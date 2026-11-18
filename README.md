@@ -1,23 +1,29 @@
 # jefferyho-landing
 
-Homepage and site metadata for https://jefferyho.com.
+The v2 homepage for jefferyho.com, served at https://jefferyho.com/v2/ (English: `/v2/en/`).
 
-- `main`: the site is served entirely by Notion, through the existing `notion2` Worker
-  (proxies `jefferyho.notion.site` onto `jefferyho.com`).
-- `v2`: the `jefferyho-landing` Worker owns the zone routes. It serves the new homepage at `/v2/` (`/v2/en/` in English)
-  and metadata files (`/sitemap.xml`, `/robots.txt`, `/og.png`, icons) from static assets and hands
-  every other path to `notion2` through a service binding, so `/` (the Notion homepage) and existing Notion page URLs keep working.
-  `www.jefferyho.com` 301-redirects to `jefferyho.com`.
+## How the domain is split
+
+| Route | Worker | Serves |
+| --- | --- | --- |
+| `jefferyho.com/*`, `www.jefferyho.com/*` | `notion2` (not in this repo) | The Notion site, proxied from `jefferyho.notion.site`, including `/`, `/sitemap.xml`, `/robots.txt` |
+| `jefferyho.com/v2*`, `www.jefferyho.com/v2*` | `jefferyho-landing` (this repo) | The v2 pages and their files; `www` 301-redirects to `jefferyho.com` |
+
+Cloudflare matches the more specific `/v2*` routes first. This repo must not change anything outside `/v2`:
+every file it serves lives under `public/v2/`, and `wrangler.jsonc` only declares the `/v2*` routes.
+
+`wrangler deploy` removes routes that point to this Worker but are not in `wrangler.jsonc`.
+Never add the catch-all routes here, and list the zone's routes after each deploy.
 
 ## Layout
 
 | Path | Purpose |
 | --- | --- |
-| `scripts/build.mjs` | Content source; generates `public/v2/index.html`, `public/v2/en/index.html`, `public/sitemap.xml` |
-| `scripts/og.swift` | Renders `public/og.png`, `public/og-en.png`, `public/apple-touch-icon.png` (macOS) |
-| `public/` | Static assets served by the Worker |
-| `src/index.ts` | Worker: www redirect, assets first, Notion fallback |
-| `wrangler.jsonc` | Worker config and routes |
+| `scripts/build.mjs` | Content source; generates `public/v2/index.html`, `public/v2/en/index.html`, `public/v2/sitemap.xml` |
+| `scripts/og.swift` | Renders `public/v2/og.png`, `og-en.png`, `apple-touch-icon.png`, `favicon.png` from `avatar.png` (macOS) |
+| `public/v2/` | Static files served by the Worker |
+| `src/index.ts` | Worker: www redirect, then static assets |
+| `wrangler.jsonc` | Worker config and `/v2*` routes |
 
 ## Workflow
 
@@ -25,17 +31,14 @@ Homepage and site metadata for https://jefferyho.com.
 npm install
 npm run build   # after editing content in scripts/build.mjs
 npm run og      # after changing share image copy
-npm run dev     # local preview at http://localhost:8787
+npm run dev     # local preview at http://localhost:8787/v2/
+npm run deploy  # needs `npx wrangler login` with the account that owns the jefferyho.com zone
 ```
 
-## Deploy
+After deploying, check `https://jefferyho.com/v2/`, `/v2/en/`, `https://www.jefferyho.com/v2/` (301),
+and that `https://jefferyho.com/` still lands on the Notion homepage.
 
-1. `npx wrangler login` with the Cloudflare account that owns the `jefferyho.com` zone.
-2. `npm run deploy` — attaches the Worker to `jefferyho.com/*` and `www.jefferyho.com/*`.
-3. Check `https://jefferyho.com/v2/`, `/v2/en/`, `/` (Notion), a Notion page URL, and `https://www.jefferyho.com/` (should 301).
-4. Turn off Cloudflare "Managed robots.txt" for the zone if it still prepends content to `/robots.txt`.
-5. Submit `https://jefferyho.com/sitemap.xml` in Google Search Console / Bing Webmaster Tools.
+Submit `https://jefferyho.com/v2/sitemap.xml` in Google Search Console / Bing Webmaster Tools
+(the root `/sitemap.xml` belongs to `notion2`).
 
-Rollback: in the Cloudflare dashboard (Workers Routes for the `jefferyho.com` zone), point
-`jefferyho.com/*` and `www.jefferyho.com/*` back to `notion2`. Do not delete `notion2`; this Worker
-depends on it.
+Rollback: delete the two `/v2*` routes (or `npx wrangler delete`); the Notion site is unaffected.
