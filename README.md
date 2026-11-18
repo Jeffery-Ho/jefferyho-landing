@@ -2,10 +2,12 @@
 
 Homepage and site metadata for https://jefferyho.com.
 
-- `main`: the site is served entirely by Notion Sites.
-- `v2`: a Cloudflare Worker with static assets owns the homepage (`/`, `/en/`) and metadata files
-  (`/sitemap.xml`, `/robots.txt`, `/og.png`, icons). Every other path is passed through to Notion,
-  so existing Notion page URLs keep working. `www.jefferyho.com` 301-redirects to `jefferyho.com`.
+- `main`: the site is served entirely by Notion, through the existing `notion2` Worker
+  (proxies `jefferyho.notion.site` onto `jefferyho.com`).
+- `v2`: the `jefferyho-landing` Worker owns the zone routes. It serves the homepage (`/`, `/en/`)
+  and metadata files (`/sitemap.xml`, `/robots.txt`, `/og.png`, icons) from static assets and hands
+  every other path to `notion2` through a service binding, so existing Notion page URLs keep working.
+  `www.jefferyho.com` 301-redirects to `jefferyho.com`.
 
 ## Layout
 
@@ -34,4 +36,6 @@ npm run dev     # local preview at http://localhost:8787
 4. Turn off Cloudflare "Managed robots.txt" for the zone if it still prepends content to `/robots.txt`.
 5. Submit `https://jefferyho.com/sitemap.xml` in Google Search Console / Bing Webmaster Tools.
 
-Rollback: remove the Worker routes (or `npx wrangler delete`); the zone falls back to Notion.
+Rollback: in the Cloudflare dashboard (Workers Routes for the `jefferyho.com` zone), point
+`jefferyho.com/*` and `www.jefferyho.com/*` back to `notion2`. Do not delete `notion2`; this Worker
+depends on it.

@@ -9,6 +9,7 @@
 - 元信息：title、description、canonical、Open Graph、Twitter Card、JSON-LD Person、favicon、apple-touch-icon；中英各一张 1200x630 分享图。
 - 规范域名统一为 `https://jefferyho.com`：Worker 将 www 301 到 apex。
 - sitemap 只列最终可索引地址（首页中英版 + Notion 详情页，均直接 200，无查询参数）；robots.txt 指向 sitemap。
-- Worker：首页与元信息文件由 v2 提供，其余路径透传 Notion。
+- Worker：首页与元信息文件由 v2 提供，其余路径通过 Service Binding 交给现有的 `notion2` Worker（代理 jefferyho.notion.site）。
+- 已部署：两条路由从 `notion2` 切换到 `jefferyho-landing`。
 
-验证方式：`wrangler dev` 本地预览 + 内置浏览器检查渲染、主题切换、语言切换、筛选与 `<head>` 元信息；`xmllint` 校验 sitemap；`sips` 核对分享图尺寸；curl 确认 sitemap 中 Notion 页面均返回 200；用模拟环境直接调用 Worker，确认 www 301、资源命中、其余路径透传。真实 Notion 透传与线上 www 跳转需部署后实测，尚未验证。
+验证方式：`wrangler dev` 本地预览 + 内置浏览器检查渲染、主题切换、语言切换、筛选与 `<head>` 元信息；`xmllint` 校验 sitemap；`sips` 核对分享图尺寸；curl 确认 sitemap 中 Notion 页面均返回 200；用模拟环境直接调用 Worker，确认 www 301、资源命中、其余路径透传。部署后线上实测：`/`、`/en/`、sitemap、robots、og.png 均 200；www 301 到 apex；Notion 首页与详情页 200 且在浏览器中正常渲染。

@@ -1,5 +1,11 @@
+interface Fetcher {
+  fetch(request: Request): Promise<Response>;
+}
+
 interface Env {
-  ASSETS: { fetch(request: Request): Promise<Response> };
+  ASSETS: Fetcher;
+  // Existing "notion2" Worker that proxies jefferyho.notion.site onto this domain.
+  NOTION: Fetcher;
 }
 
 const CANONICAL_HOST = "jefferyho.com";
@@ -21,7 +27,7 @@ export default {
       if (asset.status !== 404) return asset;
     }
 
-    // Everything else stays on Notion (the origin behind this zone).
-    return fetch(request);
+    // Everything else stays on Notion, via the existing notion2 proxy Worker.
+    return env.NOTION.fetch(request);
   },
 };
