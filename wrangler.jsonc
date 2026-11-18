@@ -1,0 +1,16 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "jefferyho-landing",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    // The Worker runs first so it can redirect www and hand non-asset paths to Notion.
+    "run_worker_first": true
+  },
+  "routes": [
+    { "pattern": "jefferyho.com/*", "zone_name": "jefferyho.com" },
+    { "pattern": "www.jefferyho.com/*", "zone_name": "jefferyho.com" }
+  ]
+}
