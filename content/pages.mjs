@@ -109,7 +109,7 @@ export const pages = [
     id: "acd09984-3f35-45c7-914d-67c1c5b6de72", section: "writing", group: "public", slug: "flomo-notion-yuque",
     zh: "我的 flomo 心得，及 Notion、语雀、flomo 如何搭配使用", en: "My flomo notes, and how I pair Notion, Yuque and flomo",
     src: { zh: "微信公众号", en: "WeChat" },
-    external: { href: "https://mp.weixin.qq.com/s/gye5hmJsBTA2ZdWDW39gpw", label: "微信公众号" },
+    external: { href: "https://mp.weixin.qq.com/s/gye5hmJsBTA2ZdWDW39gpw", label: "微信公众号「flomo浮墨笔记」" },
   },
   {
     id: "6141acf3-1e7f-42b4-b22c-abda734d5a66", section: "writing", group: "public", slug: "my-recording-stack",

@@ -2,7 +2,7 @@
 // migrated Notion page (content/pages.mjs + content/notion/*.json), and public/v2/sitemap.xml.
 // Everything this site serves lives under /v2/; all other paths belong to the Notion site.
 // Usage: node scripts/build.mjs
-import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
+import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
 import { pagePath, pages } from "../content/pages.mjs";
@@ -15,12 +15,25 @@ const OUT = join(ROOT, "public", "v2");
 
 // ---------- content ----------
 
-const data = Object.fromEntries(pages.map((p) => [p.id, JSON.parse(readFileSync(join(ROOT, "content", "notion", `${p.id}.json`), "utf8"))]));
+// Notion bodies; pages whose Notion body is empty fall back to an imported original (content/external/).
+const data = Object.fromEntries(
+  pages.map((p) => {
+    const d = JSON.parse(readFileSync(join(ROOT, "content", "notion", `${p.id}.json`), "utf8"));
+    const extFile = join(ROOT, "content", "external", `${p.id}.json`);
+    if (!d.body.length && existsSync(extFile)) {
+      const ext = JSON.parse(readFileSync(extFile, "utf8"));
+      d.body = ext.body;
+      d.published = ext.created;
+      d.imported = true;
+    }
+    return [p.id, d];
+  })
+);
 const hex = (id) => id.replace(/-/g, "");
 const byHex = Object.fromEntries(pages.map((p) => [hex(p.id), p]));
 const bySlug = Object.fromEntries(pages.filter((p) => !p.parent).map((p) => [p.slug, p]));
 const shDate = (iso) => new Date(iso).toLocaleDateString("sv-SE", { timeZone: "Asia/Shanghai" });
-const dateOf = (p) => p.date ?? shDate(data[p.id].created);
+const dateOf = (p) => p.date ?? data[p.id].published ?? shDate(data[p.id].created);
 const urlOf = (p) => `${BASE}${p.alias ?? pagePath(p).replace(/\/$/, "")}/`;
 const rendered = pages.filter((p) => !p.alias); // alias entries point at another page
 const chapters = pages.filter((p) => p.parent === "rereading-hig");
@@ -328,7 +341,7 @@ function articlePage(p) {
     : "";
   const lead = p.summary && p.section === "projects" ? `<p class="lead">${esc(p.summary)}</p>` : "";
   const external = p.external
-    ? `<a class="n-card n-card-source" href="${esc(p.external.href)}" rel="noopener" target="_blank"><span class="n-card-title">${p.external.verb ?? (bodyHtml ? "同步发布于" : "阅读原文")} · ${esc(p.external.label)}</span><span class="n-card-host">${esc(new URL(p.external.href).hostname.replace(/^www\./, ""))}</span></a>`
+    ? `<a class="n-card n-card-source" href="${esc(p.external.href)}" rel="noopener" target="_blank"><span class="n-card-title">${p.external.verb ?? (d.imported ? "原文发布于" : bodyHtml ? "同步发布于" : "阅读原文")} · ${esc(p.external.label)}</span><span class="n-card-host">${esc(new URL(p.external.href).hostname.replace(/^www\./, ""))}</span></a>`
     : "";
   const emptyNote = !bodyHtml && p.external ? `<p class="lead">这篇文章首发于${/^[A-Za-z]/.test(p.external.label) ? " " : ""}${esc(p.external.label)}，正文请阅读原文。</p>` : "";
 

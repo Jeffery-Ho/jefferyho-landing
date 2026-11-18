@@ -21,6 +21,7 @@ Never add the catch-all routes here, and list the zone's routes after each deplo
 | --- | --- |
 | `content/pages.mjs` | Every migrated page: Notion ID, section, slug, titles, summary, project facts, cover |
 | `content/notion/<id>.json` | Page bodies pulled from Notion (simplified block tree) |
+| `content/external/<id>.json` | Imported originals for pages whose Notion body only links out (Quaily, WeChat); used when the Notion body is empty |
 | `scripts/notion-sync.mjs` | Pulls pages and images from the public Notion site into `content/notion/` and `public/v2/media/` |
 | `scripts/render-notion.mjs` | Renders the block tree to HTML |
 | `scripts/build.mjs` | Generates the home pages, one page per entry, and `public/v2/sitemap.xml` |
