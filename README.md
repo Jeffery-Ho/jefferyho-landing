@@ -19,21 +19,33 @@ Never add the catch-all routes here, and list the zone's routes after each deplo
 
 | Path | Purpose |
 | --- | --- |
-| `scripts/build.mjs` | Content source; generates `public/v2/index.html`, `public/v2/en/index.html`, `public/v2/sitemap.xml` |
+| `content/pages.mjs` | Every migrated page: Notion ID, section, slug, titles, summary, project facts, cover |
+| `content/notion/<id>.json` | Page bodies pulled from Notion (simplified block tree) |
+| `scripts/notion-sync.mjs` | Pulls pages and images from the public Notion site into `content/notion/` and `public/v2/media/` |
+| `scripts/render-notion.mjs` | Renders the block tree to HTML |
+| `scripts/build.mjs` | Generates the home pages, one page per entry, and `public/v2/sitemap.xml` |
 | `scripts/og.swift` | Renders `public/v2/og.png`, `og-en.png`, `apple-touch-icon.png`, `favicon.png` from `avatar.png` (macOS) |
-| `public/v2/` | Static files served by the Worker |
+| `public/v2/` | Static files served by the Worker (`covers/`, `media/`, `assets/`, pages) |
+| `archive/notion-media/` | Original Notion images, kept for reference; not deployed |
 | `src/index.ts` | Worker: www redirect, then static assets |
 | `wrangler.jsonc` | Worker config and `/v2*` routes |
+
+Page URLs: `/v2/projects/<slug>/`, `/v2/projects/rereading-hig/<chapter>/`, `/v2/writing/<slug>/`,
+`/v2/photography/<slug>/`, `/v2/about/<slug>/`. Weekly 22/23/24/26 are chapters of Revisiting HIG and
+link to those chapter pages.
 
 ## Workflow
 
 ```bash
 npm install
-npm run build   # after editing content in scripts/build.mjs
+npm run sync    # re-pull Notion content and images (all pages, or: npm run sync -- <slug> ...)
+npm run build   # regenerate pages and sitemap
 npm run og      # after changing share image copy
 npm run dev     # local preview at http://localhost:8787/v2/
 npm run deploy  # needs `npx wrangler login` with the account that owns the jefferyho.com zone
 ```
+
+To add a page: add an entry to `content/pages.mjs`, then `npm run sync -- <slug>` and `npm run build`.
 
 After deploying, check `https://jefferyho.com/v2/`, `/v2/en/`, `https://www.jefferyho.com/v2/` (301),
 and that `https://jefferyho.com/` still lands on the Notion homepage.

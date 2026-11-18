@@ -1,0 +1,612 @@
+{
+ "id": "41b6b7f2-4e70-43d8-833e-a439048379f0",
+ "title": "（三）Foundations/App icons、Brand、Color",
+ "created": "2022-09-23T15:38:42.810Z",
+ "edited": "2022-09-29T02:18:00.000Z",
+ "titles": {
+  "41b6b7f2-4e70-43d8-833e-a439048379f0": "（三）Foundations/App icons、Brand、Color",
+  "34a8557f-73f4-4a98-a931-82959147364b": "重读HIG",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "sub_sub_header",
+   "id": "e2acd00f-8790-468d-b0bd-96c36de93ac4",
+   "r": [
+    [
+     "App 图标"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "b734c9e1-18b4-49f5-9c0b-f93e32fbd534",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "app-icons-brand-color/01.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "82dbfb68-4abe-4b57-9d1a-d5f164a38992",
+   "r": [
+    [
+     "Prefer including text only when it’s an essential part of your experience or brand.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "2b8d32b4-efef-4d2b-b31f-47883a97a495",
+   "r": [
+    [
+     "只有当文字是你的产品体验或品牌的重要组成部分时，才可以让图标内含文字。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "这里提出这个建议的主要原因是"
+    ],
+    [
+     "文字形式图标不利于本地化。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "如果要用的话，也是在产品概念已经深入人心的阶段，比如淘宝app就会用“淘”字作为 app 图标，因为淘宝这个产品早已被国内很多用户在使用，但如果在品牌尚未打造出影响力的时候，用产品首文字作为传播主体，并不容易让人记住。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "d5c282e2-3acf-4f13-8795-056d4b9884ca",
+   "r": [
+    [
+     "Prefer graphical images to photos and avoid replicating UI components in your icon.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "6034dfee-cc3a-40c2-9eba-054b6dcbdbf8",
+   "r": [
+    [
+     "无独有偶地，第二点建议就是："
+    ],
+    [
+     "尽量使用图形而不是照片，并且避免在你的图标中复制 UI 组件。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "这里主要考量是，照片或者UI界面，都会增加图标的复杂度，不好理解或让人记住。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "b86aad8d-2bd3-4e91-833a-354b7e8b58c5",
+   "r": [
+    [
+     "Don’t use replicas of Apple hardware products.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "883c24f1-f01d-4f1c-8cf4-a027143b3edf",
+   "r": [
+    [
+     "不要使用苹果硬件产品当图标。苹果产品是有版权的🐶"
+    ]
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "71b8da6a-a9e1-45e8-a5d3-85451ca98ee6",
+   "r": [
+    [
+     "相关资源："
+    ],
+    [
+     "https://developer.apple.com/design/resources/",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/resources/"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal_background",
+   "icon": "💡"
+  },
+  {
+   "t": "text",
+   "id": "7f1962b4-7ace-4245-abff-8868b76ef9e5"
+  },
+  {
+   "t": "column_list",
+   "id": "afbdac58-385f-4ed7-baaf-f48addc17b02",
+   "c": [
+    {
+     "t": "column",
+     "id": "def464b3-3fa3-4dd6-9657-80028c2ef4b4",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "text",
+       "id": "8cc51b26-3749-4b82-a654-847b56247e6d"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "39681c52-a64d-4178-ace5-dec28390ab25",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "divider",
+       "id": "57b5842c-f242-4c3d-8bbb-214d79b4fbc3"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "a5a9bd4b-1d6d-472a-bde6-c982c668bd96",
+     "ratio": 0.3333333333333333,
+     "c": [
+      {
+       "t": "text",
+       "id": "005d18c0-3cd8-4cc3-93de-01f6d5ab96b7"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "4e4eb4c7-d678-4eef-bcd5-285fdca1a013",
+   "r": [
+    [
+     "Branding",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     " 品牌"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "fb620618-6db9-4e80-8305-6857344e8596",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "app-icons-brand-color/02.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "d042d8a4-0d0a-4d36-a411-27616e00ba92",
+   "r": [
+    [
+     "Resist the temptation to display your logo throughout your app or game unless it’s essential for providing context.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "7318876c-9cb2-44b9-89a4-e314c32d1fa4",
+   "r": [
+    [
+     "不要在你的 App 或游戏中始终展示你的 Logo，除非它至关重要。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "一般来说，app内的空间都应该为具体的功能或者品牌要展示的更多信息服务，而品牌logo多数情况下，如果一定要展示，可以考虑和用户低频操作结合起来，比如下拉刷新展示logo，比如加载过程中展示logo。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "c38e1902-9e0f-4730-a18b-276f605e8123",
+   "r": [
+    [
+     "Avoid using a launch screen as a branding opportunity.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "ce3ceaf9-080d-4c3b-b457-dc45310eeac5",
+   "r": [
+    [
+     "避免使用启动屏进行品牌化。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "在 iOS 中，launch screen 是用于衔接app外和首页之间的页面，给用户一种系统快速响应的感觉，也是一个给 app 预留时间加载首页资源的“障眼法”。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "af8cb8d0-611b-426f-aad7-b68138e7f1b5",
+   "r": [
+    [
+     "但目前很多 iPhone 的硬件条件都做得比较好了，这个过程在理想情况下，只会越来越短。所以，万一启动页消失得很快，反而达不到品牌推广的目的（不过国内的app，基本上都把启动页拿来做广告了🐶），哈哈。但在苹果的角度来看，如果放置品牌信息，因为启动页有一定概率会消失得很快，反而会达不到预期效果。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "0a963c86-1e22-4e91-94ef-96cf13a2691f"
+  },
+  {
+   "t": "column_list",
+   "id": "25213051-e820-413b-9ea1-cc2c5b9dd0fd",
+   "c": [
+    {
+     "t": "column",
+     "id": "16caef97-57f9-40c5-b722-136940016823",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "text",
+       "id": "b5ad176b-0537-41db-b5df-7d407edaab03"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "cc7d2b83-805c-43ae-836f-205550566055",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "divider",
+       "id": "9dab4772-e846-439e-8ff3-79fac7cacb49"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "6521169e-3e6a-446f-b320-c742c2fd5e8b",
+     "ratio": 0.3333333333333333,
+     "c": [
+      {
+       "t": "text",
+       "id": "2ca87fb9-0974-478e-89c8-097f0ee5449a"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "e48acac3-4b25-4385-b5f9-facafbe77204",
+   "r": [
+    [
+     "Color 颜色"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "a2a9003e-f53a-4677-9cde-b9336cab27af",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "app-icons-brand-color/03.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "502095d5-018d-4107-844f-5e3657519c23",
+   "r": [
+    [
+     "Avoid using the same color to mean different things.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "8f13b46f-a21e-4a38-97c8-3275328be057",
+   "r": [
+    [
+     "避免使用相同的颜色来表示不同的东西。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "比较常混用的颜色是蓝色，设计师将蓝色作为可点击链接的高亮色，以及不可点击文字的高亮色（这个情况下，蓝色可能就是他们的品牌色）。混用颜色的影响是造成用户对可交互内容的不可分辨，降低了可用性。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "f20e3cdc-30e8-4fe4-aee5-27f7304620d9",
+   "r": [
+    [
+     "Test your app’s color scheme under a variety of lighting conditions.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "b95f9af4-77ad-4502-b09e-d9c79036780f",
+   "r": [
+    [
+     "在各种光照条件下测试你的 App 的配色方案。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "这个建议让我想起了当时我做 hmi 研究的时候，我们在界面上做了不少的颜色方案，但是放到实机和实地上看，发现现场的环境光并不是特别充足，有的颜色对比度不够，车间工人看不清楚；所以，在颜色选择这部分，我们需要结合操作环境来考虑，不能想当然以为大家都只会在明亮的办公室或者房间里使用。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "6dc28467-e3e7-4868-bb90-4246fd36b786",
+   "r": [
+    [
+     "Inclusive color 包容性颜色",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "fef81bf3-51dd-4d28-bfc4-ef6333a53375",
+   "r": [
+    [
+     "Avoid relying solely on color to differentiate between objects, indicate interactivity, or communicate essential information.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "ab712176-2722-49cb-bdae-a0d98a173afe",
+   "r": [
+    [
+     "避免仅仅依靠颜色来区分对象、表明可交互性或传达重要信息。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "这一点其实和无障碍里面的内容有些交叉，意思是有颜色辨别障碍的用户在使用产品时，除了颜色之外，提供更多的图形或者标签给他们去分辨，可以帮助他们确认当前进行交互的内容。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "acbed17c-d5bd-435b-8607-0b62f76a08dd",
+   "r": [
+    [
+     "Platform considerations 平台方面的考虑",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "7eee9297-45bb-4e11-a051-2b278b9248ae",
+   "r": [
+    [
+     "watchOS",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "ea47d83f-96bf-43ad-82ee-4b91ac44166a",
+   "r": [
+    [
+     "Use pure black for your app’s background color.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "066716ed-0c35-4405-813a-8a490dcec3b8",
+   "r": [
+    [
+     "对应用程序的背景颜色使用纯黑色。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "在watch上，背景色是纯黑色 #000000，这样做的意图是为了与屏幕外边框相融合，创造出无边界屏幕的错觉。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "79b0d928-f377-4f11-9c8c-3e2820aa9525",
+   "r": [
+    [
+     "相关资料",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "bulleted_list",
+   "id": "31382f0f-75d4-4e15-9025-816027f395b4",
+   "r": [
+    [
+     "Dark Mode",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/foundations/dark-mode"
+      ]
+     ]
+    ],
+    [
+     " 黑暗模式",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/foundations/dark-mode"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "bulleted_list",
+   "id": "42381762-d3d1-4dc7-ad91-37835ee84941",
+   "r": [
+    [
+     "Accessibility",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/foundations/accessibility"
+      ]
+     ]
+    ],
+    [
+     " 无障碍环境",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/foundations/accessibility"
+      ]
+     ]
+    ]
+   ]
+  }
+ ]
+}

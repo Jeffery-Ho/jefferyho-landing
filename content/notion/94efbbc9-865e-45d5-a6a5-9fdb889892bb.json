@@ -1,0 +1,430 @@
+{
+ "id": "94efbbc9-865e-45d5-a6a5-9fdb889892bb",
+ "title": "（四）Foundations/Dark Mode、Icons",
+ "created": "2022-10-02T07:46:24.853Z",
+ "edited": "2022-10-10T05:02:00.000Z",
+ "titles": {
+  "94efbbc9-865e-45d5-a6a5-9fdb889892bb": "（四）Foundations/Dark Mode、Icons",
+  "34a8557f-73f4-4a98-a931-82959147364b": "重读HIG",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "sub_sub_header",
+   "id": "f2b678d2-1faf-42a2-a8eb-32221a2bcd28",
+   "r": [
+    [
+     "Dark Mode 深色模式"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "b7499285-c2b6-4cb1-b359-781d23133ecc",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/01.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "5abc7742-f1a0-48d9-887d-484443c8ec36",
+   "r": [
+    [
+     "Ensure that your app looks good in both appearance modes.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "ca329373-53a4-4ee0-98bf-136508c9cec3",
+   "r": [
+    [
+     "确保你的App在两种外观模式（浅色、深色）下都看起来不错。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "在iOS中，系统可按照一定规则自动切换深浅色（比如日出日落），所以，app的深浅色设计中，也可以跟随系统一样，提供自动切换深浅色的选项。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "1921a125-b69b-43e2-871e-4a3de75d4098",
+   "r": [
+    [
+     "In rare cases, consider using only a dark appearance in the interface.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "9fc9dda6-940c-4d9b-96e3-154ca5351857",
+   "r": [
+    [
+     "在少数情况下，考虑在界面中只使用深色的外观。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "这样做的话，可以让内容主体在UI界面中突出，引起用户对内容的注意力；因此，如果只考虑使用深色模式的话，需要有一个给用户提供沉浸式内容体验的前提，例如我常用的 playstation app 就只提供深色外观，以大量的媒体封面吸引用户。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "127374b4-e638-48f2-a1cf-67931ed9663d",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/02.jpg",
+   "w": 1600,
+   "h": 818
+  },
+  {
+   "t": "quote",
+   "id": "dd297660-3406-41f7-a3a3-82f0d0d64a94",
+   "r": [
+    [
+     "At a minimum, make sure the contrast ratio between colors is no lower than 4.5:1. For custom foreground and background colors, strive for a contrast ratio of 7:1, especially in small text. This ratio ensures that your foreground content stands out from the background, and helps your content meet recommended accessibility guidelines."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "bd2edfac-fb6b-4a18-bee5-e19272753408",
+   "r": [
+    [
+     "至少要确保颜色之间（前景色和背景色）的对比度不低于4.5:1。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "对于自定义的前景和背景色，争取达到7:1的对比度，特别是在小文本中。这个对比度确保你的前景内容从背景中能够突出，并帮助你的内容满足推荐的无障碍规范。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "07f1d714-a4f6-43c6-a43a-25dd11009f9f",
+   "r": [
+    [
+     "Soften the color of white backgrounds.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "5b47df97-9e5f-4c8f-8d63-e34eb1e27d22",
+   "r": [
+    [
+     "使白色背景的颜色变得柔和。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "在深色模式下，可以尝试降低在浅色模式中的图像内容的亮度，防止刺眼，我觉得也包括纯白色 #ffffff 的应用，在黑暗环境中，纯白色看着也会刺眼，可以适量调灰一点。"
+    ]
+   ]
+  },
+  {
+   "t": "column_list",
+   "id": "a9a92f0a-baae-4017-acfa-aaf787ddb241",
+   "c": [
+    {
+     "t": "column",
+     "id": "f4473c34-5606-4528-8abd-edc009879290",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "text",
+       "id": "21b5cd8a-26f9-441a-b4dc-8d707f46b90a"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "c19f8c7b-9640-41e9-b777-32a61f72029d",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "divider",
+       "id": "a7ad34cc-436a-47e4-be85-5b3c8b1a7a0f"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "937a088c-d641-482b-9503-9d2c7e876d9f",
+     "ratio": 0.3333333333333333,
+     "c": [
+      {
+       "t": "text",
+       "id": "4244320b-2726-4ad6-a001-1e27f4e8486d"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "65e34ee8-855f-4310-b52f-bfedd410f6b9",
+   "r": [
+    [
+     "Icons 图标"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "bb921ac1-4cc4-4bb5-8ce6-e52d9ad029e8",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/03.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "22828ca0-9ff8-4bb1-a577-9b76e32c8471",
+   "r": [
+    [
+     "图标设计在这一节中没有太多可补充的地方，可以看看官方提供的图标调整示例。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "727cf5a3-0d4f-412e-bd81-0fe66fc66d86",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/04.jpg",
+   "w": 1600,
+   "h": 740
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "28fdb1d7-7657-474f-bf81-7c999b065fa6",
+   "r": [
+    [
+     "图标的本地化",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "d9916368-693c-480e-9040-7e8da4d44542",
+   "r": [
+    [
+     "在进行图标设计时，考虑本地化的问题。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "例如，在官方提供的左侧的示例中，文字图标虽然显示了英文的“A”，但是考虑到有的国家对“A”的写法不同，因此需要额外设计多个文字图标样式；而在右侧的示例中，考虑到有的文字阅读顺序并非从左往右（印象中日本的书信就不是从左往右），需要考虑从右往左的情况，设计一个新的图标。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "65d50f8e-85ac-4183-98da-6a7fb7e48893",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/05.jpg",
+   "w": 1600,
+   "h": 1271
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "a1c766d1-d371-4095-bce7-e85378e5fee6",
+   "r": [
+    [
+     "macOS中的文档"
+    ],
+    [
+     "图标如何设计？",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "a51549ff-733f-41c4-9357-a7e9a25cfba3",
+   "r": [
+    [
+     "macOS 的图标默认由三部分组成：背景图、中心图和文本，三者有其一即可。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "这些元素被放在一个右上角带有折痕的纸张上。最低可至 16*16 px @1x，但需要精简图标的元素轮廓，以便用户在低像素的情况下也能准确识别出图标的示意。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "28a94654-7dff-4e04-9347-6cf9b96a7eae",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/06.jpg",
+   "w": 1600,
+   "h": 1102
+  },
+  {
+   "t": "text",
+   "id": "96c5c652-f07c-4b7e-b22f-4e60bba2a2d9",
+   "r": [
+    [
+     "官方建议在设计文档图标的中心图像时，在四周留出10%左右的出血位，但也只是“左右”，没有严格定义到像素。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "86f899b1-1300-4049-9052-c47360ca021f",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/07.jpg",
+   "w": 1600,
+   "h": 1600
+  },
+  {
+   "t": "text",
+   "id": "8dddfb53-3473-472b-9888-378dcd451816",
+   "r": [
+    [
+     "提供用于增强理解的文本。如图所示，「SCENE」是描述这个文档的类型而不是格式，而且需要足够精简，以便能够在图标小尺寸情况下依然能够阅读；"
+    ],
+    [
+     "在默认情况下，这个文本将会在系统中显示为全大写。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "efdd8899-3b84-48e1-a737-1f6889c7fa64",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "dark-mode-icons/08.jpg",
+   "w": 1222,
+   "h": 1600
+  },
+  {
+   "t": "column_list",
+   "id": "483fdb68-4d05-406d-ad2c-c116280b1004",
+   "c": [
+    {
+     "t": "column",
+     "id": "c150e647-bf46-4603-bdb1-c4b1362ef351",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "text",
+       "id": "79ba9365-44c4-4ca0-90f4-257dfdb2b14c"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "d1d4fc5b-e053-459b-9f2c-b187dabc2622",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "divider",
+       "id": "f5a09034-6e88-4066-bbdf-43cc92fb5ab3"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "85318feb-5f3f-4047-9210-248cc3596eac",
+     "ratio": 0.3333333333333333,
+     "c": [
+      {
+       "t": "text",
+       "id": "4d850bbc-2395-4db6-9be8-7ab3028dae74"
+      }
+     ]
+    }
+   ]
+  }
+ ]
+}

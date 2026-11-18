@@ -1,0 +1,311 @@
+{
+ "id": "da64dd8a-09b4-4880-b288-616044a57c6e",
+ "title": "物联网开放平台",
+ "created": "2022-10-17T09:54:37.397Z",
+ "edited": "2025-10-14T14:22:17.385Z",
+ "titles": {
+  "da64dd8a-09b4-4880-b288-616044a57c6e": "物联网开放平台",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "image",
+   "id": "8cfc02c6-72ab-482b-8c79-fb6827cc39d8",
+   "r": [
+    [
+     "Frame 7.png"
+    ]
+   ],
+   "file": "iot-open-platform/01.jpg",
+   "w": 1600,
+   "h": 872
+  },
+  {
+   "t": "callout",
+   "id": "0fd1b4c6-ea46-4691-9913-49b424395d7c",
+   "r": [
+    [
+     "此项目可关注本人的「需求+设计把控能力」。"
+    ]
+   ],
+   "color": "teal_background",
+   "icon": "💡"
+  },
+  {
+   "t": "image",
+   "id": "0078f620-cccf-4f8f-9417-a62bfb059dfd",
+   "r": [
+    [
+     "开放平台1.png"
+    ]
+   ],
+   "file": "iot-open-platform/02.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "049bb4fd-c8cc-4975-b797-7a4ec4996e26",
+   "r": [
+    [
+     "开放平台2.png"
+    ]
+   ],
+   "file": "iot-open-platform/03.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "5c429259-b62e-483e-9a6a-344248c49d17",
+   "r": [
+    [
+     "开放平台3.png"
+    ]
+   ],
+   "file": "iot-open-platform/04.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "6ffb6fb6-ba62-49ad-b861-fdec88514f2d",
+   "r": [
+    [
+     "开放平台4.png"
+    ]
+   ],
+   "file": "iot-open-platform/05.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "3fdbf479-dd49-4986-8e83-f5f787105e21",
+   "r": [
+    [
+     "开放平台5.png"
+    ]
+   ],
+   "file": "iot-open-platform/06.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "41549911-f4bb-48a9-a9bb-a063b678ebae",
+   "r": [
+    [
+     "开放平台6.png"
+    ]
+   ],
+   "file": "iot-open-platform/07.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "2cad1e80-1960-4ac8-8201-346757b9be47",
+   "r": [
+    [
+     "开放平台7.png"
+    ]
+   ],
+   "file": "iot-open-platform/08.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "57c4251f-bdbb-453b-825e-912aa6cab356",
+   "r": [
+    [
+     "开放平台8.png"
+    ]
+   ],
+   "file": "iot-open-platform/09.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "8d8a2fbc-75a9-44e9-b99b-6335d4eedc29",
+   "r": [
+    [
+     "开放平台9.png"
+    ]
+   ],
+   "file": "iot-open-platform/10.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "4f943ea8-66dc-4428-b252-65f8211df01c",
+   "r": [
+    [
+     "开放平台10.png"
+    ]
+   ],
+   "file": "iot-open-platform/11.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "3dca3da9-2427-4277-96b4-e2399d545d22",
+   "r": [
+    [
+     "开放平台11.png"
+    ]
+   ],
+   "file": "iot-open-platform/12.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "387ecfa7-8a2e-471c-a76b-06b0bbdcae8b",
+   "r": [
+    [
+     "开放平台12.png"
+    ]
+   ],
+   "file": "iot-open-platform/13.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "05ebe416-1007-48d6-bee3-f601ccd52b26",
+   "r": [
+    [
+     "开放平台13.png"
+    ]
+   ],
+   "file": "iot-open-platform/14.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "3f7655bd-e1ff-4550-ac24-e02abfdeb8fc",
+   "r": [
+    [
+     "开放平台14.png"
+    ]
+   ],
+   "file": "iot-open-platform/15.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "c8371ca6-35e4-4a8a-9a70-61f67480ab85",
+   "r": [
+    [
+     "开放平台15.png"
+    ]
+   ],
+   "file": "iot-open-platform/16.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "f7780324-cf10-4392-8c2c-d03885e463fd",
+   "r": [
+    [
+     "开放平台16.png"
+    ]
+   ],
+   "file": "iot-open-platform/17.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "714485c7-b2d2-4cb6-a1c2-3c3275a24c54",
+   "r": [
+    [
+     "开放平台17.png"
+    ]
+   ],
+   "file": "iot-open-platform/18.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "a58993c5-cf75-4c6b-bbea-2998695e283e",
+   "r": [
+    [
+     "开放平台18.png"
+    ]
+   ],
+   "file": "iot-open-platform/19.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "dc2f6674-18fd-42ca-998f-e8cb7b95cf4c",
+   "r": [
+    [
+     "开放平台19.png"
+    ]
+   ],
+   "file": "iot-open-platform/20.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "8b84db65-dc2b-4d10-9e0d-46208cde0d56",
+   "r": [
+    [
+     "开放平台20.png"
+    ]
+   ],
+   "file": "iot-open-platform/21.jpg",
+   "w": 1600,
+   "h": 987
+  },
+  {
+   "t": "image",
+   "id": "c1f37d28-81d6-4fca-834c-bf410abcdba8",
+   "r": [
+    [
+     "开放平台21.png"
+    ]
+   ],
+   "file": "iot-open-platform/22.jpg",
+   "w": 1600,
+   "h": 987
+  },
+  {
+   "t": "image",
+   "id": "27135fe7-ad2f-49a5-8bf3-b0fefa6d226f",
+   "r": [
+    [
+     "开放平台22.png"
+    ]
+   ],
+   "file": "iot-open-platform/23.jpg",
+   "w": 1600,
+   "h": 987
+  },
+  {
+   "t": "image",
+   "id": "7dd033a5-42f3-4c2f-9b25-64bbabcff72d",
+   "r": [
+    [
+     "开放平台23.png"
+    ]
+   ],
+   "file": "iot-open-platform/24.jpg",
+   "w": 1600,
+   "h": 900
+  }
+ ]
+}

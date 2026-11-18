@@ -3,6 +3,7 @@
   "private": true,
   "type": "module",
   "scripts": {
+    "sync": "NODE_USE_ENV_PROXY=1 node scripts/notion-sync.mjs",
     "build": "node scripts/build.mjs",
     "og": "swift scripts/og.swift",
     "dev": "wrangler dev",

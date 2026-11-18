@@ -1,59 +1,45 @@
-// Generates public/v2/index.html (zh), public/v2/en/index.html (en) and public/v2/sitemap.xml.
+// Generates the v2 site: public/v2/index.html (zh), public/v2/en/index.html (en), one page per
+// migrated Notion page (content/pages.mjs + content/notion/*.json), and public/v2/sitemap.xml.
 // Everything this site serves lives under /v2/; all other paths belong to the Notion site.
 // Usage: node scripts/build.mjs
-import { writeFileSync, mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
+import { pagePath, pages } from "../content/pages.mjs";
+import { esc, firstImage, renderBlocks, textOf } from "./render-notion.mjs";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://jefferyho.com";
-const BASE = "/v2/"; // new homepage lives here; "/" stays on the Notion homepage
-const N = (path) => `${SITE}/${path}`; // Notion page on the canonical domain
+const BASE = "/v2/";
+const OUT = join(ROOT, "public", "v2");
 
-const content = {
-  thoughts: [
-    { zh: "离冥想最近的一次“接触”", en: "My closest brush with meditation", date: "2026-05-19", url: N("3652fd95f55e801cb2b6f57db7801d93") },
-    { zh: "写在 30 岁前夕", en: "On the eve of turning 30", date: "2025-10-17", url: N("30-28d2fd95f55e80b1ab13e579c40e5339") },
-    { zh: "Weekly 26 重读 HIG（七）/ Motion、Right to left", en: "Weekly 26 · Revisiting HIG (7): Motion, Right to left", date: "2025-10-16", url: N("Weekly-26-HIG-Motion-Right-to-left-3d2d5f4aa24f4177a6d234877021e1c9") },
-    { zh: "Weekly 24 重读 HIG（四）/ Dark Mode、Icons", en: "Weekly 24 · Revisiting HIG (4): Dark Mode, Icons", date: "2025-10-16", url: N("Weekly-24-HIG-Dark-Mode-Icons-3ae962f9ba324447be07e31335005d13") },
-    { zh: "Weekly 23 重读 HIG（三）/ App icons、Brand、Color", en: "Weekly 23 · Revisiting HIG (3): App icons, Brand, Color", date: "2025-10-16", url: N("Weekly-23-HIG-App-icons-Brand-Color-2de134c9086442ff9f883f8bf52eb393") },
-    { zh: "Weekly 22 重读 HIG（二）/ Accessibility", en: "Weekly 22 · Revisiting HIG (2): Accessibility", date: "2025-10-16", url: N("Weekly-22-HIG-Accessibility-c4b1a0df1f2e4e9191f6188e98e0ad0f") },
-    { zh: "Weekly 20 从内容分发到工具体验", en: "Weekly 20 · From content distribution to tool experience", date: "2025-10-16", url: N("Weekly-20-f4429ca7155f4998ae8e41eb97793607") },
-    { zh: "Weekly 19 设计师的面试官心得", en: "Weekly 19 · Notes from interviewing designers", date: "2025-10-16", url: N("Weekly-19-7474754524664e188a0e5bd36428d652") },
-  ],
-  public: [
-    { zh: "WWDC26 观后感（设计吐槽 & 期待）", en: "WWDC26 takeaways: design gripes & hopes", date: "2026-06-18", url: N("WWDC26-37b2fd95f55e80089bffe84844983b1a") },
-    { zh: "我的 flomo 心得，及 Notion、语雀、flomo 如何搭配使用", en: "My flomo notes, and how I pair Notion, Yuque and flomo", date: "2025-10-16", url: N("JefferyHo_-flomo-Notion-flomo-qq-com-acd099843f3545c7914d67c1c5b6de72"), src: { zh: "微信公众号", en: "WeChat" } },
-    { zh: "我的记录战队：flomo + 语雀 + Notion", en: "My note-taking stack: flomo + Yuque + Notion", date: "2025-10-16", url: N("flomo-Notion-xiaohongshu-com-6141acf31e7f42b4b22cabda734d5a66"), src: { zh: "小红书", en: "Xiaohongshu" } },
-  ],
-  projects: [
-    { zh: "重读 HIG", en: "Revisiting HIG", cover: "hig.jpg", url: N("HIG-34a8557f73f44a98a93182959147364b"), d: { zh: "系列文章", en: "Article series" } },
-    { zh: "小报童付费专栏", en: "Paid column on Xiaobaotong", cover: "column.jpg", url: N("7e3db60d0af749b2954718c2f08fc2c6"), d: { zh: "专栏", en: "Column" } },
-    { zh: "Telegram 设计分享频道", en: "Telegram design channel", cover: "telegram.jpg", url: N("Telegram-ef52ccb06311414cb9bf72c77bb64173"), d: { zh: "频道", en: "Channel" } },
-    { zh: "物联网开放平台", en: "IoT open platform", cover: "iot.jpg", url: N("da64dd8a09b44880b288616044a57c6e"), d: { zh: "平台设计", en: "Platform design" } },
-    { zh: "室内网关中控屏", en: "Indoor gateway control panel", cover: "gateway.jpg", url: N("32202039af8845289ef58f382b237888"), d: { zh: "智能硬件", en: "Smart hardware" } },
-    { zh: "招商银行 · 天工设计平台的设计探索", en: "China Merchants Bank · Tiangong design platform exploration", cover: "cmb-exploration.jpg", url: N("57db2dc82f3e484e8bec0c766a3654d6"), d: { zh: "设计探索", en: "Design exploration" } },
-    { zh: "OPPO ColorOS 社区设计", en: "OPPO ColorOS community design", cover: "coloros.jpg", url: N("OPPO-ColorOS-411044885ef54e41ad70b5eed9068935"), d: { zh: "社区设计", en: "Community design" } },
-    { zh: "招商证券 · 交易大师交互体验优化提案", en: "China Merchants Securities · Trading app UX proposal", cover: "cms-trading.jpg", url: N("b83ed0d1c2224018ae1e593e73c1f023"), d: { zh: "提案", en: "Proposal" } },
-    { zh: "腾讯 · 医疗健康官网设计策略提案", en: "Tencent · Healthcare website design strategy", cover: "tencent-health.jpg", url: N("af7a191d32f14aec98025e9dd2254082"), d: { zh: "提案", en: "Proposal" } },
-    { zh: "招商银行 · 天工设计平台提案", en: "China Merchants Bank · Tiangong design platform proposal", cover: "cmb-proposal.jpg", url: N("4de2c03058264efe8fff23a75b8f901a"), d: { zh: "提案", en: "Proposal" } },
-  ],
-  photography: [
-    { zh: "Nothing ear (1)", en: "Nothing ear (1)", cover: "nothing-ear.jpg", url: N("Nothing-ear-1-28e2fd95f55e80afb98ee5103baee850"), d: { zh: "收获了 Nothing CEO 的点赞", en: "Got a like from the Nothing CEO" } },
-    { zh: "Unsplash 2020", en: "Unsplash 2020", cover: "unsplash-2020.jpg", url: N("Unsplash-2020-28e2fd95f55e8092a653faf72b6db165"), d: { zh: "Interiors 类别入围", en: "Finalist, Interiors category" } },
-  ],
-  about: [
-    { zh: "个人说明书", en: "A user manual for me", date: "2022-09-23", url: N("90008a05eb1c4c1aa077b126993d6b0a") },
-    { zh: "基于 SWOT 分析自己", en: "A SWOT analysis of myself", date: "2022-09-23", url: N("SWOT-6cc3629e5d224463bd8a723a29237028") },
-    { zh: "和创造力有关的 6 个问题", en: "6 questions about creativity", date: "2022-09-23", url: N("6-12a7ce80d37d4d7fa7570135c495d1f9") },
-  ],
-  follow: [
-    { zh: "Newsletter", en: "Newsletter", url: "https://quaily.com/jefferystudio" },
-    { zh: "杰_弗里", en: "杰_弗里", url: N("_-28c2fd95f55e80868ebdc40102cd1db7") },
-    { zh: "24PX", en: "24PX", url: N("24PX-28c2fd95f55e80639e22fe1e4533fa0c") },
-    { zh: "邮箱", en: "Email", url: "mailto:Hexianji@outlook.com" },
-  ],
+// ---------- content ----------
+
+const data = Object.fromEntries(pages.map((p) => [p.id, JSON.parse(readFileSync(join(ROOT, "content", "notion", `${p.id}.json`), "utf8"))]));
+const hex = (id) => id.replace(/-/g, "");
+const byHex = Object.fromEntries(pages.map((p) => [hex(p.id), p]));
+const bySlug = Object.fromEntries(pages.filter((p) => !p.parent).map((p) => [p.slug, p]));
+const shDate = (iso) => new Date(iso).toLocaleDateString("sv-SE", { timeZone: "Asia/Shanghai" });
+const dateOf = (p) => p.date ?? shDate(data[p.id].created);
+const urlOf = (p) => `${BASE}${p.alias ?? pagePath(p).replace(/\/$/, "")}/`;
+const rendered = pages.filter((p) => !p.alias); // alias entries point at another page
+const chapters = pages.filter((p) => p.parent === "rereading-hig");
+
+const byDateDesc = (a, b) => dateOf(b).localeCompare(dateOf(a));
+const home = {
+  thoughts: pages.filter((p) => p.group === "thoughts").sort(byDateDesc),
+  public: pages.filter((p) => p.group === "public").sort(byDateDesc),
+  projects: pages.filter((p) => p.section === "projects" && !p.parent),
+  photography: pages.filter((p) => p.section === "photography"),
+  about: pages.filter((p) => p.section === "about"),
 };
+
+const follow = [
+  { zh: "Newsletter", en: "Newsletter", url: "https://quaily.com/jefferystudio" },
+  { zh: "小红书 @杰_弗里", en: "Xiaohongshu @杰_弗里", url: "https://xhslink.com/m/3wXO9kRBrLO" },
+  { zh: "小红书 @24PX", en: "Xiaohongshu @24PX", url: "https://xhslink.com/m/893LNqEQ8SC" },
+  { zh: "邮箱", en: "Email", url: "mailto:Hexianji@outlook.com" },
+];
 
 const i18n = {
   zh: {
@@ -110,18 +96,96 @@ const i18n = {
   },
 };
 
-const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;").replace(/"/g, "&quot;");
+// ---------- shared chrome ----------
 
 const ICONS = `
       <svg class="icon icon-system" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.75" y="2.75" width="12.5" height="8.5" rx="1.5"/><path d="M5.5 13.5h5"/></svg>
       <svg class="icon icon-light" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1"/></svg>
       <svg class="icon icon-dark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z"/></svg>`;
 
+const PERSON = { "@type": "Person", name: "Jeffery Ho", url: SITE + BASE };
+
+function head({ t, title, description, url, image, alternates, type, jsonld, extra = "" }) {
+  const alt = alternates
+    ? `
+  <link rel="alternate" hreflang="zh-CN" href="${SITE}${BASE}">
+  <link rel="alternate" hreflang="en" href="${SITE}${BASE}en/">
+  <link rel="alternate" hreflang="x-default" href="${SITE}${BASE}">`
+    : "";
+  return `<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>${esc(title)}</title>
+  <meta name="description" content="${esc(description)}">
+  <meta name="author" content="Jeffery Ho">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="${url}">${alt}
+
+  <meta property="og:type" content="${type}">
+  <meta property="og:site_name" content="Jeffery Ho">
+  <meta property="og:title" content="${esc(title)}">
+  <meta property="og:description" content="${esc(description)}">
+  <meta property="og:url" content="${url}">
+  <meta property="og:image" content="${image.url}">
+  <meta property="og:image:width" content="${image.w}">
+  <meta property="og:image:height" content="${image.h}">
+  <meta property="og:image:alt" content="${esc(image.alt)}">
+  <meta property="og:locale" content="${t.locale}">${extra}
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="${esc(title)}">
+  <meta name="twitter:description" content="${esc(description)}">
+  <meta name="twitter:image" content="${image.url}">
+  <meta name="twitter:image:alt" content="${esc(image.alt)}">
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08090a">
+  <link rel="icon" href="${BASE}favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="${BASE}apple-touch-icon.png">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="stylesheet" href="${BASE}assets/site.css">
+  <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\\u003c")}</script>
+</head>`;
+}
+
+function header(t, { langToggle }) {
+  const toggle = langToggle
+    ? `
+        <a class="tool" href="${t.other.href}" hreflang="${t.other.lang}" lang="${t.other.lang}" aria-label="${esc(t.other.aria)}">${t.other.label}</a>`
+    : "";
+  return `  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="${t.path}"><img class="brand-mark" src="${BASE}favicon.png" width="24" height="24" alt="">Jeffery Ho</a>
+      <div class="tools">${toggle}
+        <button class="tool" type="button" data-theme-toggle data-label-system="${esc(t.theme.system)}" data-label-light="${esc(t.theme.light)}" data-label-dark="${esc(t.theme.dark)}" aria-label="${esc(t.theme.system)}">${ICONS}
+        </button>
+      </div>
+    </div>
+  </header>`;
+}
+
+function footer(lang) {
+  return `  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 Jeffery Ho</span>
+      <nav>
+${follow.map((f) => `        <a href="${esc(f.url)}">${esc(f[lang])}</a>`).join("\n")}
+      </nav>
+    </div>
+  </footer>
+  <script src="${BASE}assets/site.js" defer></script>`;
+}
+
+const siteImage = (t) => ({ url: `${SITE}${BASE}${t.og}`, w: 1200, h: 630, alt: t.ogAlt });
+
+// ---------- homepage ----------
+
 function list(items, t, lang) {
   return `<ul class="list">
 ${items
   .map(
-    (it) => `          <li><a href="${esc(it.url)}"><span class="item-title">${esc(it[lang])}</span><span class="item-meta">${it.src ? esc(it.src[lang]) + " · " : ""}<time datetime="${it.date}">${esc(t.date(it.date))}</time></span></a></li>`
+    (p) =>
+      `          <li><a href="${urlOf(p)}"><span class="item-title">${esc(p[lang])}</span><span class="item-meta">${p.src ? esc(p.src[lang]) + " · " : ""}<time datetime="${dateOf(p)}">${esc(t.date(dateOf(p)))}</time></span></a></li>`
   )
   .join("\n")}
         </ul>`;
@@ -131,94 +195,46 @@ function grid(items, lang) {
   return `<div class="grid">
 ${items
   .map(
-    (it, i) => `          <a class="card" href="${esc(it.url)}">
-            <div class="card-visual"><img src="${BASE}covers/${it.cover}" alt="" width="1000" height="562" loading="lazy" decoding="async"></div>
-            <h3>${esc(it[lang])}</h3>
-            <p>${esc(it.d[lang])}</p>
+    (p) => `          <a class="card" href="${urlOf(p)}">
+            <div class="card-visual"><img src="${BASE}covers/${p.cover}" alt="" width="1000" height="562" loading="lazy" decoding="async"></div>
+            <h3>${esc(p[lang])}</h3>
+            <p>${esc(p.d[lang])}</p>
           </a>`
   )
   .join("\n")}
         </div>`;
 }
 
-function page(lang) {
+function homePage(lang) {
   const t = i18n[lang];
-  const url = SITE + t.path;
   const order = ["thoughts", "public", "projects", "photography", "about"];
   const body = {
-    thoughts: list(content.thoughts, t, lang),
-    public: list(content.public, t, lang),
-    projects: grid(content.projects, lang),
-    photography: grid(content.photography, lang),
-    about: list(content.about, t, lang),
+    thoughts: list(home.thoughts, t, lang),
+    public: list(home.public, t, lang),
+    projects: grid(home.projects, lang),
+    photography: grid(home.photography, lang),
+    about: list(home.about, t, lang),
   };
-  const person = {
+  const jsonld = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: "Jeffery Ho",
+    ...PERSON,
     alternateName: "Jeffery",
-    url: SITE + BASE,
     image: `${SITE}${BASE}avatar.png`,
     jobTitle: t.jobTitle,
     description: t.description,
     address: { "@type": "PostalAddress", addressLocality: t.city, addressCountry: "CN" },
     sameAs: ["https://quaily.com/jefferystudio"],
   };
+  const extra = `
+  <meta property="og:locale:alternate" content="${t.altLocale}">
+  <meta property="profile:first_name" content="Jeffery">
+  <meta property="profile:last_name" content="Ho">`;
 
   return `<!doctype html>
 <html lang="${t.lang}">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <title>${esc(t.title)}</title>
-  <meta name="description" content="${esc(t.description)}">
-  <meta name="author" content="Jeffery Ho">
-  <meta name="robots" content="index, follow, max-image-preview:large">
-  <link rel="canonical" href="${url}">
-  <link rel="alternate" hreflang="zh-CN" href="${SITE}${BASE}">
-  <link rel="alternate" hreflang="en" href="${SITE}${BASE}en/">
-  <link rel="alternate" hreflang="x-default" href="${SITE}${BASE}">
-
-  <meta property="og:type" content="profile">
-  <meta property="og:site_name" content="Jeffery Ho">
-  <meta property="og:title" content="${esc(t.title)}">
-  <meta property="og:description" content="${esc(t.description)}">
-  <meta property="og:url" content="${url}">
-  <meta property="og:image" content="${SITE}${BASE}${t.og}">
-  <meta property="og:image:type" content="image/png">
-  <meta property="og:image:width" content="1200">
-  <meta property="og:image:height" content="630">
-  <meta property="og:image:alt" content="${esc(t.ogAlt)}">
-  <meta property="og:locale" content="${t.locale}">
-  <meta property="og:locale:alternate" content="${t.altLocale}">
-  <meta property="profile:first_name" content="Jeffery">
-  <meta property="profile:last_name" content="Ho">
-
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="${esc(t.title)}">
-  <meta name="twitter:description" content="${esc(t.description)}">
-  <meta name="twitter:image" content="${SITE}${BASE}${t.og}">
-  <meta name="twitter:image:alt" content="${esc(t.ogAlt)}">
-
-  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
-  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08090a">
-  <link rel="icon" href="${BASE}favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="${BASE}apple-touch-icon.png">
-  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-  <link rel="stylesheet" href="${BASE}assets/site.css">
-  <script type="application/ld+json">${JSON.stringify(person)}</script>
-</head>
+${head({ t, title: t.title, description: t.description, url: SITE + t.path, image: siteImage(t), alternates: true, type: "profile", jsonld, extra })}
 <body>
-  <header class="top">
-    <div class="wrap">
-      <a class="brand" href="${t.path}"><img class="brand-mark" src="${BASE}favicon.png" width="24" height="24" alt="">Jeffery Ho</a>
-      <div class="tools">
-        <a class="tool" href="${t.other.href}" hreflang="${t.other.lang}" lang="${t.other.lang}" aria-label="${esc(t.other.aria)}">${t.other.label}</a>
-        <button class="tool" type="button" data-theme-toggle data-label-system="${esc(t.theme.system)}" data-label-light="${esc(t.theme.light)}" data-label-dark="${esc(t.theme.dark)}" aria-label="${esc(t.theme.system)}">${ICONS}
-        </button>
-      </div>
-    </div>
-  </header>
+${header(t, { langToggle: true })}
 
   <main class="wrap">
     <section class="hero">
@@ -229,7 +245,7 @@ function page(lang) {
 ${t.bio.map((p) => `        <p>${esc(p)}</p>`).join("\n")}
       </div>
       <div class="links">
-${content.follow.map((f) => `        <a class="chip" href="${esc(f.url)}">${esc(f[lang])}</a>`).join("\n")}
+${follow.map((f) => `        <a class="chip" href="${esc(f.url)}">${esc(f[lang])}</a>`).join("\n")}
       </div>
     </section>
 
@@ -248,44 +264,157 @@ ${order
   .join("\n\n")}
   </main>
 
-  <footer class="foot">
-    <div class="wrap">
-      <span>© 2026 Jeffery Ho</span>
-      <nav>
-${content.follow.map((f) => `        <a href="${esc(f.url)}">${esc(f[lang])}</a>`).join("\n")}
-      </nav>
-    </div>
-  </footer>
-  <script src="${BASE}assets/site.js" defer></script>
+${footer(lang)}
 </body>
 </html>
 `;
 }
 
-for (const lang of ["zh", "en"]) {
-  const out = join(ROOT, "public", "v2", lang === "zh" ? "index.html" : "en/index.html");
-  mkdirSync(dirname(out), { recursive: true });
-  writeFileSync(out, page(lang));
-  console.log("wrote", out);
+// ---------- article pages ----------
+
+function resolver(page) {
+  return (href) => {
+    if (!href) return null;
+    const internal = href.startsWith("/") || /^https?:\/\/(www\.)?(jefferyho\.com|[\w-]+\.notion\.site|notion\.so)\//.test(href);
+    if (!internal) return { href };
+    const m = /([0-9a-f]{32})(?![0-9a-f])/.exec(href.replace(/-/g, ""));
+    if (!m) return null;
+    if (m[1] === hex(page.id)) return null; // table-of-contents links back to the same page
+    const target = byHex[m[1]];
+    return target ? { href: urlOf(target) } : null;
+  };
 }
 
-// sitemap.xml for the v2 pages only (final, directly indexable URLs).
+function chapterList() {
+  return `<ol class="chapters">
+${chapters.map((c) => `  <li><a href="${urlOf(c)}"><span class="item-title">${esc(c.zh)}</span><span class="item-meta"><time datetime="${dateOf(c)}">${esc(i18n.zh.date(dateOf(c)))}</time></span></a></li>`).join("\n")}
+</ol>`;
+}
+
+function crumbs(p) {
+  const t = i18n.zh;
+  const section = p.section === "writing" ? p.group : p.section;
+  const parts = [`<a href="${BASE}#${section}">${esc(t.sections[section])}</a>`];
+  if (p.parent) parts.push(`<a href="${urlOf(bySlug[p.parent])}">${esc(bySlug[p.parent].zh)}</a>`);
+  return `<nav class="crumbs" aria-label="面包屑">${parts.join('<span aria-hidden="true">/</span>')}</nav>`;
+}
+
+function articlePage(p) {
+  const t = i18n.zh;
+  const d = data[p.id];
+  const url = SITE + urlOf(p);
+  const ctx = {
+    media: `${BASE}media/`,
+    resolveLink: resolver(p),
+    collection: (n) => (p.slug === "rereading-hig" ? chapterList() : null),
+  };
+  const bodyHtml = renderBlocks(d.body, ctx);
+  const text = textOf(d.body);
+  const description = p.summary ?? (text ? text.slice(0, 110) + (text.length > 110 ? "…" : "") : `${p.zh} · Jeffery Ho`);
+  const img = firstImage(d.body);
+  const image = img
+    ? { url: `${SITE}${BASE}media/${img.file}`, w: img.w, h: img.h, alt: p.zh }
+    : p.cover
+      ? { url: `${SITE}${BASE}covers/${p.cover}`, w: 1000, h: 562, alt: p.zh }
+      : siteImage(t);
+  const published = dateOf(p);
+  const modified = shDate(d.edited);
+
+  const metaBits = [];
+  if (p.section !== "projects" || p.parent) metaBits.push(`<time datetime="${published}">${t.date(published)}</time>`);
+  if (p.src) metaBits.push(esc(p.src.zh));
+  const metaTable = p.meta
+    ? `<dl class="facts">${Object.entries(p.meta).map(([k, v]) => `<div><dt>${esc(k)}</dt><dd>${esc(v)}</dd></div>`).join("")}</dl>`
+    : "";
+  const lead = p.summary && p.section === "projects" ? `<p class="lead">${esc(p.summary)}</p>` : "";
+  const external = p.external
+    ? `<a class="n-card n-card-source" href="${esc(p.external.href)}" rel="noopener" target="_blank"><span class="n-card-title">${p.external.verb ?? (bodyHtml ? "同步发布于" : "阅读原文")} · ${esc(p.external.label)}</span><span class="n-card-host">${esc(new URL(p.external.href).hostname.replace(/^www\./, ""))}</span></a>`
+    : "";
+  const emptyNote = !bodyHtml && p.external ? `<p class="lead">这篇文章首发于${/^[A-Za-z]/.test(p.external.label) ? " " : ""}${esc(p.external.label)}，正文请阅读原文。</p>` : "";
+
+  let pager = "";
+  if (p.parent) {
+    const i = chapters.indexOf(p);
+    const prev = chapters[i - 1];
+    const next = chapters[i + 1];
+    pager = `<nav class="pager" aria-label="章节导航">${prev ? `<a class="pager-prev" href="${urlOf(prev)}"><span>上一章</span>${esc(prev.zh)}</a>` : "<span></span>"}${next ? `<a class="pager-next" href="${urlOf(next)}"><span>下一章</span>${esc(next.zh)}</a>` : "<span></span>"}</nav>`;
+  }
+
+  const jsonld = {
+    "@context": "https://schema.org",
+    "@type": p.section === "writing" || p.parent ? "BlogPosting" : "CreativeWork",
+    headline: p.zh,
+    description,
+    url,
+    image: image.url,
+    inLanguage: "zh-CN",
+    datePublished: published,
+    dateModified: modified,
+    author: PERSON,
+  };
+  const extra = `
+  <meta property="article:published_time" content="${published}">
+  <meta property="article:modified_time" content="${modified}">
+  <meta property="article:author" content="Jeffery Ho">`;
+
+  return `<!doctype html>
+<html lang="zh-CN">
+${head({ t, title: `${p.zh} · Jeffery Ho`, description, url, image, alternates: false, type: "article", jsonld, extra })}
+<body>
+${header(t, { langToggle: false })}
+
+  <main class="wrap article">
+    ${crumbs(p)}
+    <header class="article-head">
+      <h1>${esc(p.zh)}</h1>
+      ${metaBits.length ? `<p class="article-meta">${metaBits.join('<span aria-hidden="true">·</span>')}</p>` : ""}
+    </header>
+    ${metaTable}
+    ${lead}
+    <div class="prose">
+${emptyNote}
+${bodyHtml}
+    </div>
+    ${external}
+    ${pager}
+  </main>
+
+${footer("zh")}
+</body>
+</html>
+`;
+}
+
+// ---------- write ----------
+
+for (const dir of ["projects", "writing", "photography", "about"]) rmSync(join(OUT, dir), { recursive: true, force: true });
+
+const write = (rel, html) => {
+  const file = join(OUT, rel, "index.html");
+  mkdirSync(dirname(file), { recursive: true });
+  writeFileSync(file, html);
+};
+
+write("", homePage("zh"));
+write("en", homePage("en"));
+for (const p of rendered) write(pagePath(p), articlePage(p));
+console.log(`wrote 2 home pages + ${rendered.length} article pages`);
+
 const today = new Date().toISOString().slice(0, 10);
-const entry = (loc) => `  <url>
+const homeEntry = (loc) => `  <url>
     <loc>${loc}</loc>
     <lastmod>${today}</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE}${BASE}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${SITE}${BASE}en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${BASE}"/>
   </url>`;
-const sitemap = join(ROOT, "public", "v2", "sitemap.xml");
+const articleEntries = rendered.map((p) => `  <url>\n    <loc>${SITE}${urlOf(p)}</loc>\n    <lastmod>${shDate(data[p.id].edited)}</lastmod>\n  </url>`);
 writeFileSync(
-  sitemap,
+  join(OUT, "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${entry(`${SITE}${BASE}`)}
-${entry(`${SITE}${BASE}en/`)}
+${[homeEntry(`${SITE}${BASE}`), homeEntry(`${SITE}${BASE}en/`), ...articleEntries].join("\n")}
 </urlset>
 `
 );
-console.log("wrote", sitemap);
+console.log(`wrote sitemap.xml (${2 + articleEntries.length} urls)`);

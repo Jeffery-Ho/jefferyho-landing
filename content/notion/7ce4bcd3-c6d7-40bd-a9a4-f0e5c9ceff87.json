@@ -1,0 +1,770 @@
+{
+ "id": "7ce4bcd3-c6d7-40bd-a9a4-f0e5c9ceff87",
+ "title": "（六）Foundations/Layout、Materials",
+ "created": "2022-10-22T02:29:25.990Z",
+ "edited": "2022-12-12T13:34:00.000Z",
+ "titles": {
+  "7ce4bcd3-c6d7-40bd-a9a4-f0e5c9ceff87": "（六）Foundations/Layout、Materials",
+  "34a8557f-73f4-4a98-a931-82959147364b": "重读HIG",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "sub_sub_header",
+   "id": "aeac97f9-d08d-4bfa-a218-8ec29f4c112e",
+   "r": [
+    [
+     "Layout"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "7b36ce60-6065-448f-8e62-6860583fa491",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "layout-materials/01.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "80845441-e9ed-4120-864d-9164a2803b46",
+   "r": [
+    [
+     "A "
+    ],
+    [
+     "safe area ",
+     [
+      [
+       "i"
+      ]
+     ]
+    ],
+    [
+     "defines the area within a view that isn’t covered by a navigation bar, tab bar, toolbar, or other views a window or scene might provide. Safe areas are essential for avoiding a device’s interactive and display features."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "7aae05cd-df9c-4dc8-ab64-27ae4fcacbb0",
+   "r": [
+    [
+     "安全区域",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "定义了视图中没有被导航栏、选项卡栏、工具栏或窗口或场景可能提供的其他视图覆盖的区域，它对于设备的交互和显示功能至关重要。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "44e6142b-f5a1-43ff-84ef-a5f4bb32e6e5",
+   "r": [
+    [
+     "Use placement to convey relative importance. ",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "In general, place principal items in the upper half of the screen or window, near the leading side. People typically start in this area, whether they’re looking at the screen or using a screen reader like VoiceOver."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "977324c1-1c7a-42d8-957b-7db0d2591b38",
+   "r": [
+    [
+     "使用位置来传达相对重要性。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "一般情况下，将主要项目放在屏幕或窗口的上半部分，靠近前面一侧。人们通常从这个领域开始，不管他们是看着屏幕还是使用像 VoiceOver 这样的屏幕阅读器。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "86409e57-67d1-4799-8710-73e018f95567",
+   "r": [
+    [
+     "嗯，这个符合了人们的阅读习惯。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "f66ae9c3-7b28-438a-ab60-e1c10a3ff10c",
+   "r": [
+    [
+     "Elevate essential information by giving it sufficient space. ",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "People want to view the most important information instantly, … People can easily access secondary information by scrolling."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "d11b3a9a-0727-4df3-ab32-54c404d21490",
+   "r": [
+    [
+     "通过给予足够的空间来提升重要信息。人们希望在第一屏上立即查看最重要的信息，而次要信息，他们可以通过滚动屏幕进行查看。也就是说，我们在设计界面时，需要充分考虑什么信息是主要的，将它们放在第一位，而次要信息可以适当往下放。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "6dfa223e-d5bb-4385-8c6d-3639b1001d86",
+   "r": [
+    [
+     "When possible, consider alluding to hidden content by partially displaying offscreen elements.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "67c55e4c-e1f6-4706-bc17-7068ddfff54b",
+   "r": [
+    [
+     "在可能的情况下，考虑通过部分显示屏幕外的元素来暗示隐藏的内容。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "1a6fa5c6-ee21-47ba-a2f6-8351b0784fc1",
+   "r": [
+    [
+     "Platform considerations",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "9bc01ae9-7eee-492d-8207-21d8f1ed7cad",
+   "r": [
+    [
+     "If it’s essential that your app run in a single orientation, don’t tell people to rotate their device to match; if your app doesn’t rotate automatically when someone holds the device in an unsupported orientation, they’ll know instinctively to rotate it."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "f14e8051-c5ec-47f3-8c74-b802a81906d0",
+   "r": [
+    [
+     "对于横屏布局和竖屏布局的考虑，比较重要的一点是，"
+    ],
+    [
+     "如果你的应用程序必须以单一的方向运行，不要通过设计来暗示用户，他们可以旋转屏幕后继续使用。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "56b1bb1b-e8ef-4b8f-9a68-174392b9cc5a",
+   "r": [
+    [
+     "iOS keyboard layout guide",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "4ac5bf0f-52bf-4927-8c11-a9022b1f6a82",
+   "r": [
+    [
+     "iOS 15 引入了 keyboard layout guide（键盘布局），可以帮助开发者更方便地计算弹出键盘后的安全区域布局，如下图为键盘弹出和收回时安全区判断。做设计时如果是指定了常驻底部的元素，那么弹出键盘后如果指定该元素依然浮在键盘上方，开发设置安全区底部绑定键盘区顶部即可。"
+    ]
+   ]
+  },
+  {
+   "t": "column_list",
+   "id": "9abf7be2-96d8-4531-a29e-8b8b163b5fa0",
+   "c": [
+    {
+     "t": "column",
+     "id": "4217f225-3951-4855-9e7a-8a0c22c2a532",
+     "ratio": 0.5,
+     "c": [
+      {
+       "t": "image",
+       "id": "d8604ff2-c16c-4ef4-aca4-b83c09be96f4",
+       "r": [
+        [
+         "Untitled"
+        ]
+       ],
+       "file": "layout-materials/02.jpg",
+       "w": 1600,
+       "h": 1600
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "7c504a99-44ae-4815-b427-e38d84a529a0",
+     "ratio": 0.5,
+     "c": [
+      {
+       "t": "image",
+       "id": "b9834f07-665b-4a5e-9a4d-44de34a3af3a",
+       "r": [
+        [
+         "Untitled"
+        ]
+       ],
+       "file": "layout-materials/03.jpg",
+       "w": 1600,
+       "h": 1600
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "text",
+   "id": "245f43be-3ae4-4fd3-a99c-4d94c954a38b",
+   "r": [
+    [
+     "TVOS",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "6539a876-7d7a-44c4-8481-9e6426c7ba48",
+   "r": [
+    [
+     "It can be difficult for people to see content that close to the edges, and unintended cropping can occur due to overscanning on older TVs."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "7dc0aaf5-9819-45b1-96de-e0b5693ee4a4",
+   "r": [
+    [
+     "人们很难看到接近边缘的内容，并且由于在旧电视机上可能由于分辨率不足导致画面放大，可能会对内容发生意外的裁剪。因此，在tvOS中，画面的安全区至少是两侧保留80px，上下两端保留60px"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "f4ca1832-86d9-4bbf-a81d-cdc2aa76e5ef",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "layout-materials/04.jpg",
+   "w": 1600,
+   "h": 961
+  },
+  {
+   "t": "text",
+   "id": "611f2ca2-bf42-4ee8-bb31-1b9567e5c7a4",
+   "r": [
+    [
+     "watchOS",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "42582c0f-bb3c-4c31-b5e9-c79763ff3d31",
+   "r": [
+    [
+     "Avoid placing more than two or three controls side by side in your interface.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "\n As a general rule, display no more than three buttons that contain glyphs — or two buttons that contain text — in a row. Although it’s usually better to let text buttons span the full width of the screen, two side-by-side buttons with short text labels can also work well, as long as the screen doesn’t scroll."
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "1d2ae00d-d3c2-4482-870f-d99b73702dd9",
+   "r": [
+    [
+     "避免在界面中并排放置多于两个或三个控件。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "在Apple Watch这个寸土寸金的屏幕中，一行中显示不超过三个包含符号的按钮ーー或两个包含文本的按钮。使用通栏的按钮通常来说会更好操作，但是两个并排的带有短文本标签的按钮也可以很好地工作，因为这样的话就不需要用户进行滚动操作。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "541e2c44-7910-40ae-8261-617a1dd595d8",
+   "r": [
+    [
+     "Support autorotation in views people might want to show others.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "df5a0eff-22c5-43db-a718-8ccbecfbac3a",
+   "r": [
+    [
+     "当人们希望向他人展示屏幕内容时，支持自动旋转屏幕。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "比如说，在使用 watch 二维码支付的场景中，自动旋转屏幕方向，可以方便收款方更好地识别屏幕内容。"
+    ]
+   ]
+  },
+  {
+   "t": "column_list",
+   "id": "234f4749-7c1c-4ee7-97c9-7db7149e2303",
+   "c": [
+    {
+     "t": "column",
+     "id": "406bbec2-8dbb-4153-b0b9-d3afea25fa9a",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "text",
+       "id": "070cadcf-668c-44b6-9782-08f131e04478"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "e2b9ab9d-3b91-41a2-b445-a86db6f091a6",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "divider",
+       "id": "cd0008af-997a-4fc0-9e3d-8af014af0ee0"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "460ffbae-e42e-4df3-85ae-e0ce7fa68767",
+     "ratio": 0.3333333333333333,
+     "c": [
+      {
+       "t": "text",
+       "id": "6c0b6f12-a5e5-4b8f-a6da-9cf4671ae588"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "97d33b83-5bff-4495-b76f-9b6c6dbae047",
+   "r": [
+    [
+     "Materials",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "a8455e7e-52c5-4ece-87fc-c0ed63d0e45c",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "layout-materials/05.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "a3054382-a0d5-46c3-974b-3bb82be37460",
+   "r": [
+    [
+     "材质这一章比较简单，只讲几点："
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "68170ee6-eee9-40b9-9023-2b3c85470494",
+   "r": [
+    [
+     "What 是什么",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "8c4b0d43-33c3-4478-87c4-84c2cc73eee8",
+   "r": [
+    [
+     "一种视觉效果，在系统中通过在文本、图标的背景上，向界面下一层的背景提取颜色并显示出来，通常是毛玻璃效果，以达到增强画面的深度感。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "d7611743-d6fc-42ed-8d92-531c3a590d2e",
+   "r": [
+    [
+     "系统的背景层分为了语义化的四种：透明度由低到高为 Thick、Regular、Thin 和 Ultrathin , 其中 Regular 为默认。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "7d954881-3a09-4e02-8c65-15c832a9c5b1",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "layout-materials/06.jpg",
+   "w": 1600,
+   "h": 1168
+  },
+  {
+   "t": "text",
+   "id": "5c34bd2e-6990-4b9b-a4ce-9958a76172fd",
+   "r": [
+    [
+     "图源：@fenx",
+     [
+      [
+       "h",
+       "gray"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "91a6f285-68d7-4258-9de7-f98f90e916bb",
+   "r": [
+    [
+     "Why 为什么",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "166fd422-259c-4b09-92db-1adfd6f85d69",
+   "r": [
+    [
+     "Materials can combine with vibrancy to add visual interest to the interface."
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "ba85a60c-3db4-42e4-997b-ca85cda98577",
+   "r": [
+    [
+     "材质可以与活力结合，"
+    ],
+    [
+     "增加界面的视觉趣味",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "0c6557f0-6632-4551-a878-63fcba941ae0",
+   "r": [
+    [
+     "Where 用在哪里",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "1da67d7d-8e8a-4371-9177-dcc3eea7674b",
+   "r": [
+    [
+     "iOS、iPadOS上的原生对话框、提示"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "202333e5-955a-4b77-bd53-f5933cb9d707",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "layout-materials/07.jpg",
+   "w": 1600,
+   "h": 520
+  },
+  {
+   "t": "text",
+   "id": "91b51fc5-bb0f-4137-aa4d-e48877fedc51",
+   "r": [
+    [
+     "图源：@fenx",
+     [
+      [
+       "h",
+       "gray"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "6afc5406-25ee-4e90-95d5-bc98ede04ea2",
+   "r": [
+    [
+     "watchOS"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "c9b2bae7-f3bc-4768-bb4f-7f4a0232024a",
+   "r": [
+    [
+     "暂不支持这个材质效果。",
+     [
+      [
+       "s"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "f0b3f3f7-4213-4624-b9e3-4bcfd0d4c1df",
+   "r": [
+    [
+     "macOS"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "b04b4533-6426-4fb1-9a12-514cfeb451d9",
+   "r": [
+    [
+     "在macOS中有两种混合模式，一种在窗口背后，另一种是和窗口融合。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "1fb5e3ff-c524-4964-addc-04308442a549",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "layout-materials/08.jpg",
+   "w": 1600,
+   "h": 1000
+  },
+  {
+   "t": "text",
+   "id": "cfa1216b-9360-4e3d-93e8-cb1c86a29b0c",
+   "r": [
+    [
+     "这是第一种，在这种模式下，窗口后面的内容会显示出来，帮助用户保留围绕你的应用程序或游戏的一些上下文。"
+    ],
+    [
+     "菜单、工作表和侧栏等组件自动使用此模式",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "799185b6-248b-4ebe-868c-17ceb37065f5",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "layout-materials/09.jpg",
+   "w": 1600,
+   "h": 1000
+  },
+  {
+   "t": "text",
+   "id": "3f473098-4757-4bb9-bce7-90de93c9c989",
+   "r": [
+    [
+     "这是第二种，在这个模式下，允许通过其他窗口组件显示窗口内容。例如，当窗口内容在工具栏下滚动时，工具栏可以使用这种模式，给人一种连续性的感觉。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "745bfae0-07bc-4191-ac9d-7f62a8e562f7",
+   "r": [
+    [
+     " tvOS"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "bef6c442-0ae7-457c-b385-c276a5ceb525",
+   "r": [
+    [
+     "定义和iOS类似，没有过多展开。",
+     [
+      [
+       "s"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "06dc9570-0d75-4605-8354-84ba70c91d74",
+   "r": [
+    [
+     "对于移动端app的产品设计师来说，这一章内容派上用场的地方并不多，能够理解官方对于毛玻璃材质的四种定义就足够了。"
+    ]
+   ],
+   "color": "teal_background",
+   "icon": "💡"
+  }
+ ]
+}

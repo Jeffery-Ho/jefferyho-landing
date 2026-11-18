@@ -1,0 +1,425 @@
+{
+ "id": "af7a191d-32f1-4aec-9802-5e9dd2254082",
+ "title": "腾讯-医疗健康官网设计策略提案",
+ "created": "2022-10-09T03:49:00.000Z",
+ "edited": "2025-10-14T14:51:16.823Z",
+ "titles": {
+  "af7a191d-32f1-4aec-9802-5e9dd2254082": "腾讯-医疗健康官网设计策略提案",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "callout",
+   "id": "aef5772f-87b8-4aee-87be-f39eb30ddc41",
+   "r": [
+    [
+     "腾讯医疗官网 "
+    ],
+    [
+     "https://healthcare.tencent.com/",
+     [
+      [
+       "a",
+       "https://healthcare.tencent.com/"
+      ]
+     ]
+    ],
+    [
+     "\n\n我负责整体的设计提案，包括确定竞品、按照视觉元素组成（结构、字体、颜色、质感、动效、情感化设计）梳理表达线索、制定设计规范，以及过程UI设计、最终的UI设计，该设计已于2019年上线，至今未有大改动。"
+    ]
+   ],
+   "color": "teal_background",
+   "icon": "💡"
+  },
+  {
+   "t": "image",
+   "id": "8d79c166-c487-467a-bfd4-f9073398435d",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/01.jpg",
+   "w": 1600,
+   "h": 872
+  },
+  {
+   "t": "text",
+   "id": "7d88bbcf-c9cb-4e66-be20-f7d9a7a8011d",
+   "r": [
+    [
+     "腾讯医疗背景"
+    ]
+   ],
+   "color": "gray"
+  },
+  {
+   "t": "image",
+   "id": "1cb24874-db04-43cb-b170-b38549357c93",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/02.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "4389b9d5-84de-4c3b-ab45-68c71060faee",
+   "r": [
+    [
+     "提案探索步骤"
+    ]
+   ],
+   "color": "gray"
+  },
+  {
+   "t": "image",
+   "id": "218bc2ef-d085-4e99-8b4e-2b38839ad8b3",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/03.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "ec186a7b-2d17-4bb2-98c1-2ed95d7fac4d",
+   "r": [
+    [
+     "明确设计目标",
+     [
+      [
+       "h",
+       "gray"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "ae881c75-e52d-4482-9940-3e25266ac6df",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/04.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "a04a74e5-14b0-4ba1-9493-f064d99735cc",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/05.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "054d27c7-34fd-43d5-a9cd-fed9d9112ba8",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/06.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "0f5eb795-4f05-4865-957e-b2bc86e30e7f",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/07.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "298acf9f-bb76-45f7-b0dd-dfd9309bfc80",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/08.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "4e0e11b8-430a-4d8b-b2e9-f8d6b62f5180",
+   "r": [
+    [
+     "梳理表达线索",
+     [
+      [
+       "h",
+       "gray"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "c53ce87d-b63e-44c2-a717-d5b2b471ffa1",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/09.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "1bdb4ca7-347b-424d-bab5-7303e348f4df",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/10.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "d2106ca3-5ea5-4012-920f-49d4b4d2b5b2",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/11.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "9615ca32-d9b0-46a2-b562-983cdcc0db2c",
+   "r": [
+    [
+     "建立设计规范(结构布局、色彩使用、字体使用、icon、交互动效、情感化、品牌传达)",
+     [
+      [
+       "h",
+       "gray"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "7afdfbbe-943a-4567-9056-d61313b8a572",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/12.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "9a8929c7-6b02-43bf-b4e5-c982551377fb",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/13.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "5a1fd795-7dc0-46dc-83de-b0e2d4f69010",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/14.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "c4400a1f-cd76-4e72-a69e-612a0408e728",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/15.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "bc8e032b-c712-4038-8a56-41f7189c7742",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/16.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "2cfe815e-3cc4-479a-8283-bed812ace7a7",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/17.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "d8ae72c2-5a49-4102-9b8b-96d139b90de4",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/18.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "289e8102-401e-47ca-b359-a8a1b21b055f",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/19.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "62634e8d-e18c-49b7-b4ee-fd1e02e14514",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/20.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "90bbe4ae-845d-407f-a6be-ed355b3aa57a",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/21.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "2cb6e558-8e64-4357-8150-b16430c90343",
+   "r": [
+    [
+     "过程设计",
+     [
+      [
+       "h",
+       "gray"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "3a9c3363-8019-4c27-bb34-2cc5b77077a1",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/22.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "00e13e51-caa8-42f1-a8ed-35376a2c8b06",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/23.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "64f9de40-514c-4d2e-990a-437fcea192dc",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/24.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "94136173-ea5b-479e-aff6-83684419e2e5",
+   "r": [
+    [
+     "最终确定方案"
+    ]
+   ],
+   "color": "gray"
+  },
+  {
+   "t": "image",
+   "id": "508ce307-e8e8-42bd-a8e2-4feb1ffc2bfd",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "tencent-healthcare-website/25.jpg",
+   "w": 1600,
+   "h": 900
+  }
+ ]
+}

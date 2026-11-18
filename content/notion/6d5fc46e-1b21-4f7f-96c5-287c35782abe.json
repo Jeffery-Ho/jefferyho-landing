@@ -1,0 +1,1193 @@
+{
+ "id": "6d5fc46e-1b21-4f7f-96c5-287c35782abe",
+ "title": "（五）Foundations/Images、Inclusion",
+ "created": "2022-10-10T05:02:25.321Z",
+ "edited": "2022-10-16T15:21:00.000Z",
+ "titles": {
+  "6d5fc46e-1b21-4f7f-96c5-287c35782abe": "（五）Foundations/Images、Inclusion",
+  "34a8557f-73f4-4a98-a931-82959147364b": "重读HIG",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "sub_sub_header",
+   "id": "da04aebc-798d-439f-ae20-ad15c74bd784",
+   "r": [
+    [
+     "Images 图像"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "95ffac30-e3c3-474d-9e7a-a092be5a4339",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "images-inclusion/01.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "1551641e-349c-4885-9ab7-c92f1c591a20",
+   "r": [
+    [
+     "Always test images on a range of actual devices.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "18c8e4a9-b281-47bd-b4d5-b515dc2abb39",
+   "r": [
+    [
+     "始终确保在一系列实际设备上测试图像。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "当我们的设计要适配到不同的设备上时，例如 iPhone、安卓手机、大屏电视、中控屏，需要在设备上测试显示效果，保证我们的图不会被压缩或者出现意料外的情况。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "06eef83d-5279-491f-9d66-28c0e18692df",
+   "r": [
+    [
+     "Platform considerations",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "59cd33fc-e2db-4eb9-83d9-9e449fe7a83f",
+   "r": [
+    [
+     "tvOS",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "column_list",
+   "id": "12bceaf4-f519-4491-a9ed-f956087da036",
+   "c": [
+    {
+     "t": "column",
+     "id": "4d8f52d5-31d7-4f9a-9e47-0c716584c0e3",
+     "ratio": 0.375,
+     "c": [
+      {
+       "t": "image",
+       "id": "2ec28eed-55a4-4a6a-ae91-d0cd8b5de51b",
+       "r": [
+        [
+         "Untitled"
+        ]
+       ],
+       "file": "images-inclusion/02.jpg",
+       "w": 1600,
+       "h": 979
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "a0fe3f58-4f52-45bf-b62e-0e813af88324",
+     "ratio": 0.625,
+     "c": [
+      {
+       "t": "image",
+       "id": "0b5d9be8-52ca-4706-b334-6d7cc955c8f2",
+       "r": [
+        [
+         "Untitled"
+        ]
+       ],
+       "file": "images-inclusion/03.jpg",
+       "w": 1600,
+       "h": 977
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "51d8efed-9777-4193-80fc-3b85758d8603",
+   "r": [
+    [
+     "Layered images are at the heart of the Apple TV user experience. The system combines layered images, transparency, scaling, and motion to produce a sense of realism and vigor that evokes a personal connection as people interact with onscreen content.\nAs someone interacts with an image, layers closer to the surface elevate and scale, overlapping lower layers farther back and producing a 3D effect."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "1e4d1c8a-9b57-4ec6-9360-a959da132578",
+   "r": [
+    [
+     "分层图像是苹果电视用户体验的核心。（",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "上图展示的卡片就是tvOS里面出现的分层图像），它结合了分层图像、透明度、缩放和动作，（它们聚集在一起形成一个单独的图像。层与层之间的分离，以及透明度的使用，给用户创造了一种深度的感觉。（当用户在操作时），它能产生一种真实感和活力，当人们与屏幕上的内容互动时，唤起一种联系的感觉。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "ce478c37-3c46-4a20-b023-248151fd14bd",
+   "r": [
+    [
+     "当有人与图像交互时，靠近表面的图层会升高和缩放，重叠较低的图层并产生3D 效果。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "（我也没有Apple TV，所以没有办法动态演示，脑补一下用遥控器操作卡片的时候，卡片自带的效果）"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "ca8aab85-8e42-4339-a466-f256c6b8aa53",
+   "r": [
+    [
+     "注：括号内容是我补充的部分"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "35cff42f-d405-47eb-82a0-d11092e4b03a"
+  },
+  {
+   "t": "text",
+   "id": "59dacb9f-b700-4e3a-b91f-ab15ebb5a3f3",
+   "r": [
+    [
+     "其实还有关于watchOS的部分，但因为我没有参与过watch应用的设计，所以这部分按下不表。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "d6369a99-f052-4f39-aaa5-33204fbe4507"
+  },
+  {
+   "t": "column_list",
+   "id": "7dd01443-3400-416c-a2cb-2023d0727959",
+   "c": [
+    {
+     "t": "column",
+     "id": "70f0ac59-3c63-4a78-9233-beef4b46667a",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "text",
+       "id": "0a4afbd8-4f97-451a-90bb-356b66f11f9a"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "fd62abe4-1465-4c34-bba5-d76c7c6a11bc",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "divider",
+       "id": "dcf77194-d140-4801-8db6-4efe3b2a0250"
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "5ae461c9-c2de-4157-b1e4-4c69e620dad5",
+     "ratio": 0.3333333333333333,
+     "c": [
+      {
+       "t": "text",
+       "id": "c248b644-6b96-48f8-93b9-eb243d037cb1"
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "59b180e9-7b87-492e-a56f-26af26141863",
+   "r": [
+    [
+     "Inclusion",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     " 包容性"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "5b803607-b15e-428a-be2a-133411552e03",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "images-inclusion/04.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "1070cb1d-929b-4c8a-9564-45b3f734b77c",
+   "r": [
+    [
+     "❗️包容性设计是非常重要的一节内容，笔记会比较多。",
+     [
+      [
+       "h",
+       "gray"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "62adaeb7-7f74-4923-bfe8-9822522569dd",
+   "r": [
+    [
+     "As with all design, designing an inclusive app is an iterative process that takes time to get right. Throughout the process, be prepared to examine your assumptions about how other people think and feel and be open to evolving knowledge and understanding."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "793ba621-646e-4490-a87d-b492b72f7bec",
+   "r": [
+    [
+     "“正如所有的设计一样，设计一个包容性的应用程序是一个迭代的过程，需要花费时间来获得正确的结果。在整个过程中，"
+    ],
+    [
+     "准备好检查你对其他人的想法和感受的假设，并对不断发展的知识和理解持开放态度。”",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "做有开放性的设计，是一个挺有挑战的事情，意味着要多想几个迭代，意识到功能的拓展性，在开放的基础上叠加创意，是有趣的挑战。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "bcd4b2d5-a991-47ef-8d5a-dc6b81e545d5",
+   "r": [
+    [
+     "Inclusive by design 包容性设计",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "c559cf64-439b-4547-9257-585706ba0acd",
+   "r": [
+    [
+     "Simple, intuitive experiences are at the core of well-designed apps."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "66d69cd0-f747-4914-aae5-f14c509f084e",
+   "r": [
+    [
+     "简单、直观的体验是 app 好设计的核心。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "69b11b14-19de-448a-a855-344b61fd1f1b",
+   "r": [
+    [
+     "Empathy is an important tool in this investigation because it helps you understand how people with different perspectives might respond to the content and experiences you create."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "07be2bc2-6ca7-4d2e-b0f6-088be2645fdd",
+   "r": [
+    [
+     "构建"
+    ],
+    [
+     "同理心",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "是研究包容性设计中的一个重要前提，因为它可以帮助你理解不同视角的人对你创造的内容、体验的反应。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "435a147d-5592-41ea-b2a4-592f1a79be9b",
+   "r": [
+    [
+     "Although each person’s perspective comprises a unique intersection of human qualities that’s both distinct and dynamic, all perspectives arise from human characteristics and experiences that everyone shares, including:\n尽管每个人的视角"
+    ],
+    [
+     "都包含一个独特的人类特质的交叉点，既",
+     [
+      [
+       "s"
+      ]
+     ]
+    ],
+    [
+     "是独特的又是动态的，但是所有的视角都来源于每个人共有的人类特征和经历，包括:"
+    ]
+   ],
+   "color": "teal",
+   "c": [
+    {
+     "t": "bulleted_list",
+     "id": "06993486-9521-462b-86b0-9f31ee977a4a",
+     "r": [
+      [
+       "Age 年龄"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "c06d7d91-95ac-452f-96c2-f66560dbcfac",
+     "r": [
+      [
+       "Gender and gender identity 性别与性别认同"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "c2bb7eca-873b-475f-a414-2b5cfec0d154",
+     "r": [
+      [
+       "Race and ethnicity 种族和民族"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "a595f489-f614-47a7-aaa1-0e61895b9ee6",
+     "r": [
+      [
+       "Sexuality 性取向"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "d15bde43-f71f-49e2-82a1-09b044399192",
+     "r": [
+      [
+       "Physical attributes 身体特征"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "5144d212-01b2-489a-b330-b34c7c669807",
+     "r": [
+      [
+       "Cognitive attributes 认知属性"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "c4694eca-23be-4c66-8bee-9f5036875dcf",
+     "r": [
+      [
+       "Permanent, temporary, and situational disabilities 永久性，暂时性和情境性残疾"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "a8e15630-09f6-42f2-abe3-a537b7650c66",
+     "r": [
+      [
+       "Language and culture 语言和文化"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "e96f1ea5-7b73-4a9d-9ca7-63835534a475",
+     "r": [
+      [
+       "Religion 宗教"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "f5e82417-7511-4cfe-b373-9a694974c3a6",
+     "r": [
+      [
+       "Education 教育"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "2763742f-c449-4b55-96ac-0d525da802be",
+     "r": [
+      [
+       "Political or philosophical opinions 政治或哲学观点"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "aeb1dc98-8500-4a51-b064-7c7aa7d2bc19",
+     "r": [
+      [
+       "Social and economic context 社会和经济背景"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "text",
+   "id": "f900d348-fba1-46eb-bbb1-71deba7e9094",
+   "r": [
+    [
+     "我觉得，这些人类特征对于我们做前期的用户研究非常有帮助，可以从这些点出发去研究用户，总结画像。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "d43cf166-377d-4a54-be04-54d1dce3f655"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "c2816ebe-0486-4f20-9360-9130be0b77e8",
+   "r": [
+    [
+     "Welcoming language 欢迎的语言",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "1ef3b649-0fdd-4ff7-abfb-101b6894389f",
+   "r": [
+    [
+     "Using plain, inclusive language welcomes everyone and helps them understand your app."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "5da22c60-11f6-4a3a-8f1b-fbadc2fa5673",
+   "r": [
+    [
+     "使用简单、包容的语言欢迎每个人",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "，并帮助他们了解你的产品。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "1d23a59f-9c8f-4d02-919b-2bc703ab862f",
+   "r": [
+    [
+     "Pay attention to how you refer to people.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "891fffaf-2c1e-4395-b34a-8b49fecc51aa",
+   "r": [
+    [
+     "注意对别人的称呼。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "文案上建议使用“你”或“你的”，使用“用户”会让人感到疏远。另外，可以用“我们”指代公司/团队。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "b79d2268-7e1a-4803-9f40-a6f2aa9e5d96",
+   "r": [
+    [
+     "Avoid using specialized or technical terms without defining them.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "ff0b8532-e293-4f51-ac2c-7ba664341769",
+   "r": [
+    [
+     "避免使用没有（普适性）定义的专业术语或技术术语。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "即便用户知道这些专业术语的定义，但如果一开始就使用简单的语言代替专业术语，那么文案也会更加通俗易懂。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "d9d32916-1734-4979-8ef4-02e735df4fb4",
+   "r": [
+    [
+     "Consider carefully before including humor.",
+     [
+      [
+       "b"
+      ],
+      [
+       "h",
+       "teal"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "32f9b674-eda8-4a72-8b6f-33fcae6a4e5b",
+   "r": [
+    [
+     "仔细考虑一些包含地域性的“笑话”。这种算是极端情况，如果产品文案里面包含了一些带有地域、民族、时效性的“笑话”“段子”“梗”，要考虑那些不接受、不理解他的人的感受，或许会激怒他们或者让他们感觉不舒服。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "4977719b-0e5a-4257-9209-411b5dbf4d9d"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "3e23f759-20ce-4cd2-9b4b-de189da5333e",
+   "r": [
+    [
+     "Being approachable 平易近人",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "1b1f9c8e-714b-451b-9b43-e349dbd3dd59",
+   "r": [
+    [
+     "An approachable app doesn’t require people to have particular skills or knowledge before they can use it, and it gives people a clear path toward deepening their understanding over time."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "a663adfa-e1dd-41ce-bdea-2ea56348452b",
+   "r": [
+    [
+     "“一个平易近人的 app 并不需要人们拥有特定的技能或知识才能使用，而且它给人们提供了一个随着时间的推移加深理解的清晰途径。”茅塞顿开！"
+    ],
+    [
+     "给用户提供一个能够推进且清晰的使用路径，在做新手引导设计时，这件事非常重要。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "7eba1e16-6b6d-4cfd-94d6-114a61743edd",
+   "r": [
+    [
+     "Consider designing a first-launch experience that helps new users take a step-by-step approach while letting experienced users skip straight to the content they want."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "241e16f5-6e45-4b76-aed8-5951bb3f555d",
+   "r": [
+    [
+     "“可以考虑设计一个首次发布体验，帮助新用户采取一步一步的方法，同时让有经验的用户直接跳到他们想要的内容。”也就是，对于新手来说，可以提供一个“新手任务”，但也应该允许用户直接跳过。参考我做过的案例👇"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "d7ea1228-1a8a-4e1a-8214-4abbcbf221d4",
+   "r": [
+    [
+     "开放平台14.png"
+    ]
+   ],
+   "file": "images-inclusion/05.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "44855bcc-666e-4770-ac48-d2b6726223de"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "de0f47d4-35a4-40a5-9ee8-967f34953ee9",
+   "r": [
+    [
+     "Gender identity 性别认同",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "3ac09b83-5002-4c9a-a62b-31a33a039b4f",
+   "r": [
+    [
+     "在苹果看来，大多数 app 是不需要知道用户的性别的。因此，在设计中去除性别符号，将有助于促进包容性。例如使用这样的无性别图标作为用户头像。"
+    ]
+   ]
+  },
+  {
+   "t": "column_list",
+   "id": "dc14e352-3a1d-4479-b41d-b33c520863b5",
+   "c": [
+    {
+     "t": "column",
+     "id": "0b6731bd-2f34-4b8f-82f8-cfd8ff4cf502",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "image",
+       "id": "f0debcc4-3b58-48a1-94bd-da516fd1cfd1",
+       "r": [
+        [
+         "Untitled"
+        ]
+       ],
+       "file": "images-inclusion/06.jpg",
+       "w": 1600,
+       "h": 1600
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "a2dcb5e4-4085-4e3e-8ebf-97503dc347f4",
+     "ratio": 0.33333333333333337,
+     "c": [
+      {
+       "t": "image",
+       "id": "7bb32da6-fd78-42d7-9af3-a5bcc8f0810d",
+       "r": [
+        [
+         "Untitled"
+        ]
+       ],
+       "file": "images-inclusion/07.jpg",
+       "w": 1600,
+       "h": 1600
+      }
+     ]
+    },
+    {
+     "t": "column",
+     "id": "a74a808b-2c29-4cfe-9a48-a26226287c77",
+     "ratio": 0.3333333333333333,
+     "c": [
+      {
+       "t": "image",
+       "id": "abc3d24d-8673-4a4e-9ccb-7a181eb5538f",
+       "r": [
+        [
+         "Untitled"
+        ]
+       ],
+       "file": "images-inclusion/08.jpg",
+       "w": 1600,
+       "h": 1600
+      }
+     ]
+    }
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "ffabc6fa-f8f3-484b-a653-4aeb68e97f5c",
+   "r": [
+    [
+     "but if your app requires this information — such as for health or legal reasons — consider providing inclusive options, such as "
+    ],
+    [
+     "nonbinary",
+     [
+      [
+       "i"
+      ]
+     ]
+    ],
+    [
+     ", "
+    ],
+    [
+     "self-identify",
+     [
+      [
+       "i"
+      ]
+     ]
+    ],
+    [
+     ", and "
+    ],
+    [
+     "decline to state",
+     [
+      [
+       "i"
+      ]
+     ]
+    ],
+    [
+     "."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "b182c8fc-b083-49cc-bf92-30701dbdbddc",
+   "r": [
+    [
+     "“但是如果你的应用程序需要这些信息(比如出于健康或法律原因) ，可以考虑提供包容性选项，比如非二进制、自我识别和拒绝状态。”其中，最后一个拒绝显示性别，是目前比较主流的方案，相比起提供更多的性别选项来说，只提供一个后退选项，更容易实现。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "660d8c3d-1a08-4a59-8a5a-bd9488573a9c"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "121564ad-3826-49ed-b47d-c4ecb8caa7ce",
+   "r": [
+    [
+     "People and settings 人物和环境",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "ca51d46e-73e9-4e91-827b-49f7ea9c57b9",
+   "r": [
+    [
+     "When people recognize others like themselves within an app and its related materials, they’re less likely to feel excluded and can be more likely to think they’ll benefit from the app."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "0832195c-78c5-420b-a91c-4c177bfd4d7f",
+   "r": [
+    [
+     "“当人们在一个应用程序及其相关材料中认出与自己相似的人时，他们不太可能感到被排斥，更有可能认为自己会从这个应用程序中受益。”比如，app中推出了“这些朋友最近跟你听了一样的歌”、“他们之前也买了这件商品”，找到同好，总是会让人开心的。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "4fc63b2d-c03c-40e5-8b8c-df2e0a0e3d6e"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "9bb5b7ef-bc3d-4283-879d-70ee653fb89e",
+   "r": [
+    [
+     "Avoiding stereotypes 避免刻板印象",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "b507af43-bbb5-4a90-8dd6-c3ee52a0e3b3",
+   "r": [
+    [
+     "Everyone holds biases and stereotypes — often unconsciously — and it can be challenging to discover how they affect your thoughts."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "8c96b61b-7d05-4c25-ad60-c033fd8ba2e6",
+   "r": [
+    [
+     "“每个人都有偏见和刻板印象ーー通常是无意识的ーー而且要发现它们是如何影响你的想法是很有挑战性的。”当然不是每个人都能意识到自己的偏见，但产品设计中应该尽量认识到一些偏见，并且避免向用户传达，这涉及到一些框架规则。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "2357e720-16d4-4b94-bc51-c07abc54abc0",
+   "r": [
+    [
+     "比如，在填写家庭成员资料时，默认提供一个父亲、一个母亲、还有孩子的页面框架，但这是狭义的做法，是我们对家庭的传统看法影响了我们去做这样的设计。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "2cc91f31-dc6c-480e-821b-8beec75b4583",
+   "r": [
+    [
+     "在苹果提供的例子中，当一个 app 要求人们选择安全问题，可能会提供这样的问题供用户选择，例如:"
+    ]
+   ]
+  },
+  {
+   "t": "bulleted_list",
+   "id": "d3e7e391-2dc4-4f84-887f-284711011ebc",
+   "r": [
+    [
+     "你在大学里最喜欢的科目是什么？"
+    ]
+   ]
+  },
+  {
+   "t": "bulleted_list",
+   "id": "1a1f0cc0-de01-4a7e-af6c-4963c0da2a13",
+   "r": [
+    [
+     "你的第一辆车是什么牌子的？"
+    ]
+   ]
+  },
+  {
+   "t": "bulleted_list",
+   "id": "5a82cac0-ac93-4f90-b7f7-25af8fa27515",
+   "r": [
+    [
+     "你第一次看到彩虹的时候是什么感觉？"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "812065cb-9d20-44ae-8f45-ba0b21d7bcc5",
+   "r": [
+    [
+     "但这些问题关联的事情，并不是每个人都经历过，"
+    ],
+    [
+     "避免过早给用户做出假设，是做问卷设计时一个比较重要的前提。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "可以将问题换成更普遍的共同经历，例如："
+    ]
+   ]
+  },
+  {
+   "t": "bulleted_list",
+   "id": "8e481495-9c3b-4d3b-8926-e0987a5c061b",
+   "r": [
+    [
+     "你最大的爱好是什么？"
+    ]
+   ]
+  },
+  {
+   "t": "bulleted_list",
+   "id": "d21cb6b3-5485-4b33-9748-9d445dac39b1",
+   "r": [
+    [
+     "你第一个朋友叫什么名字？"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "459fc8ad-f049-444b-a689-40c42c52eb0c"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "056bd29b-ddde-496d-9462-ecb855eba20e",
+   "r": [
+    [
+     "Accessibility 无障碍",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "6d0e2642-84b7-4c04-8a09-0686d826b174",
+   "r": [
+    [
+     "Prioritize simplicity and perceivability.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "bbac89cf-509a-451c-a1e6-51141cd7151d",
+   "r": [
+    [
+     "“优先考虑简单性和可感知性。”操作简单且一致、容易发现、任务容易执行，能够让更多的人理解app上的内容。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "fc7ca100-a4a3-438d-b280-35d81b37ed7f",
+   "r": [
+    [
+     "无障碍相关设计指南可以参考这个链接"
+    ]
+   ]
+  },
+  {
+   "t": "bookmark",
+   "id": "3bc7f1b0-75d0-48cd-ba32-86664f810635",
+   "href": "https://developer.apple.com/design/human-interface-guidelines/foundations/accessibility",
+   "title": "Accessibility",
+   "desc": "People use Apple's accessibility features to personalize how they interact with their devices in ways that work for them. An accessible app or game supports accessibility personalizations by design and gives everyone a great user experience, regardless of their capabilities or how they use their devices."
+  },
+  {
+   "t": "text",
+   "id": "754ec263-934d-4db2-a791-22c596808a83"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "b771c85e-6cc7-40a9-b352-346ee988f7a9",
+   "r": [
+    [
+     "Languages 语言",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "2a9aa494-3fbd-4ef4-9510-83d5c03e0143",
+   "r": [
+    [
+     "People expect to customize their device by choosing a language for text and a region for formatting values like date, time, and money. To welcome a global audience, first prepare your app to handle languages and regions other than your own — a process called "
+    ],
+    [
+     "internationalization .",
+     [
+      [
+       "i"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "e1087cc9-83aa-4b81-97a7-d3ea8240707b",
+   "r": [
+    [
+     "在国际化的过程中，人们希望通过选择自己熟悉的文本语言和格式化日期、时间和金钱等，来充分为自己使用。所以说，这小节虽然叫语言，但却是广义上的语言，包括了除了口头使用的语言之外，还包括了能够用于国际化的符号、颜色等。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "7720af31-e9ce-4ea0-abbd-4c90b20cc714",
+   "r": [
+    [
+     "有关国际化，可以参考这个链接"
+    ]
+   ]
+  },
+  {
+   "t": "bookmark",
+   "id": "dd0bbcdf-3cf1-4a25-9771-52683f06d7b8",
+   "href": "https://developer.apple.com/documentation/xcode/localization",
+   "title": "Apple Developer Documentation"
+  }
+ ]
+}

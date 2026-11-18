@@ -1,0 +1,453 @@
+{
+ "id": "452b1756-6194-42cb-bdbe-84091dde5d29",
+ "title": "（一）Platforms",
+ "created": "2022-09-23T15:38:42.811Z",
+ "edited": "2024-11-12T16:09:00.299Z",
+ "titles": {
+  "452b1756-6194-42cb-bdbe-84091dde5d29": "（一）Platforms",
+  "34a8557f-73f4-4a98-a931-82959147364b": "重读HIG",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "sub_header",
+   "id": "25941311-f713-4dd4-b77f-5ac654033d5f",
+   "r": [
+    [
+     "「平台」"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "bookmark",
+   "id": "ae14fbd0-406b-4ad3-a953-f73ae2c00309",
+   "href": "https://developer.apple.com/design/human-interface-guidelines/platforms/overview",
+   "title": "Platforms",
+   "desc": "Platforms"
+  },
+  {
+   "t": "text",
+   "id": "cd7bfb2d-48a3-4267-9634-430542d654bd",
+   "r": [
+    [
+     "介绍指南适用的各个端，一个卡片对应一个端的OS，里面介绍了不同设备的特征，并建议设计师和开发者根据这些特征展开设计或开发。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "80cced65-6ddb-419f-99ea-5f8473cae0b3",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "platforms/01.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "0cd99a58-849e-4fa1-963c-9c41f60d03d1"
+  },
+  {
+   "t": "divider",
+   "id": "369a62a5-7a10-4b75-8db4-61e565c5a7a9"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "60e56260-cbea-4dcd-896d-c3e7aef3df20",
+   "r": [
+    [
+     "iOS"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "4522ad07-2972-4802-ad34-73e067d7dca8",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "platforms/02.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "866dfdd4-d197-4468-9734-21253f6c47bd",
+   "r": [
+    [
+     "Enable interactions that support the way people usually hold their device. For example, it tends to be easier and more comfortable for people to reach a control when it’s located in the middle or bottom area of the display, so it’s especially important let people swipe to navigate back or initiate actions in a list row."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "21626f5c-69dd-42db-9587-e86bf5802083",
+   "r": [
+    [
+     "这段内容中提到了控件所处位置对于用户访问易用性的影响，"
+    ],
+    [
+     "当控件位于显示屏的中间或底部区域时，用户访问控件往往更容易、更舒适。因为这符合了用户握持设备的姿势习惯。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "3dd80def-bdcc-4d93-a8f1-3c047b815535",
+   "r": [
+    [
+     " iPadOS"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "4cebd791-1afc-4066-83be-e6f51e3f8df1",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "platforms/03.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "1dfcf255-26ff-47b6-bff7-fdb8c8f3c752",
+   "r": [
+    [
+     "Inputs.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "\n• People can interact with iPad using Multi-Touch "
+    ],
+    [
+     "gestures",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/inputs/touchscreen-gestures"
+      ]
+     ]
+    ],
+    [
+     " and "
+    ],
+    [
+     "onscreen keyboards",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/components/selection-and-input/onscreen-keyboards"
+      ]
+     ]
+    ],
+    [
+     " , an attached "
+    ],
+    [
+     "keyboard",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/inputs/keyboards"
+      ]
+     ]
+    ],
+    [
+     " or "
+    ],
+    [
+     "pointing device",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/inputs/pointing-devices"
+      ]
+     ]
+    ],
+    [
+     " , "
+    ],
+    [
+     "Apple Pencil",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/inputs/apple-pencil-and-scribble"
+      ]
+     ]
+    ],
+    [
+     " , or "
+    ],
+    [
+     "voice",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/technologies/siri/introduction"
+      ]
+     ]
+    ],
+    [
+     " , and they often combine multiple input modes.\n• Let people use Multi-Touch gestures, a physical keyboard or trackpad, or Apple Pencil, and consider enabling unique interactions that combine multiple input modes."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "818a6337-78ce-46ce-911f-e30cba1d59be",
+   "r": [
+    [
+     "这段内容提到了 iPad 上允许人们使用复合的交互，并建议让用户多点触控手势、物理键盘或触控板或 Apple Pencil ，并考虑启用组合多种输入模式的独特交互。但我其实并不苟同这个建议，就我个人使用12.9寸 iPad Pro 的体验来说，"
+    ],
+    [
+     "我认为 iPadOS 的交互还是过于复杂了，物理控件操作虚拟界面，虚拟控件操作虚拟界面，多种多样的任务窗口，用户要在不同的交互方式之间进行切换，难道这样真的能增加操作效率吗？至少易用性我会打个问号，但我可以给予肯定的是，足够大的触摸屏，能够带来阅读上的效率提高。",
+     [
+      [
+       "h",
+       "red_background"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "237a3ba8-ae47-4235-b296-e8c23e85964c",
+   "r": [
+    [
+     "macOS"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "0541a1ab-721a-4036-b764-9ad15a69018c",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "platforms/04.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "text",
+   "id": "b1556937-6e91-406c-b42a-dde9bdf4a3d9",
+   "r": [
+    [
+     "关于 macOS 介绍的这部分，大致上比较基础，但有两个地方我会比较在意："
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "4718b17a-44ff-4b51-926d-8baf24c28f86",
+   "r": [
+    [
+     "第一点是 Mac 用户可能会长时间专注在处理任务上，为了提供足够效率的体验，我们在设计的时候，应该允许应用窗口支持两种过渡：活动与非活动、全屏与调节窗口大小；"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "0c00d7b6-0eda-494b-aaf3-19069aa4f7a3",
+   "r": [
+    [
+     "第二点是键盘快捷键，在 macOS 的应用中，建议通过快捷键帮助人们加快操作速度，并支持纯键盘工作方式。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "5b02cdd0-be53-4388-b977-493afad5e544",
+   "r": [
+    [
+     "tvOS"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "fd7ce28d-6944-4095-ab9d-7b9efab9d815",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "platforms/05.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "6c24214c-739d-45ea-9940-26460662b87c",
+   "r": [
+    [
+     "Ergonomics.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "\nAlthough people generally remain many feet away from their stationary TV — often 8 feet or more — they sometimes continue to interact with content as they move around the room.\n"
+    ],
+    [
+     "App interactions.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "\nPeople can get deeply immersed in a single experience — often lasting hours — but they also appreciate using a picture-in-picture view to simultaneously follow an alternative app or video."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "64e560d8-842e-4acf-96ff-99c8b65cba1b",
+   "r": [
+    [
+     "针对 tvOS ，以上两点我比较在意："
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "a83e6406-048f-4c08-b671-8300f3c20866",
+   "r": [
+    [
+     "第一点提到了人们在与 tv 交互的时候，可能会处于一个「运动」状态，典型场景是健身，我们在设计的时候要考虑到用户在运动时，注意力不连贯的情况，继而考虑设计方案：比如在画面中让元素集中，抓住用户的中心注意力；或者增加更多的声音反馈，以提高用户的参与感。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "6f7ba172-e58a-4232-9899-df95447527e1",
+   "r": [
+    [
+     "第二点提到了 tvOS 应用的多任务情况，通常用户会在 tv 上聚集一个主任务，但他们也可以通过画中画的方式让其他任务放在画面中。"
+    ]
+   ]
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "e57097f8-2ca2-4312-8adc-990c550821d5",
+   "r": [
+    [
+     " watchOS"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "04bbf6f7-545f-4cde-a6c7-58fb00998d6f",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "platforms/06.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "dcf5b7e4-67f9-4464-9eae-356c9aa9a3c8",
+   "r": [
+    [
+     "• Enable quick, glanceable interactions that deliver critical information succinctly and help people perform targeted actions with a simple gesture or two.\n• Use "
+    ],
+    [
+     "notifications",
+     [
+      [
+       "a",
+       "https://developer.apple.com/design/human-interface-guidelines/components/system-experiences/notifications"
+      ]
+     ]
+    ],
+    [
+     " to deliver timely, high-value information and enable important actions people can take without opening your app."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "e46aab32-35f4-4d1e-957f-5c8648563f21",
+   "r": [
+    [
+     "最后针对 watchOS 上的这两点，让我比较在意："
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "9b1fd205-545a-40c3-8e6e-351113b3bb13",
+   "r": [
+    [
+     "第一点中提到需要给用户提供可快速完成的交互，因为用户通常在手表上交互的时间不会超过一分钟（以我的习惯，甚至在10秒内），所以提供简洁而且容易发现的操作，是设计的重点之一；"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "6cc015e2-3aa1-4dc3-b2a7-aa91c8f6a030",
+   "r": [
+    [
+     "第二点提到了「通知」设计的重要性，用户常常通过 Apple Watch 获取来自 iPhone 上的通知，并且执行下一步操作；因此，通知信息简短，且提供可轻松点击的操作按钮，能够帮助用户快速处理在手表上的任务。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "ffbb0c22-3c8b-4f1f-8f85-49e01e7fa7a1"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "8109b6a3-b771-4547-a797-9397ee8f9509",
+   "r": [
+    [
+     "小结"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "3868d4e3-9701-4500-be54-a3665451c322",
+   "r": [
+    [
+     "虽然这一章是 HIG 的入门章节，基本上就是简单介绍各个平台的显示以及交互特性，我也从中就我感兴趣的部分写下了想法；也恰恰因为是入门内容，常常会被人忽视，所以我才要特地开一页，让人看了也能从较短的内容中获取启发。"
+    ]
+   ]
+  }
+ ]
+}

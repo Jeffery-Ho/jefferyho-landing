@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>新的 HIG 架构 · Jeffery Ho</title>
+  <meta name="description" content="如果把 HIG 当作一个产品来看的话，应该先从架构开始了解。在新的架构中，分为了这么几个栏目： 「Platforms」「Foundations」「Patterns」「Components」「Inputs」「Technol…">
+  <meta name="author" content="Jeffery Ho">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://jefferyho.com/v2/projects/rereading-hig/new-architecture/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jeffery Ho">
+  <meta property="og:title" content="新的 HIG 架构 · Jeffery Ho">
+  <meta property="og:description" content="如果把 HIG 当作一个产品来看的话，应该先从架构开始了解。在新的架构中，分为了这么几个栏目： 「Platforms」「Foundations」「Patterns」「Components」「Inputs」「Technol…">
+  <meta property="og:url" content="https://jefferyho.com/v2/projects/rereading-hig/new-architecture/">
+  <meta property="og:image" content="https://jefferyho.com/v2/media/new-architecture/01.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="新的 HIG 架构">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2022-09-23">
+  <meta property="article:modified_time" content="2024-09-17">
+  <meta property="article:author" content="Jeffery Ho">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="新的 HIG 架构 · Jeffery Ho">
+  <meta name="twitter:description" content="如果把 HIG 当作一个产品来看的话，应该先从架构开始了解。在新的架构中，分为了这么几个栏目： 「Platforms」「Foundations」「Patterns」「Components」「Inputs」「Technol…">
+  <meta name="twitter:image" content="https://jefferyho.com/v2/media/new-architecture/01.jpg">
+  <meta name="twitter:image:alt" content="新的 HIG 架构">
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08090a">
+  <link rel="icon" href="/v2/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/v2/apple-touch-icon.png">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="stylesheet" href="/v2/assets/site.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"新的 HIG 架构","description":"如果把 HIG 当作一个产品来看的话，应该先从架构开始了解。在新的架构中，分为了这么几个栏目： 「Platforms」「Foundations」「Patterns」「Components」「Inputs」「Technol…","url":"https://jefferyho.com/v2/projects/rereading-hig/new-architecture/","image":"https://jefferyho.com/v2/media/new-architecture/01.jpg","inLanguage":"zh-CN","datePublished":"2022-09-23","dateModified":"2024-09-17","author":{"@type":"Person","name":"Jeffery Ho","url":"https://jefferyho.com/v2/"}}</script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/v2/"><img class="brand-mark" src="/v2/favicon.png" width="24" height="24" alt="">Jeffery Ho</a>
+      <div class="tools">
+        <button class="tool" type="button" data-theme-toggle data-label-system="主题：跟随系统" data-label-light="主题：浅色" data-label-dark="主题：深色" aria-label="主题：跟随系统">
+      <svg class="icon icon-system" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.75" y="2.75" width="12.5" height="8.5" rx="1.5"/><path d="M5.5 13.5h5"/></svg>
+      <svg class="icon icon-light" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1"/></svg>
+      <svg class="icon icon-dark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap article">
+    <nav class="crumbs" aria-label="面包屑"><a href="/v2/#projects">项目</a><span aria-hidden="true">/</span><a href="/v2/projects/rereading-hig/">重读 HIG</a></nav>
+    <header class="article-head">
+      <h1>新的 HIG 架构</h1>
+      <p class="article-meta"><time datetime="2022-09-23">2022.09.23</time></p>
+    </header>
+    
+    
+    <div class="prose">
+
+<figure class="n-image"><img src="/v2/media/new-architecture/01.jpg" width="1600" height="900" alt="" loading="lazy" decoding="async"></figure>
+<p>如果把 HIG 当作一个产品来看的话，应该先从架构开始了解。在新的架构中，分为了这么几个栏目：</p>
+<p>「Platforms」「Foundations」「Patterns」「Components」「Inputs」「Technologies」，印象中，老版本并没有这么清晰的架构划分。新的架构给我的第一感觉就是，这个指南是为苹果全平台服务的，而不再区分桌面端、移动端、大屏端等，也符合了苹果这两年推进全平台通用设计的目标。</p>
+<p>对比老版本👇</p>
+<figure class="n-image"><img src="/v2/media/new-architecture/02.jpg" width="1600" height="1600" alt="" loading="lazy" decoding="async"></figure>
+<p>在阅读这个架构的时候，我觉得可以将前面提到的六项内容，分为两类来解读：<strong>第一类是按应用范围来划分</strong>，包括了「Platforms」「Foundations」「Patterns」「Components」，也就是平台、底层、模式、组件，仔细研究会发现，它们所处的范围，存在一定的递进关系。</p>
+<p>这不禁让我联想到我之前做开放平台，在设计导航菜单的时候，也是按照运行环境 &gt; 平台 &gt; 应用 &gt;  组件模块 &gt; 组件这么分，也是递进关系。</p>
+<figure class="n-image"><img src="/v2/media/new-architecture/03.jpg" width="1600" height="271" alt="" loading="lazy" decoding="async"></figure>
+<p>这是一个有趣的发现，代表着设计师在处理这个架构的时候，是有系统性思考的，没有故意捧苹果的意思，刚好又跟自己的经历有联系，觉得有启发。</p>
+<p>第二类就值得探讨了，「Inputs」「Technologies」，也就是输入方式和技术，一个面向用户，一个面向开发者，一前一后，对用户来说，就是看得见和看不见的区别，似乎很难找到这两者在左侧导航菜单上的划分定义，或许这代表了苹果认为整个 HIG 上，除了前面提到的应用之外，这两项是给目标群体（设计师和开发者）看的最为重要的两个东西吧。</p>
+    </div>
+    
+    <nav class="pager" aria-label="章节导航"><a class="pager-prev" href="/v2/projects/rereading-hig/intro/"><span>上一章</span>写在开头</a><a class="pager-next" href="/v2/projects/rereading-hig/platforms/"><span>下一章</span>（一）Platforms</a></nav>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 Jeffery Ho</span>
+      <nav>
+        <a href="https://quaily.com/jefferystudio">Newsletter</a>
+        <a href="https://xhslink.com/m/3wXO9kRBrLO">小红书 @杰_弗里</a>
+        <a href="https://xhslink.com/m/893LNqEQ8SC">小红书 @24PX</a>
+        <a href="mailto:Hexianji@outlook.com">邮箱</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/v2/assets/site.js" defer></script>
+</body>
+</html>

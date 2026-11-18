@@ -1,0 +1,96 @@
+{
+ "id": "978c89f2-65cb-40f3-a3c3-6f8a55d6f4f4",
+ "title": "写在开头",
+ "created": "2022-09-23T15:38:42.810Z",
+ "edited": "2022-10-08T14:34:00.000Z",
+ "titles": {
+  "978c89f2-65cb-40f3-a3c3-6f8a55d6f4f4": "写在开头",
+  "34a8557f-73f4-4a98-a931-82959147364b": "重读HIG",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "image",
+   "id": "40e28bad-e170-4b0f-ba34-f6e3a70c229d",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "intro/01.jpg",
+   "w": 1600,
+   "h": 899
+  },
+  {
+   "t": "text",
+   "id": "bf54fdbc-ce24-4a9c-b508-e814227d51f9"
+  },
+  {
+   "t": "callout",
+   "id": "8f0ffce2-ac46-471b-93f4-761ef611942b",
+   "r": [
+    [
+     "前段时间在开通小报童没多久后，少楠找过我，希望我能够就改版后的 Apple Human Interface Guidelines （简称 HIG ）写一个「小册」，我当时暂时答应了会做这件事，原因是新的 HIG 确实很吸引人：重新设计的信息架构、指导全平台的设计指南等等。那么，就开始一边重读一边写点感受吧。"
+    ]
+   ],
+   "color": "teal_background",
+   "icon": "🤔"
+  },
+  {
+   "t": "bookmark",
+   "id": "1a10b92e-b571-4f3d-ad84-7f16917dfa98",
+   "href": "https://developer.apple.com/design/human-interface-guidelines/guidelines/overview",
+   "title": "Human Interface Guidelines",
+   "desc": "Human Interface Guidelines"
+  },
+  {
+   "t": "text",
+   "id": "0569f27c-966b-4a0e-a2af-1cd8eee988fb"
+  },
+  {
+   "t": "text",
+   "id": "c9f2714b-fda5-4526-bae2-35ed3da7e63e",
+   "r": [
+    [
+     "中文互联网下，目前还有两位朋友在写，这里我也把他们的地址贴出来"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "287b1a20-895a-4bf6-8f24-7cf9ba8e7418",
+   "r": [
+    [
+     "作者：酸梅干超人"
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "bookmark",
+   "id": "2fcee2d4-caff-40f5-9fe4-530d8016817c",
+   "href": "http://www.supermancall.com/"
+  },
+  {
+   "t": "text",
+   "id": "bbd34a1f-7f29-42b5-b19e-6a99f6b7ebe5",
+   "r": [
+    [
+     "作者：fenx",
+     [
+      [
+       "h",
+       "teal_background"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "bookmark",
+   "id": "fcc5ec09-3955-43d2-b82c-edb01f19ba99",
+   "href": "https://www.craft.do/s/fH49oLBCFdJO4l",
+   "title": "重读 Human Interface Guidelines 笔记"
+  }
+ ]
+}

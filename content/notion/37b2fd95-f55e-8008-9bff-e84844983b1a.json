@@ -1,0 +1,263 @@
+{
+ "id": "37b2fd95-f55e-8008-9bff-e84844983b1a",
+ "title": "WWDC26观后感（设计吐槽&期待）",
+ "icon": "/icons/document_red.svg",
+ "created": "2026-06-10T14:03:33.104Z",
+ "edited": "2026-06-17T16:11:19.444Z",
+ "titles": {
+  "37b2fd95-f55e-8008-9bff-e84844983b1a": "WWDC26观后感（设计吐槽&期待）",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "text",
+   "id": "37b2fd95-f55e-8042-8539-f031bf8694ac",
+   "r": [
+    [
+     "‣",
+     [
+      [
+       "u",
+       "e66fdaa0-3944-43e6-9805-1d011314802a"
+      ]
+     ]
+    ],
+    [
+     " "
+    ]
+   ]
+  },
+  {
+   "t": "sub_header",
+   "id": "37b2fd95-f55e-8048-ad2d-fbbb91e2d5d6",
+   "r": [
+    [
+     "背景"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "37b2fd95-f55e-808a-b1cf-f4e6556db8da",
+   "r": [
+    [
+     "一年一度的wwdc2026如期结束了，各位设计师也纷纷开始吐槽了…"
+    ]
+   ]
+  },
+  {
+   "t": "sub_header",
+   "id": "37b2fd95-f55e-8074-ad8b-e11749941195",
+   "r": [
+    [
+     "问题"
+    ]
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "37b2fd95-f55e-80c1-858e-f8acef2f96a8",
+   "color": "gray_background",
+   "icon": "💡",
+   "c": [
+    {
+     "t": "header_4",
+     "id": "37b2fd95-f55e-80a6-8a0e-c6f18ea22171",
+     "r": [
+      [
+       "Liquid Glass 到底是设计革命，还是一次视觉翻新？"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37b2fd95-f55e-8052-8d66-cfcf7ddabd3f",
+     "r": [
+      [
+       "这次设计语言最大的价值是什么？"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37b2fd95-f55e-80cb-8892-f15be3d43244",
+     "r": [
+      [
+       "如果没有苹果背书，设计圈会喜欢这种风格吗？"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "37b2fd95-f55e-80e8-b8a7-d747cc389c1a",
+   "color": "gray_background",
+   "icon": "💡",
+   "c": [
+    {
+     "t": "header_4",
+     "id": "37b2fd95-f55e-808a-a720-ef7a1840215e",
+     "r": [
+      [
+       "Apple Intelligence 这种端侧模型、各种Agent越来越强。AI 时代，设计师还需要画那么多界面吗？"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37b2fd95-f55e-80a8-971a-fd7a1df721b4",
+     "r": [
+      [
+       "未来设计师是在设计页面？还是在设计 Agent 行为？"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37b2fd95-f55e-8043-aa1f-c8ccb3921dad",
+     "r": [
+      [
+       "Prompt 会不会成为新的交互稿？"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "37c2fd95-f55e-805d-b901-c4006e37131b",
+   "color": "gray_background",
+   "icon": "💡",
+   "c": [
+    {
+     "t": "header_4",
+     "id": "37c2fd95-f55e-806a-8976-c419043eea5a",
+     "r": [
+      [
+       "如果只能保留 WWDC26 的一个设计更新，你会选什么？"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37c2fd95-f55e-80aa-8285-f860ea046930",
+     "r": [
+      [
+       "Liquid Glass调节"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37c2fd95-f55e-801e-ac87-c508e99e5341",
+     "r": [
+      [
+       "Siri AI"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37c2fd95-f55e-80b4-bc4a-f7c59e8e61b3",
+     "r": [
+      [
+       "相册的新功能（AI扩图、AI旋转图片）"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37c2fd95-f55e-80ae-9d59-c7fb9232a44d",
+     "r": [
+      [
+       "跨平台统一设计，设计更新不再区分OS"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "37c2fd95-f55e-80e2-9c0a-c4bc469c8470",
+   "color": "gray_background",
+   "icon": "💡",
+   "c": [
+    {
+     "t": "header_4",
+     "id": "37c2fd95-f55e-808f-98b5-c5221dc44c56",
+     "r": [
+      [
+       "【折叠屏】这次WWDC26，不只是更新了OS设计，同时也更新了xcode27，模拟器、iPhone镜像支持了横向拉伸，苹果就差把折叠屏三个字写在开发者脸上了；那么如果App 已经适配了 iPad，我们还期待在折叠屏看到什么设计？"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37c2fd95-f55e-80dd-9cc0-ca4beae00c34",
+     "r": [
+      [
+       "新的灵动岛设计"
+      ]
+     ]
+    },
+    {
+     "t": "bulleted_list",
+     "id": "37c2fd95-f55e-8002-b9da-d1285166b4bf",
+     "r": [
+      [
+       "让iOS拥有更接近macOS体验的设计"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "37b2fd95-f55e-800e-908a-ffb5151be399",
+   "color": "gray_background",
+   "icon": "💡",
+   "c": [
+    {
+     "t": "header_4",
+     "id": "37b2fd95-f55e-8074-ab40-f8669d1c456f",
+     "r": [
+      [
+       "这次WWDC26看着就像是补齐苹果2024年没能兑现的AI功能，那么今年看下来，有没有觉得暴露苹果自己的焦虑？"
+      ]
+     ]
+    },
+    {
+     "t": "text",
+     "id": "37b2fd95-f55e-80f5-b67d-f603ed0ca33e",
+     "r": [
+      [
+       "从设计更新中能不能看出苹果在焦虑什么？"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "callout",
+   "id": "37c2fd95-f55e-8046-9f3a-d34d43069126",
+   "color": "gray_background",
+   "icon": "💡",
+   "c": [
+    {
+     "t": "header_4",
+     "id": "37c2fd95-f55e-8008-a6b1-d859c579f1d1",
+     "r": [
+      [
+       "端侧模型是正确的方向吗？用户真的需要随时能够在APP里调出Siri、Spotlight、Apple Intelligence吗？"
+      ]
+     ]
+    }
+   ]
+  },
+  {
+   "t": "text",
+   "id": "3822fd95-f55e-801c-a0f3-e6fc2492e3b5"
+  }
+ ]
+}

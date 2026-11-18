@@ -1,0 +1,882 @@
+{
+ "id": "1f423762-cf87-4793-bdee-39014f5c1807",
+ "title": "（二）Foundations/Accessibility",
+ "created": "2022-09-23T15:38:42.811Z",
+ "edited": "2024-11-12T15:18:27.996Z",
+ "titles": {
+  "1f423762-cf87-4793-bdee-39014f5c1807": "（二）Foundations/Accessibility",
+  "34a8557f-73f4-4a98-a931-82959147364b": "重读HIG",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "sub_sub_header",
+   "id": "98995c2d-658b-40f5-988b-620be8860188",
+   "r": [
+    [
+     "无障碍",
+     [
+      [
+       "h",
+       "teal_background"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal_background"
+  },
+  {
+   "t": "image",
+   "id": "ebe4be6c-81bf-4e0a-af94-00db299ecc48",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "accessibility/01.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "quote",
+   "id": "9f38ba19-9501-4bbf-a63d-e50f4faec270",
+   "r": [
+    [
+     "Approximately one in seven people have a disability that affects the way they interact with the world and their devices.\nAccessibility is not just about making information available to people with disabilities — it’s about making information available to everyone, regardless of their capabilities or situation. Designing your app with accessibility in mind means prioritizing "
+    ],
+    [
+     "simplicity ",
+     [
+      [
+       "i"
+      ]
+     ]
+    ],
+    [
+     "and "
+    ],
+    [
+     "perceivability ",
+     [
+      [
+       "i"
+      ]
+     ]
+    ],
+    [
+     "and examining every design decision to ensure that it doesn’t exclude people who have different abilities or interact with their devices in different ways."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "7d2232e2-0694-4421-8b9b-494d15a5a71b",
+   "r": [
+    [
+     "世界上大约有七分之一的人患有残疾，并影响着他们与设备交互的方式。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "这个事实，我们还是不容忽视的，哪怕有的人没有残疾，不需要借助辅助功能完成交互，我们也应该为他们尽量清除使用上的障碍。我觉得做产品设计的目标，是要为用户提供功能上的感知，操作上的便捷，而不是单纯的主观炫技。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "ee582f56-5bae-4b63-8a93-91e24f7aed5a",
+   "r": [
+    [
+     "为了能够达到上述说的目标，在做产品的"
+    ],
+    [
+     "无障碍",
+     [
+      [
+       "s"
+      ]
+     ]
+    ],
+    [
+     "设计时，需要遵循以下几个原则："
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "6781db6d-e646-481f-af65-b263c9d1d694",
+   "r": [
+    [
+     "Simplicity（简易性）",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "26b5cf16-c3c2-43cf-9e48-c960d2405dd2",
+   "r": [
+    [
+     "Enabling familiar, consistent interactions that make complex tasks simple and straightforward to perform"
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "4ae6d0f3-a29d-4731-8919-7bc15d2f4dff",
+   "r": [
+    [
+     "关键词：熟悉、一致性",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "a342d99f-cfd1-4e70-ba49-ea864099ce82",
+   "r": [
+    [
+     "熟悉：意味着用户在进行这个虚拟的交互时，能够联想到现实中的交互行为，比如当用户想要关掉房间里面的灯，他通过按下 app 中具有灯的外形的控件，并且获得了反馈：房间里的灯灭了；而这个反馈与现实中他去手动关灯的反馈是一致的；那么，我们可以得到结论：这个灯的交互对于用户来说，会是熟悉的。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "3c331827-d186-4b21-85d6-1a889be6420a",
+   "r": [
+    [
+     "一致性：一致性是一个很大的命题，它涉及到系统的概念，系统内元素、交互动作、操作范式的一致性，还有系统内和系统外的一致性🤔，这个可以单独开一个专页来讲讲。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "ed6bdfa1-88d6-4804-bbea-137378bf6ca1",
+   "r": [
+    [
+     "Perceivability（可感知性）",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "238f6866-9836-4e01-9cbf-b9911631f532",
+   "r": [
+    [
+     "Making sure that all content can be perceived whether people are using sight, hearing, or touch."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "c85d7cab-b306-4dbb-96f9-a0da80b1af8f",
+   "r": [
+    [
+     "确保用户可交互的内容都能被感知，在业务目标不断累积的当下，要做到这一点，其实并不容易，"
+    ],
+    [
+     "要做出可感知范围内的设计方案，需要持续对系统有足够的观察和应对预案。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "6f166378-900a-482e-a9b1-f44e2bab1880",
+   "r": [
+    [
+     "Support personalization（支持个性化）",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "14246f93-f02b-4975-868b-adecc01bb193",
+   "r": [
+    [
+     "Use standard components（使用标准组件）",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "5fb9c6b3-37d9-43cf-992b-e97710c242d2",
+   "r": [
+    [
+     "Audit and test your app or game for accessibility.（审核和测试您的应用程序或游戏的可访问性）",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "divider",
+   "id": "888ba141-5935-4039-8bca-46cfdd308e6d"
+  },
+  {
+   "t": "text",
+   "id": "5d7f95d1-b978-49e3-982b-dd96551db476"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "91446f36-c42a-42a8-aed8-d55faed65d30",
+   "r": [
+    [
+     "Interactions ",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "交互"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "6ef1ee27-34ed-43db-b537-928ddb56478d",
+   "r": [
+    [
+     "手势",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "8930d941-45f1-4668-89dd-68bdcc247581",
+   "r": [
+    [
+     "Don’t override the platform gestures.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "271c401d-54a9-4643-b7e8-0efed5026032",
+   "r": [
+    [
+     "不要覆盖平台手势，我见过有不少国内的 app 喜欢干一件事，覆盖原有的系统手势，最常见的一个应该是：双击状态栏返回页面顶部。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "2b44a87f-17b3-4bd4-b837-74bd3c336b24",
+   "r": [
+    [
+     "Prefer simplified gestures for common interactions.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "600a94bf-664b-4661-afa8-4420fe530d4e",
+   "r": [
+    [
+     "对于常见交互，使用简单手势进行操作。复杂手势对很多人来说操作都不够方便，比如多指手势、长按或重复按按钮。但我对于长按手势，还是持乐观态度的，像我之前在中控屏上就尝试过使用长按手势调出编辑卡片的操作，虽然会牺牲一定的可见性，但因为编辑操作用的频率不高，而把按钮隐藏起来，能减少低频操作的信息干扰。"
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "90fd0f15-e808-4e8d-bb28-af2905a0b697",
+   "r": [
+    [
+     "When possible, make your app’s core functionality accessible through more than one type of physical interaction.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "fcee2c23-1c25-4a24-b7b2-eb7ec25b81a1",
+   "r": [
+    [
+     "如果可以的话，请设计一种以上的物理交互来访问您 App 的核心功能。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "替代交互的常见例子不只是出现在手机拍照时可以用音量键代替屏幕内的快门键，还有当我们在web产品中打开一个弹窗时，虽然可以通过用鼠标点击“关闭”按钮关掉弹窗，也可以点击“取消”关闭弹窗，但也可以通过点击键盘上的“esc”关闭弹窗，而且这个操作更符合操作直觉，也容易被忽略。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "a4dbf9dd-bb89-4714-9120-aece8458982e",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "accessibility/02.jpg",
+   "w": 1600,
+   "h": 863
+  },
+  {
+   "t": "text",
+   "id": "bee395e2-6ab4-45e1-b3a6-e67c9252de6a"
+  },
+  {
+   "t": "text",
+   "id": "70faa0af-e6af-40f5-9181-2082170b8ffe",
+   "r": [
+    [
+     "按钮和控件",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "2423c3e3-cfdc-45f1-b2d2-080d526b8bc7",
+   "r": [
+    [
+     "Consider giving links a visual indicator in addition to color, such as an underline.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "\n It’s fine to use color to identify a link, but if you use it as the only indicator, people — such as those with color blindness or cognitive or situational attention impairments — may not be able to perceive the distinction."
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "023eec3d-48c2-4311-8e5f-eae0739f573c",
+   "r": [
+    [
+     "考虑给链接一个除了颜色之外的可视化指示器，例如"
+    ],
+    [
+     "下划线",
+     [
+      [
+       "_"
+      ]
+     ]
+    ],
+    [
+     "。使用颜色来识别控件状态是可以的，但是如果把颜色作为唯一的指标，人们ーー比如那些有色盲、认知或情景注意力缺陷的人ーー可能无法察觉到这种区别。"
+    ],
+    [
+     "这个更偏向于制定指示性控件时会遇到的问题",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "，比如「tab」，有的设计师会直接用字重区分已选中的tab和未选中的tab，但其实加上一条下划线，会更好与文本产生差异。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "00cd0c15-498e-4f85-aeb7-094c8cc45fc9",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "accessibility/03.jpg",
+   "w": 1600,
+   "h": 800
+  },
+  {
+   "t": "text",
+   "id": "43fa9a79-99f0-4340-b26a-e4a141941f3a"
+  },
+  {
+   "t": "text",
+   "id": "eab6d9d0-8d5e-4b85-ab59-57456a122e15",
+   "r": [
+    [
+     "用户输入",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "6941729b-dd4d-40e1-b2ba-faeffc8e4abc",
+   "r": [
+    [
+     "Let people input information by speaking instead of typing.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "b550aa38-fcab-448c-9b09-7dcc3be19e74",
+   "r": [
+    [
+     "让用户通过说话而不是打字来输入信息。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "对于需要无障碍人士来说，语音功能是个足以替代部分生理残缺的重要功能，这方面需求还挺值得研究的；但是，面对大多数人，在可输入/可语音的场景下，而不是一定要语音的场景下，语音输入依然是个“optional feature”，毕竟，它的隐私性并没有文字那么充足。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "e8bd8383-b1cf-42f4-a160-a383bb690533"
+  },
+  {
+   "t": "text",
+   "id": "0708687b-6df5-4444-ba52-14c93c115058",
+   "r": [
+    [
+     "Haptics 触感",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "8c4cd904-d892-47e2-a098-df195bce5277",
+   "r": [
+    [
+     "Support the system-defined haptics.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "\nMany people rely on haptics to help them interact with apps when they can’t see the screen."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "f35318a4-e9da-4747-ad70-547133ed1915",
+   "r": [
+    [
+     "支持系统定义的触感。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "许多人在看不到屏幕的情况下依靠触感来与产品互动。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "9e769919-0ee6-401c-a6dd-54a0b47594ab",
+   "r": [
+    [
+     "这一点虽然写得简单，但是来自设备的触觉反馈，还挺让我印象深刻的，好的触觉引擎，能够带来优秀的交互体验，而差的触觉，也会让用户想立马关掉；「触觉」虽然不是一个设计时的必选项，但对于创造非凡交互体验的目标来说，是必不可少的，当然它离不开优秀的震动马达来支持，这就是来自硬件上对设计的限制了。"
+    ]
+   ]
+  },
+  {
+   "t": "divider",
+   "id": "8ac79d2a-02a2-468f-b21f-fcecdd5807b7"
+  },
+  {
+   "t": "text",
+   "id": "65dce602-91cb-4927-896c-10a6523d9dfe"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "2618b54e-d952-47ed-a3c9-33a74a15c186",
+   "r": [
+    [
+     "VoiceOver 画外音",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "2972d444-17c0-4c51-af4b-0b01e5666b02",
+   "r": [
+    [
+     "这部分功能虽然是为无障碍人士提供，但是我作为普通人来说，使用下来却几乎没有办法写出体验，主要原因是交互逻辑跟通用逻辑完全不一样了，退出机制一时之间没法适应…所以，希望以后有机会能好好了解无障碍吧。（苦笑）"
+    ]
+   ]
+  },
+  {
+   "t": "divider",
+   "id": "46da2927-8927-4fd4-ba4d-d9a64351cbae"
+  },
+  {
+   "t": "text",
+   "id": "d9769b10-e83f-4b08-b3c9-0e4e74fcb295"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "f7bef462-3b7b-42a8-b43d-dd80a518b97c",
+   "r": [
+    [
+     "Text display 文本展示",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "c05be53c-3ab9-41c7-858e-c9d6a78e876f",
+   "r": [
+    [
+     "As font size increases, keep text truncation to a minimum.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "In general, aim to display as much useful text in the largest accessibility font size as you do in the largest standard font size. Avoid truncating text in scrollable regions unless people can open a separate view to read the rest of the content."
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "8aee784a-242a-464c-8af7-c257226de474",
+   "r": [
+    [
+     "无论字体大小增加到什么程度，始终保持一屏内文本截断的完整性。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "正常来说，使用最大的无障碍字体中显示的有效文字数量，要和最大的标准字体一样多。从官方提供的图例中可以看出，在一屏中，无论是小号字还是大号字，显示内容都是一样多，用开发的话来说就是，标签数量没有减少。在普通视角下，这是为了保证阅读效率，在无障碍视角下，当用户启用了旁白功能时，这不仅保证了视觉上的阅读效率，还能让用户能完整听完一屏内的完整内容。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "a3585e1d-2f32-4a3a-ba6f-1cd4e4f8bac7",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "accessibility/04.jpg",
+   "w": 1600,
+   "h": 1421
+  },
+  {
+   "t": "text",
+   "id": "1200ad5a-5457-46c8-b1a3-3ba737881a43"
+  },
+  {
+   "t": "quote",
+   "id": "b7b5658a-4801-4168-b2ba-9360a8981849",
+   "r": [
+    [
+     "Consider adjusting layout at large font sizes.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     " When font size increases, inline items and container boundaries can crowd text, making it less readable. For example, if you display text inline with secondary items — such as glyphs or timestamps — the text has less horizontal space. At large font sizes, an inline layout might cause text to truncate or result in overlapping text and secondary items."
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "18356da0-e19f-49f3-bfe6-721bbcedbc0c",
+   "r": [
+    [
+     "考虑在大的字体尺寸下调整布局。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "当字体尺寸增大时，边框内的内容就会挤占文本，使其不容易阅读。例如，如果你将文本内容与次要内容--如图形或时间--一起展示，文本的横向空间就会缩小。在大号字体尺寸下，可能会导致文本被截断，或者导致文本和二级项目重叠。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "12c6f89f-825c-4aae-a86f-8e27949d1302",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "accessibility/05.jpg",
+   "w": 1600,
+   "h": 1450
+  },
+  {
+   "t": "text",
+   "id": "981be7b3-218a-4953-8b92-3e0d151cb121",
+   "r": [
+    [
+     "这里讲得太细了，其实就是要注意当字号增大时，要注意不同文本之间因为换行而导致的排版问题，比如标点挤压，间距过小或过大等；对于这样的问题，有异曲同工之妙的解决方案有这个：即刻的排版设置，可以让用户自主调节间距，对标点挤压和段间距也做到了可自定义的程度，还提供了文本预览，方便用户调节。"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "0d9522e0-3d56-4c4f-b6bc-981629e9507c",
+   "r": [
+    [
+     "IMG_3A7F709F4E3D-1.jpeg"
+    ]
+   ],
+   "file": "accessibility/06.jpg",
+   "w": 739,
+   "h": 1600
+  },
+  {
+   "t": "divider",
+   "id": "60aa1ff1-dee6-4eb3-a09d-cae90ea0d1be"
+  },
+  {
+   "t": "text",
+   "id": "e928d4de-f147-4936-b41b-3fc9940286d5"
+  },
+  {
+   "t": "sub_sub_header",
+   "id": "dd9d3427-4a59-4106-b094-14603f99a89e",
+   "r": [
+    [
+     "Color and effects 颜色和效果",
+     [
+      [
+       "b"
+      ],
+      [
+       "b"
+      ]
+     ]
+    ]
+   ]
+  },
+  {
+   "t": "quote",
+   "id": "d299e9ee-eaca-4d73-aa66-9a150f348c9c",
+   "r": [
+    [
+     "Avoid using color combinations as the only way to distinguish between two states or values.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "b351ad5d-8bd9-4368-8414-be06d58eedd3",
+   "r": [
+    [
+     "避免使用颜色组合作为区分两种状态或数值的唯一方法。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "官方这个建议，是为了避免色盲人士难以区分颜色的问题，比如许多色盲用户很难区分蓝色和橙色，还有红色和绿色、红色和黑色，以及红色或绿色与灰色的组合。"
+    ]
+   ]
+  },
+  {
+   "t": "text",
+   "id": "3cb06ef6-b462-4328-8278-12f1e941be90",
+   "r": [
+    [
+     "非色盲用户看到的 / 色盲用户看到的"
+    ]
+   ]
+  },
+  {
+   "t": "image",
+   "id": "1725c722-a67f-4f93-8ca8-a3a8d04453d3",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "accessibility/07.jpg",
+   "w": 1600,
+   "h": 1505
+  },
+  {
+   "t": "quote",
+   "id": "0280aa6c-ab25-4ae0-b810-91940733373c",
+   "r": [
+    [
+     "Use strongly contrasting colors to improve readability.",
+     [
+      [
+       "b"
+      ]
+     ]
+    ]
+   ],
+   "color": "teal"
+  },
+  {
+   "t": "text",
+   "id": "02e51059-fecd-4e44-8304-27df8d7a28dd",
+   "r": [
+    [
+     "使用强对比的颜色来提高可读性。",
+     [
+      [
+       "b"
+      ]
+     ]
+    ],
+    [
+     "对比度的问题，在日常设计中也容易被忽略，设计师为了追求美观，在颜色选择上缺乏考虑对比度，在验证界面中相邻颜色的对比度是否符合最低可接受水平时，可以参考在线色彩计算工具 "
+    ],
+    [
+     "Web Content Accessibility Guidelines (WCAG)",
+     [
+      [
+       "a",
+       "https://www.w3.org/TR/WCAG21/"
+      ]
+     ]
+    ],
+    [
+     "，也可以试试 在线检测工具"
+    ]
+   ]
+  },
+  {
+   "t": "bookmark",
+   "id": "3604a3f7-1f8b-4b09-877b-c2c1fde5128c",
+   "href": "https://webaim.org/resources/contrastchecker/",
+   "title": "Contrast Checker",
+   "desc": "The five boxing wizards jump quickly. The five boxing wizards jump quickly. Enter a foreground and background color in RGB hexadecimal format (e.g., #FD3 or #F7DA39) or choose a color using the color picker. The Lightness slider can be used to adjust the selected color."
+  }
+ ]
+}

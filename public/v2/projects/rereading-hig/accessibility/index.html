@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>（二）Foundations / Accessibility · Jeffery Ho</title>
+  <meta name="description" content="无障碍 Approximately one in seven people have a disability that affects the way they interact with the world and …">
+  <meta name="author" content="Jeffery Ho">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://jefferyho.com/v2/projects/rereading-hig/accessibility/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jeffery Ho">
+  <meta property="og:title" content="（二）Foundations / Accessibility · Jeffery Ho">
+  <meta property="og:description" content="无障碍 Approximately one in seven people have a disability that affects the way they interact with the world and …">
+  <meta property="og:url" content="https://jefferyho.com/v2/projects/rereading-hig/accessibility/">
+  <meta property="og:image" content="https://jefferyho.com/v2/media/accessibility/01.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="（二）Foundations / Accessibility">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2022-09-23">
+  <meta property="article:modified_time" content="2024-11-12">
+  <meta property="article:author" content="Jeffery Ho">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="（二）Foundations / Accessibility · Jeffery Ho">
+  <meta name="twitter:description" content="无障碍 Approximately one in seven people have a disability that affects the way they interact with the world and …">
+  <meta name="twitter:image" content="https://jefferyho.com/v2/media/accessibility/01.jpg">
+  <meta name="twitter:image:alt" content="（二）Foundations / Accessibility">
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08090a">
+  <link rel="icon" href="/v2/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/v2/apple-touch-icon.png">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="stylesheet" href="/v2/assets/site.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"（二）Foundations / Accessibility","description":"无障碍 Approximately one in seven people have a disability that affects the way they interact with the world and …","url":"https://jefferyho.com/v2/projects/rereading-hig/accessibility/","image":"https://jefferyho.com/v2/media/accessibility/01.jpg","inLanguage":"zh-CN","datePublished":"2022-09-23","dateModified":"2024-11-12","author":{"@type":"Person","name":"Jeffery Ho","url":"https://jefferyho.com/v2/"}}</script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/v2/"><img class="brand-mark" src="/v2/favicon.png" width="24" height="24" alt="">Jeffery Ho</a>
+      <div class="tools">
+        <button class="tool" type="button" data-theme-toggle data-label-system="主题：跟随系统" data-label-light="主题：浅色" data-label-dark="主题：深色" aria-label="主题：跟随系统">
+      <svg class="icon icon-system" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.75" y="2.75" width="12.5" height="8.5" rx="1.5"/><path d="M5.5 13.5h5"/></svg>
+      <svg class="icon icon-light" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1"/></svg>
+      <svg class="icon icon-dark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap article">
+    <nav class="crumbs" aria-label="面包屑"><a href="/v2/#projects">项目</a><span aria-hidden="true">/</span><a href="/v2/projects/rereading-hig/">重读 HIG</a></nav>
+    <header class="article-head">
+      <h1>（二）Foundations / Accessibility</h1>
+      <p class="article-meta"><time datetime="2022-09-23">2022.09.23</time></p>
+    </header>
+    
+    
+    <div class="prose">
+
+<h3 class="bg-teal"><span class="bg-teal">无障碍</span></h3>
+<figure class="n-image"><img src="/v2/media/accessibility/01.jpg" width="1600" height="900" alt="" loading="lazy" decoding="async"></figure>
+<blockquote><p>Approximately one in seven people have a disability that affects the way they interact with the world and their devices.<br>Accessibility is not just about making information available to people with disabilities — it’s about making information available to everyone, regardless of their capabilities or situation. Designing your app with accessibility in mind means prioritizing <em>simplicity </em>and <em>perceivability </em>and examining every design decision to ensure that it doesn’t exclude people who have different abilities or interact with their devices in different ways.</p></blockquote>
+<p><strong>世界上大约有七分之一的人患有残疾，并影响着他们与设备交互的方式。</strong>这个事实，我们还是不容忽视的，哪怕有的人没有残疾，不需要借助辅助功能完成交互，我们也应该为他们尽量清除使用上的障碍。我觉得做产品设计的目标，是要为用户提供功能上的感知，操作上的便捷，而不是单纯的主观炫技。</p>
+<p>为了能够达到上述说的目标，在做产品的<s>无障碍</s>设计时，需要遵循以下几个原则：</p>
+<p><strong>Simplicity（简易性）</strong></p>
+<blockquote><p>Enabling familiar, consistent interactions that make complex tasks simple and straightforward to perform</p></blockquote>
+<p><strong>关键词：熟悉、一致性</strong></p>
+<p>熟悉：意味着用户在进行这个虚拟的交互时，能够联想到现实中的交互行为，比如当用户想要关掉房间里面的灯，他通过按下 app 中具有灯的外形的控件，并且获得了反馈：房间里的灯灭了；而这个反馈与现实中他去手动关灯的反馈是一致的；那么，我们可以得到结论：这个灯的交互对于用户来说，会是熟悉的。</p>
+<p>一致性：一致性是一个很大的命题，它涉及到系统的概念，系统内元素、交互动作、操作范式的一致性，还有系统内和系统外的一致性🤔，这个可以单独开一个专页来讲讲。</p>
+<p><strong>Perceivability（可感知性）</strong></p>
+<blockquote><p>Making sure that all content can be perceived whether people are using sight, hearing, or touch.</p></blockquote>
+<p>确保用户可交互的内容都能被感知，在业务目标不断累积的当下，要做到这一点，其实并不容易，<strong>要做出可感知范围内的设计方案，需要持续对系统有足够的观察和应对预案。</strong></p>
+<p><strong>Support personalization（支持个性化）</strong></p>
+<p><strong>Use standard components（使用标准组件）</strong></p>
+<p><strong>Audit and test your app or game for accessibility.（审核和测试您的应用程序或游戏的可访问性）</strong></p>
+<hr>
+<h3><strong><strong>Interactions </strong></strong>交互</h3>
+<p><strong>手势</strong></p>
+<blockquote><p><strong>Don’t override the platform gestures.</strong></p></blockquote>
+<p>不要覆盖平台手势，我见过有不少国内的 app 喜欢干一件事，覆盖原有的系统手势，最常见的一个应该是：双击状态栏返回页面顶部。</p>
+<blockquote><p><strong>Prefer simplified gestures for common interactions.</strong></p></blockquote>
+<p>对于常见交互，使用简单手势进行操作。复杂手势对很多人来说操作都不够方便，比如多指手势、长按或重复按按钮。但我对于长按手势，还是持乐观态度的，像我之前在中控屏上就尝试过使用长按手势调出编辑卡片的操作，虽然会牺牲一定的可见性，但因为编辑操作用的频率不高，而把按钮隐藏起来，能减少低频操作的信息干扰。</p>
+<blockquote><p><strong>When possible, make your app’s core functionality accessible through more than one type of physical interaction.</strong></p></blockquote>
+<p><strong>如果可以的话，请设计一种以上的物理交互来访问您 App 的核心功能。</strong>替代交互的常见例子不只是出现在手机拍照时可以用音量键代替屏幕内的快门键，还有当我们在web产品中打开一个弹窗时，虽然可以通过用鼠标点击“关闭”按钮关掉弹窗，也可以点击“取消”关闭弹窗，但也可以通过点击键盘上的“esc”关闭弹窗，而且这个操作更符合操作直觉，也容易被忽略。</p>
+<figure class="n-image"><img src="/v2/media/accessibility/02.jpg" width="1600" height="863" alt="" loading="lazy" decoding="async"></figure>
+<p><strong>按钮和控件</strong></p>
+<blockquote><p><strong>Consider giving links a visual indicator in addition to color, such as an underline.</strong><br> It’s fine to use color to identify a link, but if you use it as the only indicator, people — such as those with color blindness or cognitive or situational attention impairments — may not be able to perceive the distinction.</p></blockquote>
+<p>考虑给链接一个除了颜色之外的可视化指示器，例如<u>下划线</u>。使用颜色来识别控件状态是可以的，但是如果把颜色作为唯一的指标，人们ーー比如那些有色盲、认知或情景注意力缺陷的人ーー可能无法察觉到这种区别。<strong>这个更偏向于制定指示性控件时会遇到的问题</strong>，比如「tab」，有的设计师会直接用字重区分已选中的tab和未选中的tab，但其实加上一条下划线，会更好与文本产生差异。</p>
+<figure class="n-image"><img src="/v2/media/accessibility/03.jpg" width="1600" height="800" alt="" loading="lazy" decoding="async"></figure>
+<p><strong>用户输入</strong></p>
+<blockquote><p><strong>Let people input information by speaking instead of typing.</strong></p></blockquote>
+<p><strong>让用户通过说话而不是打字来输入信息。</strong>对于需要无障碍人士来说，语音功能是个足以替代部分生理残缺的重要功能，这方面需求还挺值得研究的；但是，面对大多数人，在可输入/可语音的场景下，而不是一定要语音的场景下，语音输入依然是个“optional feature”，毕竟，它的隐私性并没有文字那么充足。</p>
+<p><strong><strong>Haptics 触感</strong></strong></p>
+<blockquote><p><strong>Support the system-defined haptics.</strong><br>Many people rely on haptics to help them interact with apps when they can’t see the screen.</p></blockquote>
+<p><strong>支持系统定义的触感。</strong>许多人在看不到屏幕的情况下依靠触感来与产品互动。</p>
+<p>这一点虽然写得简单，但是来自设备的触觉反馈，还挺让我印象深刻的，好的触觉引擎，能够带来优秀的交互体验，而差的触觉，也会让用户想立马关掉；「触觉」虽然不是一个设计时的必选项，但对于创造非凡交互体验的目标来说，是必不可少的，当然它离不开优秀的震动马达来支持，这就是来自硬件上对设计的限制了。</p>
+<hr>
+<h3><strong><strong>VoiceOver 画外音</strong></strong></h3>
+<p>这部分功能虽然是为无障碍人士提供，但是我作为普通人来说，使用下来却几乎没有办法写出体验，主要原因是交互逻辑跟通用逻辑完全不一样了，退出机制一时之间没法适应…所以，希望以后有机会能好好了解无障碍吧。（苦笑）</p>
+<hr>
+<h3><strong><strong>Text display 文本展示</strong></strong></h3>
+<blockquote><p><strong>As font size increases, keep text truncation to a minimum.</strong>In general, aim to display as much useful text in the largest accessibility font size as you do in the largest standard font size. Avoid truncating text in scrollable regions unless people can open a separate view to read the rest of the content.</p></blockquote>
+<p><strong>无论字体大小增加到什么程度，始终保持一屏内文本截断的完整性。</strong>正常来说，使用最大的无障碍字体中显示的有效文字数量，要和最大的标准字体一样多。从官方提供的图例中可以看出，在一屏中，无论是小号字还是大号字，显示内容都是一样多，用开发的话来说就是，标签数量没有减少。在普通视角下，这是为了保证阅读效率，在无障碍视角下，当用户启用了旁白功能时，这不仅保证了视觉上的阅读效率，还能让用户能完整听完一屏内的完整内容。</p>
+<figure class="n-image"><img src="/v2/media/accessibility/04.jpg" width="1600" height="1421" alt="" loading="lazy" decoding="async"></figure>
+<blockquote><p><strong>Consider adjusting layout at large font sizes.</strong> When font size increases, inline items and container boundaries can crowd text, making it less readable. For example, if you display text inline with secondary items — such as glyphs or timestamps — the text has less horizontal space. At large font sizes, an inline layout might cause text to truncate or result in overlapping text and secondary items.</p></blockquote>
+<p><strong>考虑在大的字体尺寸下调整布局。</strong>当字体尺寸增大时，边框内的内容就会挤占文本，使其不容易阅读。例如，如果你将文本内容与次要内容--如图形或时间--一起展示，文本的横向空间就会缩小。在大号字体尺寸下，可能会导致文本被截断，或者导致文本和二级项目重叠。</p>
+<figure class="n-image"><img src="/v2/media/accessibility/05.jpg" width="1600" height="1450" alt="" loading="lazy" decoding="async"></figure>
+<p>这里讲得太细了，其实就是要注意当字号增大时，要注意不同文本之间因为换行而导致的排版问题，比如标点挤压，间距过小或过大等；对于这样的问题，有异曲同工之妙的解决方案有这个：即刻的排版设置，可以让用户自主调节间距，对标点挤压和段间距也做到了可自定义的程度，还提供了文本预览，方便用户调节。</p>
+<figure class="n-image"><img src="/v2/media/accessibility/06.jpg" width="739" height="1600" alt="" loading="lazy" decoding="async"></figure>
+<hr>
+<h3><strong><strong>Color and effects 颜色和效果</strong></strong></h3>
+<blockquote><p><strong>Avoid using color combinations as the only way to distinguish between two states or values.</strong></p></blockquote>
+<p><strong>避免使用颜色组合作为区分两种状态或数值的唯一方法。</strong>官方这个建议，是为了避免色盲人士难以区分颜色的问题，比如许多色盲用户很难区分蓝色和橙色，还有红色和绿色、红色和黑色，以及红色或绿色与灰色的组合。</p>
+<p>非色盲用户看到的 / 色盲用户看到的</p>
+<figure class="n-image"><img src="/v2/media/accessibility/07.jpg" width="1600" height="1505" alt="" loading="lazy" decoding="async"></figure>
+<blockquote><p><strong>Use strongly contrasting colors to improve readability.</strong></p></blockquote>
+<p><strong>使用强对比的颜色来提高可读性。</strong>对比度的问题，在日常设计中也容易被忽略，设计师为了追求美观，在颜色选择上缺乏考虑对比度，在验证界面中相邻颜色的对比度是否符合最低可接受水平时，可以参考在线色彩计算工具 <a href="https://www.w3.org/TR/WCAG21/" rel="noopener" target="_blank">Web Content Accessibility Guidelines (WCAG)</a>，也可以试试 在线检测工具</p>
+<a class="n-card" href="https://webaim.org/resources/contrastchecker/" rel="noopener" target="_blank"><span class="n-card-title">Contrast Checker</span><span class="n-card-desc">The five boxing wizards jump quickly. The five boxing wizards jump quickly. Enter a foreground and background color in R…</span><span class="n-card-host">webaim.org</span></a>
+    </div>
+    <a class="n-card n-card-source" href="https://quaily.com/jefferystudio/p/weekly-22-revisit-hig-2-accessibility" rel="noopener" target="_blank"><span class="n-card-title">同步发布于 · Quaily Newsletter</span><span class="n-card-host">quaily.com</span></a>
+    <nav class="pager" aria-label="章节导航"><a class="pager-prev" href="/v2/projects/rereading-hig/platforms/"><span>上一章</span>（一）Platforms</a><a class="pager-next" href="/v2/projects/rereading-hig/app-icons-brand-color/"><span>下一章</span>（三）Foundations / App icons、Brand、Color</a></nav>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 Jeffery Ho</span>
+      <nav>
+        <a href="https://quaily.com/jefferystudio">Newsletter</a>
+        <a href="https://xhslink.com/m/3wXO9kRBrLO">小红书 @杰_弗里</a>
+        <a href="https://xhslink.com/m/893LNqEQ8SC">小红书 @24PX</a>
+        <a href="mailto:Hexianji@outlook.com">邮箱</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/v2/assets/site.js" defer></script>
+</body>
+</html>

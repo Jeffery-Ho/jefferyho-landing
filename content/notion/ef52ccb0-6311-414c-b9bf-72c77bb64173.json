@@ -1,0 +1,40 @@
+{
+ "id": "ef52ccb0-6311-414c-b9bf-72c77bb64173",
+ "title": "Telegram 设计分享频道",
+ "created": "2022-10-08T14:39:00.000Z",
+ "edited": "2025-10-16T04:30:23.328Z",
+ "titles": {
+  "ef52ccb0-6311-414c-b9bf-72c77bb64173": "Telegram 设计分享频道",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "image",
+   "id": "fdee9050-e46f-4984-a631-c7c2334bbbb2",
+   "r": [
+    [
+     "Untitled"
+    ]
+   ],
+   "file": "telegram-design-channel/01.jpg",
+   "w": 1600,
+   "h": 1199
+  },
+  {
+   "t": "text",
+   "id": "92cb203a-2ef0-4dca-9fce-888c125f99fe",
+   "r": [
+    [
+     "长期关注产品体验，因为每天可能至少会看五六条，发到即刻上感觉太打扰别人的信息流了，于是建了个电报群来分享，缓解自己爆炸的分享欲～"
+    ]
+   ]
+  },
+  {
+   "t": "bookmark",
+   "id": "3cbc8c7c-6b3b-44af-b138-f1237bd2d39d",
+   "href": "https://t.me/twentyfourpixelschannel",
+   "title": "24PX's Channel",
+   "desc": "我太喜欢浏览产品设计体验了，所以建个channel来分享，不想过分打扰到大家的feed😁也欢迎订阅我的newsletter：https://xianjijeffery.zhubai.love/Created by @显济Jeffery If you have Telegram, you can view and join 24PX's Channel right away."
+  }
+ ]
+}

@@ -1,0 +1,359 @@
+{
+ "id": "32202039-af88-4528-9ef5-8f382b237888",
+ "title": "室内网关中控屏",
+ "created": "2022-09-23T15:38:42.806Z",
+ "edited": "2025-10-14T14:22:17.384Z",
+ "titles": {
+  "32202039-af88-4528-9ef5-8f382b237888": "室内网关中控屏",
+  "4609df01-dda7-4b6e-b016-0c96942aee8a": "Jeffery Studio"
+ },
+ "body": [
+  {
+   "t": "callout",
+   "id": "12c91185-b73d-432a-b03c-8a6e21c85326",
+   "r": [
+    [
+     "此项目可关注本人的「硬件交互设计能力」。"
+    ]
+   ],
+   "color": "teal_background",
+   "icon": "💡"
+  },
+  {
+   "t": "image",
+   "id": "b197a485-c400-4cf3-a307-305e42401f39",
+   "r": [
+    [
+     "智能硬件.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/01.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "fca8e197-1af7-40b0-a49d-cbd7fc7cab43",
+   "r": [
+    [
+     "智能硬件2.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/02.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "896eb6fe-7e71-4583-aed7-314e683c2f99",
+   "r": [
+    [
+     "智能硬件3.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/03.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "36af17a0-e3ae-428f-ab6d-c2a1ca73f4cd",
+   "r": [
+    [
+     "主页改版1.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/04.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "aecd76b5-b097-48f8-8208-940818d49e5d",
+   "r": [
+    [
+     "主页改版2.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/05.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "d10a80ac-3948-4a28-bbb3-038173f49fb1",
+   "r": [
+    [
+     "功能适配1.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/06.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "737680c8-f44a-41dc-861b-373db20e7156",
+   "r": [
+    [
+     "功能适配2.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/07.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "bc4573a7-55d3-4985-914a-2063ed948dae",
+   "r": [
+    [
+     "功能适配3.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/08.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "634ea2cb-ee87-4c28-8725-b10d853e821b",
+   "r": [
+    [
+     "功能适配4.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/09.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "80a15b68-56eb-44a7-a54a-6b8a6ddad5a5",
+   "r": [
+    [
+     "功能适配5.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/10.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "85205568-6f57-404d-a73e-4a8504e5f74b",
+   "r": [
+    [
+     "主页改版3.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/11.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "89e191de-4924-4be6-8fc7-b8856244dc68",
+   "r": [
+    [
+     "主页改版4.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/12.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "54379016-7477-405d-9ed2-52f760b8afad",
+   "r": [
+    [
+     "主页改版5.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/13.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "20b8f230-aa17-47b6-bf92-ec72e11e4d89",
+   "r": [
+    [
+     "主页改版6.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/14.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "b6298520-44c0-47c2-93e9-b9eef2814d50",
+   "r": [
+    [
+     "主页改版7.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/15.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "8857f64b-07e0-413d-bb4e-7d8d9ca891a1",
+   "r": [
+    [
+     "主页改版8.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/16.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "eb0777fe-a5b0-4f3b-a6d4-8af137d6c4c2",
+   "r": [
+    [
+     "主页改版9.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/17.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "02294452-873d-4a09-84b1-9ea0416b2085",
+   "r": [
+    [
+     "主页改版10.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/18.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "990f1311-9c87-4449-b83f-3e494d700e18",
+   "r": [
+    [
+     "主页改版11.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/19.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "f43c3d57-d87b-4128-bcce-c5f3c390c527",
+   "r": [
+    [
+     "主页改版12.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/20.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "e160bcf6-a597-49ed-921a-783b51556498",
+   "r": [
+    [
+     "主页改版13.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/21.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "443f9f6c-fae5-4ef1-b305-a5697efc74c8",
+   "r": [
+    [
+     "网关配置流程1.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/22.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "c518d65d-8087-45af-a734-1265f5328398",
+   "r": [
+    [
+     "网关配置流程2.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/23.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "531a9961-dbfb-430c-87a5-9964be48b6be",
+   "r": [
+    [
+     "网关配置流程3.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/24.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "6c5662c4-009f-42d4-9599-6fba15e51104",
+   "r": [
+    [
+     "网关配置流程4.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/25.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "f379c280-95c3-4af8-9e93-0bacd4e06c1a",
+   "r": [
+    [
+     "网关配置流程5.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/26.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "ee957ad7-197c-478f-8cba-a37f06eeb93d",
+   "r": [
+    [
+     "网关配置流程6.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/27.jpg",
+   "w": 1600,
+   "h": 900
+  },
+  {
+   "t": "image",
+   "id": "56b8c710-ec41-40b4-ba04-f44f604b3340",
+   "r": [
+    [
+     "中控屏项目总结.png"
+    ]
+   ],
+   "file": "indoor-gateway-control-panel/28.jpg",
+   "w": 1600,
+   "h": 900
+  }
+ ]
+}

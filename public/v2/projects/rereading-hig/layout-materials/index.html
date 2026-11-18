@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>（六）Foundations / Layout、Materials · Jeffery Ho</title>
+  <meta name="description" content="Layout A safe area defines the area within a view that isn’t covered by a navigation bar, tab bar, toolbar, or…">
+  <meta name="author" content="Jeffery Ho">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://jefferyho.com/v2/projects/rereading-hig/layout-materials/">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="Jeffery Ho">
+  <meta property="og:title" content="（六）Foundations / Layout、Materials · Jeffery Ho">
+  <meta property="og:description" content="Layout A safe area defines the area within a view that isn’t covered by a navigation bar, tab bar, toolbar, or…">
+  <meta property="og:url" content="https://jefferyho.com/v2/projects/rereading-hig/layout-materials/">
+  <meta property="og:image" content="https://jefferyho.com/v2/media/layout-materials/01.jpg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="900">
+  <meta property="og:image:alt" content="（六）Foundations / Layout、Materials">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="article:published_time" content="2022-10-22">
+  <meta property="article:modified_time" content="2022-12-12">
+  <meta property="article:author" content="Jeffery Ho">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="（六）Foundations / Layout、Materials · Jeffery Ho">
+  <meta name="twitter:description" content="Layout A safe area defines the area within a view that isn’t covered by a navigation bar, tab bar, toolbar, or…">
+  <meta name="twitter:image" content="https://jefferyho.com/v2/media/layout-materials/01.jpg">
+  <meta name="twitter:image:alt" content="（六）Foundations / Layout、Materials">
+
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08090a">
+  <link rel="icon" href="/v2/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/v2/apple-touch-icon.png">
+  <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
+  <link rel="stylesheet" href="/v2/assets/site.css">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"（六）Foundations / Layout、Materials","description":"Layout A safe area defines the area within a view that isn’t covered by a navigation bar, tab bar, toolbar, or…","url":"https://jefferyho.com/v2/projects/rereading-hig/layout-materials/","image":"https://jefferyho.com/v2/media/layout-materials/01.jpg","inLanguage":"zh-CN","datePublished":"2022-10-22","dateModified":"2022-12-12","author":{"@type":"Person","name":"Jeffery Ho","url":"https://jefferyho.com/v2/"}}</script>
+</head>
+<body>
+  <header class="top">
+    <div class="wrap">
+      <a class="brand" href="/v2/"><img class="brand-mark" src="/v2/favicon.png" width="24" height="24" alt="">Jeffery Ho</a>
+      <div class="tools">
+        <button class="tool" type="button" data-theme-toggle data-label-system="主题：跟随系统" data-label-light="主题：浅色" data-label-dark="主题：深色" aria-label="主题：跟随系统">
+      <svg class="icon icon-system" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><rect x="1.75" y="2.75" width="12.5" height="8.5" rx="1.5"/><path d="M5.5 13.5h5"/></svg>
+      <svg class="icon icon-light" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1.5v1.5M8 13v1.5M1.5 8H3M13 8h1.5M3.4 3.4l1 1M11.6 11.6l1 1M3.4 12.6l1-1M11.6 4.4l1-1"/></svg>
+      <svg class="icon icon-dark" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7z"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap article">
+    <nav class="crumbs" aria-label="面包屑"><a href="/v2/#projects">项目</a><span aria-hidden="true">/</span><a href="/v2/projects/rereading-hig/">重读 HIG</a></nav>
+    <header class="article-head">
+      <h1>（六）Foundations / Layout、Materials</h1>
+      <p class="article-meta"><time datetime="2022-10-22">2022.10.22</time></p>
+    </header>
+    
+    
+    <div class="prose">
+
+<h3 class="bg-teal">Layout</h3>
+<figure class="n-image"><img src="/v2/media/layout-materials/01.jpg" width="1600" height="900" alt="" loading="lazy" decoding="async"></figure>
+<blockquote><p>A <em>safe area </em>defines the area within a view that isn’t covered by a navigation bar, tab bar, toolbar, or other views a window or scene might provide. Safe areas are essential for avoiding a device’s interactive and display features.</p></blockquote>
+<p><strong>安全区域</strong>定义了视图中没有被导航栏、选项卡栏、工具栏或窗口或场景可能提供的其他视图覆盖的区域，它对于设备的交互和显示功能至关重要。</p>
+<blockquote><p><strong>Use placement to convey relative importance. </strong>In general, place principal items in the upper half of the screen or window, near the leading side. People typically start in this area, whether they’re looking at the screen or using a screen reader like VoiceOver.</p></blockquote>
+<p><strong>使用位置来传达相对重要性。</strong>一般情况下，将主要项目放在屏幕或窗口的上半部分，靠近前面一侧。人们通常从这个领域开始，不管他们是看着屏幕还是使用像 VoiceOver 这样的屏幕阅读器。</p>
+<p>嗯，这个符合了人们的阅读习惯。</p>
+<blockquote><p><strong>Elevate essential information by giving it sufficient space. </strong>People want to view the most important information instantly, … People can easily access secondary information by scrolling.</p></blockquote>
+<p>通过给予足够的空间来提升重要信息。人们希望在第一屏上立即查看最重要的信息，而次要信息，他们可以通过滚动屏幕进行查看。也就是说，我们在设计界面时，需要充分考虑什么信息是主要的，将它们放在第一位，而次要信息可以适当往下放。</p>
+<blockquote><p><strong>When possible, consider alluding to hidden content by partially displaying offscreen elements.</strong></p></blockquote>
+<p>在可能的情况下，考虑通过部分显示屏幕外的元素来暗示隐藏的内容。</p>
+<h3><strong><strong>Platform considerations</strong></strong></h3>
+<blockquote><p>If it’s essential that your app run in a single orientation, don’t tell people to rotate their device to match; if your app doesn’t rotate automatically when someone holds the device in an unsupported orientation, they’ll know instinctively to rotate it.</p></blockquote>
+<p>对于横屏布局和竖屏布局的考虑，比较重要的一点是，<strong>如果你的应用程序必须以单一的方向运行，不要通过设计来暗示用户，他们可以旋转屏幕后继续使用。</strong></p>
+<p><strong><strong>iOS keyboard layout guide</strong></strong></p>
+<p>iOS 15 引入了 keyboard layout guide（键盘布局），可以帮助开发者更方便地计算弹出键盘后的安全区域布局，如下图为键盘弹出和收回时安全区判断。做设计时如果是指定了常驻底部的元素，那么弹出键盘后如果指定该元素依然浮在键盘上方，开发设置安全区底部绑定键盘区顶部即可。</p>
+<div class="n-columns" style="--cols:50.00fr 50.00fr"><div class="n-column"><figure class="n-image"><img src="/v2/media/layout-materials/02.jpg" width="1600" height="1600" alt="" loading="lazy" decoding="async"></figure></div><div class="n-column"><figure class="n-image"><img src="/v2/media/layout-materials/03.jpg" width="1600" height="1600" alt="" loading="lazy" decoding="async"></figure></div></div>
+<p><strong><strong>TVOS</strong></strong></p>
+<blockquote><p>It can be difficult for people to see content that close to the edges, and unintended cropping can occur due to overscanning on older TVs.</p></blockquote>
+<p>人们很难看到接近边缘的内容，并且由于在旧电视机上可能由于分辨率不足导致画面放大，可能会对内容发生意外的裁剪。因此，在tvOS中，画面的安全区至少是两侧保留80px，上下两端保留60px</p>
+<figure class="n-image"><img src="/v2/media/layout-materials/04.jpg" width="1600" height="961" alt="" loading="lazy" decoding="async"></figure>
+<p><strong><strong>watchOS</strong></strong></p>
+<blockquote><p><strong>Avoid placing more than two or three controls side by side in your interface.</strong><br> As a general rule, display no more than three buttons that contain glyphs — or two buttons that contain text — in a row. Although it’s usually better to let text buttons span the full width of the screen, two side-by-side buttons with short text labels can also work well, as long as the screen doesn’t scroll.</p></blockquote>
+<p><strong>避免在界面中并排放置多于两个或三个控件。</strong>在Apple Watch这个寸土寸金的屏幕中，一行中显示不超过三个包含符号的按钮ーー或两个包含文本的按钮。使用通栏的按钮通常来说会更好操作，但是两个并排的带有短文本标签的按钮也可以很好地工作，因为这样的话就不需要用户进行滚动操作。</p>
+<blockquote><p><strong>Support autorotation in views people might want to show others.</strong></p></blockquote>
+<p><strong>当人们希望向他人展示屏幕内容时，支持自动旋转屏幕。</strong>比如说，在使用 watch 二维码支付的场景中，自动旋转屏幕方向，可以方便收款方更好地识别屏幕内容。</p>
+<div class="n-columns" style="--cols:33.33fr 33.33fr 33.33fr"><div class="n-column"></div><div class="n-column"><hr></div><div class="n-column"></div></div>
+<h3 class="bg-teal"><strong><strong>Materials</strong></strong></h3>
+<figure class="n-image"><img src="/v2/media/layout-materials/05.jpg" width="1600" height="900" alt="" loading="lazy" decoding="async"></figure>
+<p>材质这一章比较简单，只讲几点：</p>
+<p><strong>What 是什么</strong></p>
+<p>一种视觉效果，在系统中通过在文本、图标的背景上，向界面下一层的背景提取颜色并显示出来，通常是毛玻璃效果，以达到增强画面的深度感。</p>
+<p>系统的背景层分为了语义化的四种：透明度由低到高为 Thick、Regular、Thin 和 Ultrathin , 其中 Regular 为默认。</p>
+<figure class="n-image"><img src="/v2/media/layout-materials/06.jpg" width="1600" height="1168" alt="" loading="lazy" decoding="async"></figure>
+<p><span class="fg-gray">图源：@fenx</span></p>
+<p><strong>Why 为什么</strong></p>
+<blockquote><p>Materials can combine with vibrancy to add visual interest to the interface.</p></blockquote>
+<p>材质可以与活力结合，<strong>增加界面的视觉趣味</strong>。</p>
+<p><strong>Where 用在哪里</strong></p>
+<p>iOS、iPadOS上的原生对话框、提示</p>
+<figure class="n-image"><img src="/v2/media/layout-materials/07.jpg" width="1600" height="520" alt="" loading="lazy" decoding="async"></figure>
+<p><span class="fg-gray">图源：@fenx</span></p>
+<p>watchOS</p>
+<p><s>暂不支持这个材质效果。</s></p>
+<p>macOS</p>
+<p>在macOS中有两种混合模式，一种在窗口背后，另一种是和窗口融合。</p>
+<figure class="n-image"><img src="/v2/media/layout-materials/08.jpg" width="1600" height="1000" alt="" loading="lazy" decoding="async"></figure>
+<p>这是第一种，在这种模式下，窗口后面的内容会显示出来，帮助用户保留围绕你的应用程序或游戏的一些上下文。<strong>菜单、工作表和侧栏等组件自动使用此模式</strong>。</p>
+<figure class="n-image"><img src="/v2/media/layout-materials/09.jpg" width="1600" height="1000" alt="" loading="lazy" decoding="async"></figure>
+<p>这是第二种，在这个模式下，允许通过其他窗口组件显示窗口内容。例如，当窗口内容在工具栏下滚动时，工具栏可以使用这种模式，给人一种连续性的感觉。</p>
+<p> tvOS</p>
+<p><s>定义和iOS类似，没有过多展开。</s></p>
+<div class="n-callout bg-teal"><span class="n-callout-icon" aria-hidden="true">💡</span><div><p>对于移动端app的产品设计师来说，这一章内容派上用场的地方并不多，能够理解官方对于毛玻璃材质的四种定义就足够了。</p></div></div>
+    </div>
+    
+    <nav class="pager" aria-label="章节导航"><a class="pager-prev" href="/v2/projects/rereading-hig/images-inclusion/"><span>上一章</span>（五）Foundations / Images、Inclusion</a><a class="pager-next" href="/v2/projects/rereading-hig/motion-right-to-left/"><span>下一章</span>（七）Foundations / Motion、Right to left</a></nav>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <span>© 2026 Jeffery Ho</span>
+      <nav>
+        <a href="https://quaily.com/jefferystudio">Newsletter</a>
+        <a href="https://xhslink.com/m/3wXO9kRBrLO">小红书 @杰_弗里</a>
+        <a href="https://xhslink.com/m/893LNqEQ8SC">小红书 @24PX</a>
+        <a href="mailto:Hexianji@outlook.com">邮箱</a>
+      </nav>
+    </div>
+  </footer>
+  <script src="/v2/assets/site.js" defer></script>
+</body>
+</html>
