@@ -1,5 +1,12 @@
 # Changelog
 
+## 2026-11-18 · 卡片封面与原图存档
+
+- 项目与摄影的 12 张卡片改用 Notion 页面图片作封面（1000px JPEG，共约 1MB，`public/v2/covers/`），替换原文字占位；悬停轻微放大。
+- Notion 页面原图 170 张（141MB）存档到 `archive/notion-media/`，不部署。
+
+验证方式：本地 `wrangler dev` 浏览器检查 12 张封面全部加载、无失败；部署前后核对 zone 路由不变（全站仍为 notion2）；线上 curl `/v2/`、`/v2/en/`、封面与样式均 200，`/` 仍 302 到 Notion 首页。
+
 ## 2026-11-18 · v2 独立 Worker
 
 - `jefferyho-landing` 只绑定 `jefferyho.com/v2*` 与 `www.jefferyho.com/v2*`；全站路由交还 `notion2`，`/`、Notion 页面、根目录 sitemap 与 robots 恢复原状。

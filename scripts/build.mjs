@@ -27,20 +27,20 @@ const content = {
     { zh: "我的记录战队：flomo + 语雀 + Notion", en: "My note-taking stack: flomo + Yuque + Notion", date: "2025-10-16", url: N("flomo-Notion-xiaohongshu-com-6141acf31e7f42b4b22cabda734d5a66"), src: { zh: "小红书", en: "Xiaohongshu" } },
   ],
   projects: [
-    { zh: "重读 HIG", en: "Revisiting HIG", glyph: "HIG", url: N("HIG-34a8557f73f44a98a93182959147364b"), d: { zh: "系列文章", en: "Article series" } },
-    { zh: "小报童付费专栏", en: "Paid column on Xiaobaotong", glyph: "Col", url: N("7e3db60d0af749b2954718c2f08fc2c6"), d: { zh: "专栏", en: "Column" } },
-    { zh: "Telegram 设计分享频道", en: "Telegram design channel", glyph: "TG", url: N("Telegram-ef52ccb06311414cb9bf72c77bb64173"), d: { zh: "频道", en: "Channel" } },
-    { zh: "物联网开放平台", en: "IoT open platform", glyph: "IoT", url: N("da64dd8a09b44880b288616044a57c6e"), d: { zh: "平台设计", en: "Platform design" } },
-    { zh: "室内网关中控屏", en: "Indoor gateway control panel", glyph: "Hub", url: N("32202039af8845289ef58f382b237888"), d: { zh: "智能硬件", en: "Smart hardware" } },
-    { zh: "招商银行 · 天工设计平台的设计探索", en: "China Merchants Bank · Tiangong design platform exploration", glyph: "CMB", url: N("57db2dc82f3e484e8bec0c766a3654d6"), d: { zh: "设计探索", en: "Design exploration" } },
-    { zh: "OPPO ColorOS 社区设计", en: "OPPO ColorOS community design", glyph: "OS", url: N("OPPO-ColorOS-411044885ef54e41ad70b5eed9068935"), d: { zh: "社区设计", en: "Community design" } },
-    { zh: "招商证券 · 交易大师交互体验优化提案", en: "China Merchants Securities · Trading app UX proposal", glyph: "CMS", url: N("b83ed0d1c2224018ae1e593e73c1f023"), d: { zh: "提案", en: "Proposal" } },
-    { zh: "腾讯 · 医疗健康官网设计策略提案", en: "Tencent · Healthcare website design strategy", glyph: "TX", url: N("af7a191d32f14aec98025e9dd2254082"), d: { zh: "提案", en: "Proposal" } },
-    { zh: "招商银行 · 天工设计平台提案", en: "China Merchants Bank · Tiangong design platform proposal", glyph: "CMB", url: N("4de2c03058264efe8fff23a75b8f901a"), d: { zh: "提案", en: "Proposal" } },
+    { zh: "重读 HIG", en: "Revisiting HIG", cover: "hig.jpg", url: N("HIG-34a8557f73f44a98a93182959147364b"), d: { zh: "系列文章", en: "Article series" } },
+    { zh: "小报童付费专栏", en: "Paid column on Xiaobaotong", cover: "column.jpg", url: N("7e3db60d0af749b2954718c2f08fc2c6"), d: { zh: "专栏", en: "Column" } },
+    { zh: "Telegram 设计分享频道", en: "Telegram design channel", cover: "telegram.jpg", url: N("Telegram-ef52ccb06311414cb9bf72c77bb64173"), d: { zh: "频道", en: "Channel" } },
+    { zh: "物联网开放平台", en: "IoT open platform", cover: "iot.jpg", url: N("da64dd8a09b44880b288616044a57c6e"), d: { zh: "平台设计", en: "Platform design" } },
+    { zh: "室内网关中控屏", en: "Indoor gateway control panel", cover: "gateway.jpg", url: N("32202039af8845289ef58f382b237888"), d: { zh: "智能硬件", en: "Smart hardware" } },
+    { zh: "招商银行 · 天工设计平台的设计探索", en: "China Merchants Bank · Tiangong design platform exploration", cover: "cmb-exploration.jpg", url: N("57db2dc82f3e484e8bec0c766a3654d6"), d: { zh: "设计探索", en: "Design exploration" } },
+    { zh: "OPPO ColorOS 社区设计", en: "OPPO ColorOS community design", cover: "coloros.jpg", url: N("OPPO-ColorOS-411044885ef54e41ad70b5eed9068935"), d: { zh: "社区设计", en: "Community design" } },
+    { zh: "招商证券 · 交易大师交互体验优化提案", en: "China Merchants Securities · Trading app UX proposal", cover: "cms-trading.jpg", url: N("b83ed0d1c2224018ae1e593e73c1f023"), d: { zh: "提案", en: "Proposal" } },
+    { zh: "腾讯 · 医疗健康官网设计策略提案", en: "Tencent · Healthcare website design strategy", cover: "tencent-health.jpg", url: N("af7a191d32f14aec98025e9dd2254082"), d: { zh: "提案", en: "Proposal" } },
+    { zh: "招商银行 · 天工设计平台提案", en: "China Merchants Bank · Tiangong design platform proposal", cover: "cmb-proposal.jpg", url: N("4de2c03058264efe8fff23a75b8f901a"), d: { zh: "提案", en: "Proposal" } },
   ],
   photography: [
-    { zh: "Nothing ear (1)", en: "Nothing ear (1)", glyph: "ear", url: N("Nothing-ear-1-28e2fd95f55e80afb98ee5103baee850"), d: { zh: "收获了 Nothing CEO 的点赞", en: "Got a like from the Nothing CEO" } },
-    { zh: "Unsplash 2020", en: "Unsplash 2020", glyph: "2020", url: N("Unsplash-2020-28e2fd95f55e8092a653faf72b6db165"), d: { zh: "Interiors 类别入围", en: "Finalist, Interiors category" } },
+    { zh: "Nothing ear (1)", en: "Nothing ear (1)", cover: "nothing-ear.jpg", url: N("Nothing-ear-1-28e2fd95f55e80afb98ee5103baee850"), d: { zh: "收获了 Nothing CEO 的点赞", en: "Got a like from the Nothing CEO" } },
+    { zh: "Unsplash 2020", en: "Unsplash 2020", cover: "unsplash-2020.jpg", url: N("Unsplash-2020-28e2fd95f55e8092a653faf72b6db165"), d: { zh: "Interiors 类别入围", en: "Finalist, Interiors category" } },
   ],
   about: [
     { zh: "个人说明书", en: "A user manual for me", date: "2022-09-23", url: N("90008a05eb1c4c1aa077b126993d6b0a") },
@@ -132,7 +132,7 @@ function grid(items, lang) {
 ${items
   .map(
     (it, i) => `          <a class="card" href="${esc(it.url)}">
-            <div class="card-visual" aria-hidden="true"><span class="card-index">${String(i + 1).padStart(2, "0")}</span><span class="card-glyph">${esc(it.glyph)}</span></div>
+            <div class="card-visual"><img src="${BASE}covers/${it.cover}" alt="" width="1000" height="562" loading="lazy" decoding="async"></div>
             <h3>${esc(it[lang])}</h3>
             <p>${esc(it.d[lang])}</p>
           </a>`
