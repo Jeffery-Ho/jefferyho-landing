@@ -1,4 +1,4 @@
-// Generates public/index.html (zh) and public/en/index.html (en) from one content source.
+// Generates public/v2/index.html (zh) and public/v2/en/index.html (en) from one content source.
 // Usage: node scripts/build.mjs
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -6,6 +6,8 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://jefferyho.com";
+const BASE = "/v2/"; // new homepage lives here; "/" stays on the Notion homepage
+const NOTION_HOME = `${SITE}/Jeffery-Studio-4609df01dda74b6eb0160c96942aee8a`;
 const N = (path) => `${SITE}/${path}`; // Notion page on the canonical domain
 
 const content = {
@@ -56,7 +58,7 @@ const content = {
 const i18n = {
   zh: {
     lang: "zh-CN",
-    path: "/",
+    path: BASE,
     locale: "zh_CN",
     altLocale: "en_US",
     title: "Jeffery Ho · 产品设计师",
@@ -73,7 +75,7 @@ const i18n = {
     sections: { thoughts: "想法", public: "公开分享", projects: "项目", photography: "摄影", about: "关于" },
     all: "全部",
     filterLabel: "按类别筛选",
-    other: { href: "/en/", label: "EN", lang: "en", aria: "Switch to English" },
+    other: { href: `${BASE}en/`, label: "EN", lang: "en", aria: "Switch to English" },
     theme: { system: "主题：跟随系统", light: "主题：浅色", dark: "主题：深色" },
     avatarAlt: "Jeffery 的插画头像",
     jobTitle: "高级产品设计师",
@@ -82,7 +84,7 @@ const i18n = {
   },
   en: {
     lang: "en",
-    path: "/en/",
+    path: `${BASE}en/`,
     locale: "en_US",
     altLocale: "zh_CN",
     title: "Jeffery Ho · Product Designer",
@@ -99,7 +101,7 @@ const i18n = {
     sections: { thoughts: "Thoughts", public: "In public", projects: "Projects", photography: "Photography", about: "About" },
     all: "All",
     filterLabel: "Filter by category",
-    other: { href: "/", label: "中文", lang: "zh-CN", aria: "切换到中文" },
+    other: { href: BASE, label: "中文", lang: "zh-CN", aria: "切换到中文" },
     theme: { system: "Theme: system", light: "Theme: light", dark: "Theme: dark" },
     avatarAlt: "Illustrated portrait of Jeffery",
     jobTitle: "Senior Product Designer",
@@ -155,7 +157,7 @@ function page(lang) {
     "@type": "Person",
     name: "Jeffery Ho",
     alternateName: "Jeffery",
-    url: SITE + "/",
+    url: SITE + BASE,
     image: `${SITE}/avatar.png`,
     jobTitle: t.jobTitle,
     description: t.description,
@@ -173,9 +175,9 @@ function page(lang) {
   <meta name="author" content="Jeffery Ho">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="${url}">
-  <link rel="alternate" hreflang="zh-CN" href="${SITE}/">
-  <link rel="alternate" hreflang="en" href="${SITE}/en/">
-  <link rel="alternate" hreflang="x-default" href="${SITE}/">
+  <link rel="alternate" hreflang="zh-CN" href="${SITE}${BASE}">
+  <link rel="alternate" hreflang="en" href="${SITE}${BASE}en/">
+  <link rel="alternate" hreflang="x-default" href="${SITE}${BASE}">
 
   <meta property="og:type" content="profile">
   <meta property="og:site_name" content="Jeffery Ho">
@@ -261,7 +263,7 @@ ${content.follow.map((f) => `        <a href="${esc(f.url)}">${esc(f[lang])}</a>
 }
 
 for (const lang of ["zh", "en"]) {
-  const out = join(ROOT, "public", lang === "zh" ? "index.html" : "en/index.html");
+  const out = join(ROOT, "public", "v2", lang === "zh" ? "index.html" : "en/index.html");
   mkdirSync(dirname(out), { recursive: true });
   writeFileSync(out, page(lang));
   console.log("wrote", out);
@@ -272,9 +274,9 @@ const today = new Date().toISOString().slice(0, 10);
 const home = (loc) => `  <url>
     <loc>${loc}</loc>
     <lastmod>${today}</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE}/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="${SITE}/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE}${BASE}"/>
+    <xhtml:link rel="alternate" hreflang="en" href="${SITE}${BASE}en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${BASE}"/>
   </url>`;
 const notion = ["thoughts", "public", "projects", "photography", "about"]
   .flatMap((k) => content[k])
@@ -283,7 +285,7 @@ writeFileSync(
   join(ROOT, "public", "sitemap.xml"),
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${[home(`${SITE}/`), home(`${SITE}/en/`), ...notion].join("\n")}
+${[`  <url>\n    <loc>${NOTION_HOME}</loc>\n  </url>`, home(`${SITE}${BASE}`), home(`${SITE}${BASE}en/`), ...notion].join("\n")}
 </urlset>
 `
 );

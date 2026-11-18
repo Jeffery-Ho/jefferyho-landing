@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-18 · 新首页移到 /v2
+
+- 新页面改为 `https://jefferyho.com/v2/`（英文 `/v2/en/`），`/` 恢复为 Notion 首页。
+- canonical、hreflang、og:url、JSON-LD 与页内链接改为 `/v2/` 路径。
+- sitemap 改列 Notion 首页最终地址（`/Jeffery-Studio-…`）、`/v2/`、`/v2/en/` 与 Notion 详情页；不再列会 302 的 `/`。
+
+验证方式：部署后线上实测，`/` 302 到 Notion 首页且正常渲染，`/v2` 307 到 `/v2/` 返回 200，`/v2/en/` 200，www 301 到 apex，sitemap 通过 `xmllint` 校验。
+
 ## 2026-11-18 · v2
 
 - 新首页：参考 Notion 首页重新整理内容（简介、想法、公开分享、项目、摄影、关于、联系方式），深色卡片风格，分类筛选。

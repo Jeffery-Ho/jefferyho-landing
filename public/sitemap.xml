@@ -1,18 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jefferyho.com/</loc>
-    <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jefferyho.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jefferyho.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jefferyho.com/"/>
+    <loc>https://jefferyho.com/Jeffery-Studio-4609df01dda74b6eb0160c96942aee8a</loc>
   </url>
   <url>
-    <loc>https://jefferyho.com/en/</loc>
+    <loc>https://jefferyho.com/v2/</loc>
     <lastmod>2026-11-18</lastmod>
-    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jefferyho.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://jefferyho.com/en/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://jefferyho.com/"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jefferyho.com/v2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jefferyho.com/v2/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jefferyho.com/v2/"/>
+  </url>
+  <url>
+    <loc>https://jefferyho.com/v2/en/</loc>
+    <lastmod>2026-11-18</lastmod>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://jefferyho.com/v2/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://jefferyho.com/v2/en/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://jefferyho.com/v2/"/>
   </url>
   <url>
     <loc>https://jefferyho.com/3652fd95f55e801cb2b6f57db7801d93</loc>
