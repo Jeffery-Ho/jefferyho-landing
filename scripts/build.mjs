@@ -1,4 +1,5 @@
-// Generates public/v2/index.html (zh) and public/v2/en/index.html (en) from one content source.
+// Generates public/v2/index.html (zh), public/v2/en/index.html (en) and public/v2/sitemap.xml.
+// Everything this site serves lives under /v2/; all other paths belong to the Notion site.
 // Usage: node scripts/build.mjs
 import { writeFileSync, mkdirSync } from "node:fs";
 import { dirname, join } from "node:path";
@@ -7,7 +8,6 @@ import { fileURLToPath } from "node:url";
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://jefferyho.com";
 const BASE = "/v2/"; // new homepage lives here; "/" stays on the Notion homepage
-const NOTION_HOME = `${SITE}/Jeffery-Studio-4609df01dda74b6eb0160c96942aee8a`;
 const N = (path) => `${SITE}/${path}`; // Notion page on the canonical domain
 
 const content = {
@@ -158,7 +158,7 @@ function page(lang) {
     name: "Jeffery Ho",
     alternateName: "Jeffery",
     url: SITE + BASE,
-    image: `${SITE}/avatar.png`,
+    image: `${SITE}${BASE}avatar.png`,
     jobTitle: t.jobTitle,
     description: t.description,
     address: { "@type": "PostalAddress", addressLocality: t.city, addressCountry: "CN" },
@@ -184,7 +184,7 @@ function page(lang) {
   <meta property="og:title" content="${esc(t.title)}">
   <meta property="og:description" content="${esc(t.description)}">
   <meta property="og:url" content="${url}">
-  <meta property="og:image" content="${SITE}/${t.og}">
+  <meta property="og:image" content="${SITE}${BASE}${t.og}">
   <meta property="og:image:type" content="image/png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
@@ -197,21 +197,21 @@ function page(lang) {
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="${esc(t.title)}">
   <meta name="twitter:description" content="${esc(t.description)}">
-  <meta name="twitter:image" content="${SITE}/${t.og}">
+  <meta name="twitter:image" content="${SITE}${BASE}${t.og}">
   <meta name="twitter:image:alt" content="${esc(t.ogAlt)}">
 
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#ffffff">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#08090a">
-  <link rel="icon" href="/favicon.png" type="image/png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="icon" href="${BASE}favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="${BASE}apple-touch-icon.png">
   <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="${BASE}assets/site.css">
   <script type="application/ld+json">${JSON.stringify(person)}</script>
 </head>
 <body>
   <header class="top">
     <div class="wrap">
-      <a class="brand" href="${t.path}"><img class="brand-mark" src="/favicon.png" width="24" height="24" alt="">Jeffery Ho</a>
+      <a class="brand" href="${t.path}"><img class="brand-mark" src="${BASE}favicon.png" width="24" height="24" alt="">Jeffery Ho</a>
       <div class="tools">
         <a class="tool" href="${t.other.href}" hreflang="${t.other.lang}" lang="${t.other.lang}" aria-label="${esc(t.other.aria)}">${t.other.label}</a>
         <button class="tool" type="button" data-theme-toggle data-label-system="${esc(t.theme.system)}" data-label-light="${esc(t.theme.light)}" data-label-dark="${esc(t.theme.dark)}" aria-label="${esc(t.theme.system)}">${ICONS}
@@ -222,7 +222,7 @@ function page(lang) {
 
   <main class="wrap">
     <section class="hero">
-      <img class="avatar" src="/avatar.png" width="96" height="96" alt="${esc(t.avatarAlt)}">
+      <img class="avatar" src="${BASE}avatar.png" width="96" height="96" alt="${esc(t.avatarAlt)}">
       <h1>Jeffery Ho</h1>
       <p class="role">${esc(t.role)}</p>
       <div class="bio">
@@ -256,7 +256,7 @@ ${content.follow.map((f) => `        <a href="${esc(f.url)}">${esc(f[lang])}</a>
       </nav>
     </div>
   </footer>
-  <script src="/assets/site.js" defer></script>
+  <script src="${BASE}assets/site.js" defer></script>
 </body>
 </html>
 `;
@@ -269,24 +269,23 @@ for (const lang of ["zh", "en"]) {
   console.log("wrote", out);
 }
 
-// sitemap.xml: only final, directly indexable URLs (200, no redirects, no query strings).
+// sitemap.xml for the v2 pages only (final, directly indexable URLs).
 const today = new Date().toISOString().slice(0, 10);
-const home = (loc) => `  <url>
+const entry = (loc) => `  <url>
     <loc>${loc}</loc>
     <lastmod>${today}</lastmod>
     <xhtml:link rel="alternate" hreflang="zh-CN" href="${SITE}${BASE}"/>
     <xhtml:link rel="alternate" hreflang="en" href="${SITE}${BASE}en/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="${SITE}${BASE}"/>
   </url>`;
-const notion = ["thoughts", "public", "projects", "photography", "about"]
-  .flatMap((k) => content[k])
-  .map((it) => (it.date ? `  <url>\n    <loc>${esc(it.url)}</loc>\n    <lastmod>${it.date}</lastmod>\n  </url>` : `  <url>\n    <loc>${esc(it.url)}</loc>\n  </url>`));
+const sitemap = join(ROOT, "public", "v2", "sitemap.xml");
 writeFileSync(
-  join(ROOT, "public", "sitemap.xml"),
+  sitemap,
   `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
-${[`  <url>\n    <loc>${NOTION_HOME}</loc>\n  </url>`, home(`${SITE}${BASE}`), home(`${SITE}${BASE}en/`), ...notion].join("\n")}
+${entry(`${SITE}${BASE}`)}
+${entry(`${SITE}${BASE}en/`)}
 </urlset>
 `
 );
-console.log("wrote", join(ROOT, "public", "sitemap.xml"));
+console.log("wrote", sitemap);

@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-18 · v2 独立 Worker
+
+- `jefferyho-landing` 只绑定 `jefferyho.com/v2*` 与 `www.jefferyho.com/v2*`；全站路由交还 `notion2`，`/`、Notion 页面、根目录 sitemap 与 robots 恢复原状。
+- v2 的样式、脚本、头像、分享图、图标全部移到 `/v2/` 下；新增 `/v2/sitemap.xml`（仅列 `/v2/`、`/v2/en/`）；去掉根目录 robots.txt / sitemap.xml 与对 `notion2` 的 Service Binding。
+- 部署时发生约 1 分钟中断：wrangler 部署删除了不在配置中的全站路由，已立即为 `notion2` 重建。
+
+验证方式：线上 curl，`/` 302 到 Notion 首页、Notion 详情页 200、根 sitemap/robots 为 notion2 原版；`/v2/`、`/v2/en/`、`/v2/og.png`、`/v2/assets/site.css`、`/v2/sitemap.xml` 均 200，www/v2 301 到 apex；浏览器确认 `/v2/` 样式与图片加载无失败请求。
+
 ## 2026-11-18 · 新首页移到 /v2
 
 - 新页面改为 `https://jefferyho.com/v2/`（英文 `/v2/en/`），`/` 恢复为 Notion 首页。

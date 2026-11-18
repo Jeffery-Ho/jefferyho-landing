@@ -1,11 +1,6 @@
-interface Fetcher {
-  fetch(request: Request): Promise<Response>;
-}
-
+// Serves only https://jefferyho.com/v2* — every other path stays on the Notion site (notion2 Worker).
 interface Env {
-  ASSETS: Fetcher;
-  // Existing "notion2" Worker that proxies jefferyho.notion.site onto this domain.
-  NOTION: Fetcher;
+  ASSETS: { fetch(request: Request): Promise<Response> };
 }
 
 const CANONICAL_HOST = "jefferyho.com";
@@ -21,13 +16,6 @@ export default {
       return Response.redirect(url.toString(), 301);
     }
 
-    // v2 owns the homepage and site metadata files.
-    if (request.method === "GET" || request.method === "HEAD") {
-      const asset = await env.ASSETS.fetch(request);
-      if (asset.status !== 404) return asset;
-    }
-
-    // Everything else stays on Notion, via the existing notion2 proxy Worker.
-    return env.NOTION.fetch(request);
+    return env.ASSETS.fetch(request);
   },
 };

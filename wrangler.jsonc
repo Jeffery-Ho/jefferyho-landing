@@ -6,12 +6,12 @@
   "assets": {
     "directory": "./public",
     "binding": "ASSETS",
-    // The Worker runs first so it can redirect www and hand non-asset paths to Notion.
+    // The Worker runs first so it can redirect www before serving assets.
     "run_worker_first": true
   },
-  "services": [{ "binding": "NOTION", "service": "notion2" }],
+  // Only /v2 belongs to this Worker; the catch-all routes stay on the notion2 Worker.
   "routes": [
-    { "pattern": "jefferyho.com/*", "zone_name": "jefferyho.com" },
-    { "pattern": "www.jefferyho.com/*", "zone_name": "jefferyho.com" }
+    { "pattern": "jefferyho.com/v2*", "zone_name": "jefferyho.com" },
+    { "pattern": "www.jefferyho.com/v2*", "zone_name": "jefferyho.com" }
   ]
 }

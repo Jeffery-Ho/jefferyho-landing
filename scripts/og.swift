@@ -1,9 +1,9 @@
-// Renders share images and icons into public/.
+// Renders share images and icons into public/v2/.
 // Usage: swift scripts/og.swift
 import AppKit
 
 let root = URL(fileURLWithPath: CommandLine.arguments[0]).deletingLastPathComponent().deletingLastPathComponent()
-let pub = root.appendingPathComponent("public")
+let pub = root.appendingPathComponent("public/v2")
 
 let bg = NSColor(srgbRed: 0x08 / 255, green: 0x09 / 255, blue: 0x0a / 255, alpha: 1)
 let fg = NSColor(srgbRed: 0xf7 / 255, green: 0xf8 / 255, blue: 0xf8 / 255, alpha: 1)
