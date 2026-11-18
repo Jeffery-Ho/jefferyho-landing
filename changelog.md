@@ -1,5 +1,13 @@
 # Changelog
 
+## 2026-11-18 · 站内链接打开加速
+
+- 预渲染：每页加入 Speculation Rules，悬停站内 `/v2/` 链接约 200ms 即在后台预渲染目标页（Chrome / Edge），点击后几乎立即显示。
+- 兜底预取：不支持 Speculation Rules 的浏览器（Safari、Firefox）在悬停或触摸链接时用 `<link rel="prefetch">` 预取页面，每个地址只取一次。
+- 缓存：`site.css` / `site.js` 引用带内容哈希 `?v=`，Worker 对其返回一年 immutable 缓存；图片缓存 7 天（另加 1 天 stale-while-revalidate），跳转时不再逐个回源校验。HTML 仍每次校验，改动即时生效。
+
+验证方式：本地 `wrangler dev` curl 核对页面、带版本 CSS、图片、404 的缓存头；内置浏览器确认规则存在、控制台无错误，模拟不支持 Speculation Rules 时悬停会插入预取且去重。内置浏览器（Electron）不执行预渲染，Chrome 中的预渲染效果未实测。
+
 ## 2026-11-18 · 外部原文搬到站内
 
 - Weekly 19、Weekly 20（Quaily）与《我的 flomo 心得》（微信公众号「flomo浮墨笔记」）的原文正文与图片导入站内，存于 `content/external/`；Notion 正文为空时构建自动使用导入正文，日期改为原文发布日期，页尾保留「原文发布于」链接。

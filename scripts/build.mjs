@@ -2,6 +2,7 @@
 // migrated Notion page (content/pages.mjs + content/notion/*.json), and public/v2/sitemap.xml.
 // Everything this site serves lives under /v2/; all other paths belong to the Notion site.
 // Usage: node scripts/build.mjs
+import { createHash } from "node:crypto";
 import { existsSync, mkdirSync, readFileSync, rmSync, writeFileSync } from "node:fs";
 import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -12,6 +13,17 @@ const ROOT = join(dirname(fileURLToPath(import.meta.url)), "..");
 const SITE = "https://jefferyho.com";
 const BASE = "/v2/";
 const OUT = join(ROOT, "public", "v2");
+
+// Content hash per asset, appended as ?v= so the Worker can cache /v2/assets/* as immutable.
+const assetVersion = (name) =>
+  createHash("sha256").update(readFileSync(join(OUT, "assets", name))).digest("hex").slice(0, 10);
+const CSS_URL = `${BASE}assets/site.css?v=${assetVersion("site.css")}`;
+const JS_URL = `${BASE}assets/site.js?v=${assetVersion("site.js")}`;
+
+// Prerender in-site pages on hover (Chromium); site.js prefetches on hover elsewhere.
+const SPECULATION = JSON.stringify({
+  prerender: [{ where: { href_matches: `${BASE}*` }, eagerness: "moderate" }],
+});
 
 // ---------- content ----------
 
@@ -156,7 +168,8 @@ function head({ t, title, description, url, image, alternates, type, jsonld, ext
   <link rel="icon" href="${BASE}favicon.png" type="image/png">
   <link rel="apple-touch-icon" href="${BASE}apple-touch-icon.png">
   <script>(function(){try{var t=localStorage.getItem("theme");if(t==="light"||t==="dark")document.documentElement.setAttribute("data-theme",t);}catch(e){}})();</script>
-  <link rel="stylesheet" href="${BASE}assets/site.css">
+  <link rel="stylesheet" href="${CSS_URL}">
+  <script type="speculationrules">${SPECULATION}</script>
   <script type="application/ld+json">${JSON.stringify(jsonld).replace(/</g, "\\u003c")}</script>
 </head>`;
 }
@@ -186,7 +199,7 @@ ${follow.map((f) => `        <a href="${esc(f.url)}">${esc(f[lang])}</a>`).join(
       </nav>
     </div>
   </footer>
-  <script src="${BASE}assets/site.js" defer></script>`;
+  <script src="${JS_URL}" defer></script>`;
 }
 
 const siteImage = (t) => ({ url: `${SITE}${BASE}${t.og}`, w: 1200, h: 630, alt: t.ogAlt });

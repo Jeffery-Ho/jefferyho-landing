@@ -28,7 +28,7 @@ Never add the catch-all routes here, and list the zone's routes after each deplo
 | `scripts/og.swift` | Renders `public/v2/og.png`, `og-en.png`, `apple-touch-icon.png`, `favicon.png` from `avatar.png` (macOS) |
 | `public/v2/` | Static files served by the Worker (`covers/`, `media/`, `assets/`, pages) |
 | `archive/notion-media/` | Original Notion images, kept for reference; not deployed |
-| `src/index.ts` | Worker: www redirect, then static assets |
+| `src/index.ts` | Worker: www redirect, then static assets; long cache for images and `?v=`-hashed `assets/` |
 | `wrangler.jsonc` | Worker config and `/v2*` routes |
 
 Page URLs: `/v2/projects/<slug>/`, `/v2/projects/rereading-hig/<chapter>/`, `/v2/writing/<slug>/`,

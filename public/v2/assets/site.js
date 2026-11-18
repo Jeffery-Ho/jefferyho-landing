@@ -51,4 +51,22 @@
       });
     });
   });
+  // Hover / touch prefetch of in-site pages for browsers without Speculation Rules (Safari, Firefox).
+  var supportsRules = HTMLScriptElement.supports && HTMLScriptElement.supports("speculationrules");
+  if (!supportsRules) {
+    var fetched = {};
+    var prefetch = function (e) {
+      var a = e.target.closest && e.target.closest("a[href]");
+      if (!a || a.origin !== location.origin || a.pathname.indexOf("/v2/") !== 0) return;
+      var href = a.origin + a.pathname;
+      if (fetched[href] || href === location.origin + location.pathname) return;
+      fetched[href] = true;
+      var link = document.createElement("link");
+      link.rel = "prefetch";
+      link.href = href;
+      document.head.appendChild(link);
+    };
+    document.addEventListener("mouseover", prefetch, { passive: true });
+    document.addEventListener("touchstart", prefetch, { passive: true });
+  }
 })();
